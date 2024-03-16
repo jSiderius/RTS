@@ -23,11 +23,31 @@ signal power_plant_pressed()
 
 func _ready(): 
 	_update_time_label()
+	_update_price_energy_labels()
 
 func _process(delta):
 	time = floor(Time.get_ticks_msec() / 1000.0)
 	_update_money_label()
 	_update_power_bars()
+	
+func _update_price_energy_labels(): 
+	#var hq_price = %bruvHQPrice
+	%HeadQuartersPrice.text = str(GlobalData.headquarters_cost)
+	%HeadQuartersEnergy.text = str(GlobalData.headquarters_power)
+	%RefineryPrice.text = str(GlobalData.refinery_cost)
+	%RefineryEnergy.text = str(GlobalData.refinery_power)
+	%BarracksPrice.text = str(GlobalData.barracks_cost)
+	%BarracksEnergy.text = str(GlobalData.barracks_power)
+	%PowerPlantPrice.text = str(GlobalData.power_plant_cost)
+	%PowerPlantEnergy.text = str(GlobalData.power_plant_power)
+	%TurretPrice.text = str(GlobalData.turret_cost)
+	%TurretEnergy.text = str(GlobalData.turret_power)
+	%FactoryPrice.text = str(GlobalData.factory_cost)
+	%FactoryEnergy.text = str(GlobalData.factory_power)
+	%AirportPrice.text = str(GlobalData.airport_cost)
+	%AirportEnergy.text = str(GlobalData.airport_power)
+	%NuclearPlantPrice.text = str(GlobalData.nuclear_plant_cost)
+	%NuclearPlantEnergy.text = str(GlobalData.nuclear_plant_power)
 	
 func _update_time_label(): 
 	if (int(time) % 60 < 10.0): 
@@ -63,3 +83,6 @@ func _nuclear_plant_button_pressed():
 	emit_signal("nuclear_plant_pressed")
 func _power_plant_button_pressed(): 
 	emit_signal("power_plant_pressed")
+
+
+

@@ -55,7 +55,7 @@ func move_all_units(m_pos):
 
 func select_units(m_pos): 
 	var new_selected_units = [] 
-	if m_pos.distance_squared_to(start_sel_pos) < 20: 
+	if m_pos.distance_squared_to(start_sel_pos) < 30: 
 		var u = get_unit_under_mouse(m_pos)
 		if u: 
 			new_selected_units.append(u)
@@ -68,8 +68,9 @@ func select_units(m_pos):
 	selected_units = new_selected_units
 	
 func get_unit_under_mouse(m_pos): 
-	var result = raycast_from_mouse(m_pos, 3)
-	if result and is_in_group("unit"): #Unit logic
+	var result = raycast_from_mouse(m_pos, 0x1)
+	#print(result, get_groups())
+	if result and result.collider.is_in_group("units"): #Unit logic
 		return result.collider #Not sure if I'm using colliders rn
 
 func get_units_in_box(top_left, bot_right): 
