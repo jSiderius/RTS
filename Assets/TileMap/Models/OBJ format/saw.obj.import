@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c44e4nd4umalx"
+path="res://.godot/imported/saw.obj-aeb03bd604cc7a9e0b7130a049db026e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/saw.obj-aeb03bd604cc7a9e0b7130a049db026e.mesh"]
+
+source_file="res://Assets/TileMap/Models/OBJ format/saw.obj"
+dest_files=["res://.godot/imported/saw.obj-aeb03bd604cc7a9e0b7130a049db026e.mesh", "res://.godot/imported/saw.obj-aeb03bd604cc7a9e0b7130a049db026e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

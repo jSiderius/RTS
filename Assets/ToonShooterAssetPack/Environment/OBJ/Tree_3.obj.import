@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctckqjo0vvl5k"
+path="res://.godot/imported/Tree_3.obj-27d971521550fd666809b38c8d8a0bd2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tree_3.obj-27d971521550fd666809b38c8d8a0bd2.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_3.obj"
+dest_files=["res://.godot/imported/Tree_3.obj-27d971521550fd666809b38c8d8a0bd2.mesh", "res://.godot/imported/Tree_3.obj-27d971521550fd666809b38c8d8a0bd2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

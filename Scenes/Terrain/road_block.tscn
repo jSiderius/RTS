@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0i3awx5l03tt"]
+
+[ext_resource type="Texture2D" uid="uid://dj2ytkgedawp6" path="res://Assets/Textures/dirt.png" id="1_34fqm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgq4b"]
+albedo_texture = ExtResource("1_34fqm")
+
+[sub_resource type="BoxMesh" id="BoxMesh_rjnnp"]
+material = SubResource("StandardMaterial3D_wgq4b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f51b"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6lfcm"]
+
+[node name="RoadBlock" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
+mesh = SubResource("BoxMesh_rjnnp")
+surface_material_override/0 = SubResource("StandardMaterial3D_0f51b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
+shape = SubResource("BoxShape3D_6lfcm")

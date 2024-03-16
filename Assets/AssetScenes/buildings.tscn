@@ -1,0 +1,96 @@
+[gd_scene load_steps=24 format=3 uid="uid://cuhsbti2fojye"]
+
+[ext_resource type="ArrayMesh" uid="uid://bi61wdoebjtl6" path="res://Assets/Buildings/MilitaryBase/OBJ/Barrel.obj" id="1_5y8pn"]
+[ext_resource type="ArrayMesh" uid="uid://b1koato78qcfw" path="res://Assets/Buildings/MilitaryBase/OBJ/BarrierParking.obj" id="2_dktdv"]
+[ext_resource type="ArrayMesh" uid="uid://d1g2xbwvxey6s" path="res://Assets/Buildings/MilitaryBase/OBJ/Bathroom.obj" id="3_scvin"]
+[ext_resource type="ArrayMesh" uid="uid://h7vfjigxfpc4" path="res://Assets/Buildings/MilitaryBase/OBJ/ConcreteBlock.obj" id="4_kfg87"]
+[ext_resource type="ArrayMesh" uid="uid://cjb4n6m3nj3tm" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_01.obj" id="5_hkxr8"]
+[ext_resource type="ArrayMesh" uid="uid://ddg055jx8eoie" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_02.obj" id="6_blehb"]
+[ext_resource type="ArrayMesh" uid="uid://6nwic2vxuwqu" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_03.obj" id="7_6xgbx"]
+[ext_resource type="ArrayMesh" uid="uid://bkexy3ag8uxi4" path="res://Assets/Buildings/MilitaryBase/OBJ/Explosive_Barrel.obj" id="8_trgra"]
+[ext_resource type="ArrayMesh" uid="uid://b6e8qrhr4i0td" path="res://Assets/Buildings/MilitaryBase/OBJ/GasTank.obj" id="9_0owef"]
+[ext_resource type="ArrayMesh" uid="uid://bcf40pvsdpx33" path="res://Assets/Buildings/MilitaryBase/OBJ/GateKeeperStation.obj" id="10_2rsg6"]
+[ext_resource type="ArrayMesh" uid="uid://bneite3bw4y6v" path="res://Assets/Buildings/MilitaryBase/OBJ/HelicopterBase.obj" id="11_btsa6"]
+[ext_resource type="ArrayMesh" uid="uid://dmu86aggq5qea" path="res://Assets/Buildings/MilitaryBase/OBJ/LightPole.obj" id="12_pti8p"]
+[ext_resource type="ArrayMesh" uid="uid://oc064fjdgqxn" path="res://Assets/Buildings/MilitaryBase/OBJ/MedicTent.obj" id="13_5ff0q"]
+[ext_resource type="ArrayMesh" uid="uid://b5g4dinbo5d2i" path="res://Assets/Buildings/MilitaryBase/OBJ/Quarter.obj" id="14_tpp4q"]
+[ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/Buildings/MilitaryBase/OBJ/RadioStation.obj" id="15_rvqrx"]
+[ext_resource type="ArrayMesh" uid="uid://dnp0gme7blbe3" path="res://Assets/Buildings/MilitaryBase/OBJ/Refectory.obj" id="16_yn0rt"]
+[ext_resource type="ArrayMesh" uid="uid://sji023diydkj" path="res://Assets/Buildings/MilitaryBase/OBJ/SandsSack.obj" id="17_kb5ff"]
+[ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/Buildings/MilitaryBase/OBJ/SniperTower.obj" id="18_xp2se"]
+[ext_resource type="ArrayMesh" uid="uid://tx7rxvd4y1q6" path="res://Assets/Buildings/MilitaryBase/OBJ/Storage.obj" id="19_abykd"]
+[ext_resource type="ArrayMesh" uid="uid://bo2nslxm8tuib" path="res://Assets/Buildings/MilitaryBase/OBJ/TargetPratice.obj" id="20_0h83i"]
+[ext_resource type="ArrayMesh" uid="uid://dhsirsmm2gvfe" path="res://Assets/Buildings/MilitaryBase/OBJ/Wall_01.obj" id="21_52kx2"]
+[ext_resource type="ArrayMesh" uid="uid://64qxac2elrxe" path="res://Assets/Buildings/MilitaryBase/OBJ/Wall_02.obj" id="22_1vu1c"]
+[ext_resource type="ArrayMesh" uid="uid://tqb0wdbkxd67" path="res://Assets/Buildings/MilitaryBase/OBJ/WoodenBox.obj" id="23_kwe30"]
+
+[node name="Buildings" type="Node3D"]
+
+[node name="Barrel" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_5y8pn")
+
+[node name="BarrierParking" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_dktdv")
+
+[node name="Bathroom" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_scvin")
+
+[node name="ConcreteBlock" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_kfg87")
+
+[node name="Container01" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_hkxr8")
+
+[node name="Container02" type="MeshInstance3D" parent="."]
+mesh = ExtResource("6_blehb")
+
+[node name="Container03" type="MeshInstance3D" parent="."]
+mesh = ExtResource("7_6xgbx")
+
+[node name="ExplosiveBarrel" type="MeshInstance3D" parent="."]
+mesh = ExtResource("8_trgra")
+
+[node name="GasTank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("9_0owef")
+
+[node name="GateKeeperStation" type="MeshInstance3D" parent="."]
+mesh = ExtResource("10_2rsg6")
+
+[node name="HelicopterBase" type="MeshInstance3D" parent="."]
+mesh = ExtResource("11_btsa6")
+
+[node name="LightPole" type="MeshInstance3D" parent="."]
+mesh = ExtResource("12_pti8p")
+
+[node name="MedicTent" type="MeshInstance3D" parent="."]
+mesh = ExtResource("13_5ff0q")
+
+[node name="Quarter" type="MeshInstance3D" parent="."]
+mesh = ExtResource("14_tpp4q")
+
+[node name="RadioStation" type="MeshInstance3D" parent="."]
+mesh = ExtResource("15_rvqrx")
+
+[node name="Refectory" type="MeshInstance3D" parent="."]
+mesh = ExtResource("16_yn0rt")
+
+[node name="SandsSack" type="MeshInstance3D" parent="."]
+mesh = ExtResource("17_kb5ff")
+
+[node name="SniperTower" type="MeshInstance3D" parent="."]
+mesh = ExtResource("18_xp2se")
+
+[node name="Storage" type="MeshInstance3D" parent="."]
+mesh = ExtResource("19_abykd")
+
+[node name="TargetPratice" type="MeshInstance3D" parent="."]
+mesh = ExtResource("20_0h83i")
+
+[node name="Wall01" type="MeshInstance3D" parent="."]
+mesh = ExtResource("21_52kx2")
+
+[node name="Wall02" type="MeshInstance3D" parent="."]
+mesh = ExtResource("22_1vu1c")
+
+[node name="WoodenBox" type="MeshInstance3D" parent="."]
+mesh = ExtResource("23_kwe30")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bs21223x1rxod"
+path="res://.godot/imported/Key.obj-b68a2e889cbfdbc80b1a9b654f5c5696.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Key.obj-b68a2e889cbfdbc80b1a9b654f5c5696.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/Key.obj"
+dest_files=["res://.godot/imported/Key.obj-b68a2e889cbfdbc80b1a9b654f5c5696.mesh", "res://.godot/imported/Key.obj-b68a2e889cbfdbc80b1a9b654f5c5696.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

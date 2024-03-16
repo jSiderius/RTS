@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://blob3l7efs0mc"
+path="res://.godot/imported/BrickWall_2.obj-42ed7a9446607b60eed02d7796f64e7b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BrickWall_2.obj-42ed7a9446607b60eed02d7796f64e7b.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/BrickWall_2.obj"
+dest_files=["res://.godot/imported/BrickWall_2.obj-42ed7a9446607b60eed02d7796f64e7b.mesh", "res://.godot/imported/BrickWall_2.obj-42ed7a9446607b60eed02d7796f64e7b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

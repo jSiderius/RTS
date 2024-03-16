@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://blvqp4bs6n5p1"
+path="res://.godot/imported/blockDirtRampHalf.obj-8749c70ca78390498378bcf41bf1f519.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockDirtRampHalf.obj-8749c70ca78390498378bcf41bf1f519.mesh"]
+
+source_file="res://Assets/TileMap/Models/OBJ format/blockDirtRampHalf.obj"
+dest_files=["res://.godot/imported/blockDirtRampHalf.obj-8749c70ca78390498378bcf41bf1f519.mesh", "res://.godot/imported/blockDirtRampHalf.obj-8749c70ca78390498378bcf41bf1f519.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

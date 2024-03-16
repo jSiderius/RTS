@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3xe6evqxplts"
+path="res://.godot/imported/blockSnowRoundedLow.obj-5e6791270479af934546648e8fad55b8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockSnowRoundedLow.obj-5e6791270479af934546648e8fad55b8.mesh"]
+
+source_file="res://Assets/TileMap/Models/OBJ format/blockSnowRoundedLow.obj"
+dest_files=["res://.godot/imported/blockSnowRoundedLow.obj-5e6791270479af934546648e8fad55b8.mesh", "res://.godot/imported/blockSnowRoundedLow.obj-5e6791270479af934546648e8fad55b8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

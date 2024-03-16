@@ -1,0 +1,334 @@
+[gd_scene load_steps=56 format=3 uid="uid://j4srgh0135ed"]
+
+[ext_resource type="ArrayMesh" uid="uid://doejhguot68yg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Fixed.obj" id="1_bgl4t"]
+[ext_resource type="ArrayMesh" uid="uid://dapxwkc8ev3cn" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Large.obj" id="2_18r4o"]
+[ext_resource type="ArrayMesh" uid="uid://caxlqqjw1t3xm" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Single.obj" id="3_s6wm7"]
+[ext_resource type="ArrayMesh" uid="uid://dg1uupnkox86w" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Trash.obj" id="4_v00gs"]
+[ext_resource type="ArrayMesh" uid="uid://capwvjht24kxr" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BearTrap_Closed.obj" id="5_nv067"]
+[ext_resource type="ArrayMesh" uid="uid://cn27b6t805cqe" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BearTrap_Open.obj" id="6_0tnch"]
+[ext_resource type="ArrayMesh" uid="uid://dswlvox2vw70k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BrickWall_1.obj" id="7_gscou"]
+[ext_resource type="ArrayMesh" uid="uid://blob3l7efs0mc" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BrickWall_2.obj" id="8_y44u1"]
+[ext_resource type="ArrayMesh" uid="uid://cajggbtlv5g7u" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_1.obj" id="9_ttggu"]
+[ext_resource type="ArrayMesh" uid="uid://pxeg8f1p0avh" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_2.obj" id="10_ys3wr"]
+[ext_resource type="ArrayMesh" uid="uid://dasaekm2o8hqi" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_3.obj" id="11_30nl4"]
+[ext_resource type="ArrayMesh" uid="uid://did4pcghyv513" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_4.obj" id="12_wwump"]
+[ext_resource type="ArrayMesh" uid="uid://w63sw5epvqiv" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Container_Long.obj" id="13_qs1ox"]
+[ext_resource type="ArrayMesh" uid="uid://cuue0gq8w2862" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Container_Small.obj" id="14_c4nmy"]
+[ext_resource type="ArrayMesh" uid="uid://cwpbbef6gf3so" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Crate.obj" id="15_1w2vi"]
+[ext_resource type="ArrayMesh" uid="uid://qqwgkpterbc8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_BrokenCar.obj" id="16_7vico"]
+[ext_resource type="ArrayMesh" uid="uid://c86rtg52otjn8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_1.obj" id="17_lis7k"]
+[ext_resource type="ArrayMesh" uid="uid://cva2ahfauksjk" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_2.obj" id="18_w3e4p"]
+[ext_resource type="ArrayMesh" uid="uid://cvebxtiaiedmf" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_3.obj" id="19_y7ajl"]
+[ext_resource type="ArrayMesh" uid="uid://mlrgw82tqkpc" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Pile.obj" id="20_k2nwv"]
+[ext_resource type="ArrayMesh" uid="uid://eeqoyq0dnvlq" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Tires.obj" id="21_tgmkk"]
+[ext_resource type="ArrayMesh" uid="uid://b2qyksu4yh4k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel.obj" id="22_pkof8"]
+[ext_resource type="ArrayMesh" uid="uid://d2i4wodpmpl3g" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel_Spilled.obj" id="23_dgfyb"]
+[ext_resource type="ArrayMesh" uid="uid://cgm34batfrgsf" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Fence.obj" id="24_ja0b4"]
+[ext_resource type="ArrayMesh" uid="uid://7fn6txtn7l4n" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Fence_Long.obj" id="25_42p0p"]
+[ext_resource type="ArrayMesh" uid="uid://b0bd7y1h4jbib" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/GasCan.obj" id="26_pxpe4"]
+[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="27_nl56s"]
+[ext_resource type="ArrayMesh" uid="uid://cojy8xjo54vh7" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Health.obj" id="28_rstgr"]
+[ext_resource type="ArrayMesh" uid="uid://bs21223x1rxod" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Key.obj" id="29_kjqiu"]
+[ext_resource type="ArrayMesh" uid="uid://dex4yixfgs2n6" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Landmine.obj" id="30_huq7o"]
+[ext_resource type="ArrayMesh" uid="uid://b5ew3p7n576m3" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/MetalFence.obj" id="31_6445l"]
+[ext_resource type="ArrayMesh" uid="uid://cavs02nhgvxya" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pallet.obj" id="32_dgnep"]
+[ext_resource type="ArrayMesh" uid="uid://dfcuqsdahfttu" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pallet_Broken.obj" id="33_08ii3"]
+[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="34_wmhuj"]
+[ext_resource type="ArrayMesh" uid="uid://c548kmli417cu" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/SackTrench.obj" id="35_tuyre"]
+[ext_resource type="ArrayMesh" uid="uid://f4r23ufk8idb" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/SackTrench_Small.obj" id="36_viv0s"]
+[ext_resource type="ArrayMesh" uid="uid://b5rt61wmuwuww" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sign.obj" id="37_2bpps"]
+[ext_resource type="ArrayMesh" uid="uid://bka1awup7t5n5" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sofa.obj" id="38_ewbmh"]
+[ext_resource type="ArrayMesh" uid="uid://683aef5oi8ff" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sofa_Small.obj" id="39_eoste"]
+[ext_resource type="ArrayMesh" uid="uid://3af8y38xtd8x" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/StreetLight.obj" id="40_yuarr"]
+[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="41_b7a74"]
+[ext_resource type="ArrayMesh" uid="uid://cptdq57x1573q" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_2.obj" id="42_2hyjj"]
+[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="43_riy5u"]
+[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="44_bysau"]
+[ext_resource type="ArrayMesh" uid="uid://c1glcve5ey6al" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tank.obj" id="45_2kvnb"]
+[ext_resource type="ArrayMesh" uid="uid://mgnyq3g3j1si" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrafficCone.obj" id="46_ysumv"]
+[ext_resource type="ArrayMesh" uid="uid://b51bewxfo8y8s" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrashContainer.obj" id="47_oylt7"]
+[ext_resource type="ArrayMesh" uid="uid://bmrwxiuc1djqi" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrashContainer_Open.obj" id="48_1rjkf"]
+[ext_resource type="ArrayMesh" uid="uid://cy2qsno6b70i1" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_1.obj" id="49_2rb0m"]
+[ext_resource type="ArrayMesh" uid="uid://rifg6sxp660b" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_2.obj" id="50_0mbok"]
+[ext_resource type="ArrayMesh" uid="uid://ctckqjo0vvl5k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_3.obj" id="51_a6ou4"]
+[ext_resource type="ArrayMesh" uid="uid://cr0al22cau4e" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_4.obj" id="52_65c6v"]
+[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="53_w1ksg"]
+[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="54_peea4"]
+[ext_resource type="ArrayMesh" uid="uid://c8lg4r6515hjg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WoodPlanks.obj" id="55_bywhq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="BarrierFixed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("1_bgl4t")
+
+[node name="BarrierLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("2_18r4o")
+
+[node name="BarrierSingle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("3_s6wm7")
+
+[node name="BarrierTrash" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("4_v00gs")
+
+[node name="BearTrapClosed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("5_nv067")
+
+[node name="BearTrapOpen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("6_0tnch")
+
+[node name="BrickWall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("7_gscou")
+
+[node name="BrickWall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("8_y44u1")
+
+[node name="CardboardBoxes1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("9_ttggu")
+
+[node name="CardboardBoxes2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("10_ys3wr")
+
+[node name="CardboardBoxes3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("11_30nl4")
+
+[node name="CardboardBoxes4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("12_wwump")
+
+[node name="ContainerLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("13_qs1ox")
+
+[node name="ContainerSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("14_c4nmy")
+
+[node name="Crate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("15_1w2vi")
+
+[node name="DebrisBrokenCar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("16_7vico")
+
+[node name="DebrisPapers1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("17_lis7k")
+
+[node name="DebrisPapers2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("18_w3e4p")
+
+[node name="DebrisPapers3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("19_y7ajl")
+
+[node name="DebrisPile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("20_k2nwv")
+
+[node name="DebrisTires" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("21_tgmkk")
+
+[node name="ExplodingBarrel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("22_pkof8")
+
+[node name="ExplodingBarrelSpilled" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("23_dgfyb")
+
+[node name="Fence" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("24_ja0b4")
+
+[node name="FenceLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("25_42p0p")
+
+[node name="GasCan" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("26_pxpe4")
+
+[node name="GasTank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("27_nl56s")
+
+[node name="Health" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("28_rstgr")
+
+[node name="Key" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("29_kjqiu")
+
+[node name="Landmine" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("30_huq7o")
+
+[node name="MetalFence" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("31_6445l")
+
+[node name="Pallet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("32_dgnep")
+
+[node name="PalletBroken" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("33_08ii3")
+
+[node name="Pipes" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("34_wmhuj")
+
+[node name="SackTrench" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("35_tuyre")
+
+[node name="SackTrenchSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("36_viv0s")
+
+[node name="Sign" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("37_2bpps")
+
+[node name="Sofa" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("38_ewbmh")
+
+[node name="SofaSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("39_eoste")
+
+[node name="StreetLight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("40_yuarr")
+
+[node name="Structure1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("41_b7a74")
+
+[node name="Structure2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("42_2hyjj")
+
+[node name="Structure3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("43_riy5u")
+
+[node name="Structure4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("44_bysau")
+
+[node name="Tank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("45_2kvnb")
+
+[node name="TrafficCone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("46_ysumv")
+
+[node name="TrashContainer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("47_oylt7")
+
+[node name="TrashContainerOpen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("48_1rjkf")
+
+[node name="Tree1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("49_2rb0m")
+
+[node name="Tree2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("50_0mbok")
+
+[node name="Tree3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("51_a6ou4")
+
+[node name="Tree4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("52_65c6v")
+
+[node name="WaterTankFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("53_w1ksg")
+
+[node name="WaterTankPlatform" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("54_peea4")
+
+[node name="WoodPlanks" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("55_bywhq")

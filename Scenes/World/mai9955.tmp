@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhjocrguxpk4b"]
+
+[ext_resource type="Script" path="res://Scenes/World/navRegionMain.gd" id="1_h55im"]
+[ext_resource type="PackedScene" uid="uid://b5s7dek43n8sd" path="res://Scenes/World/tile_map_expiriment.tscn" id="2_ln84y"]
+[ext_resource type="Script" path="res://Scenes/Camera/CameraBase.gd" id="3_gs2h3"]
+[ext_resource type="Shader" path="res://Scenes/World/grid_block.gdshader" id="4_h7h73"]
+[ext_resource type="Script" path="res://Scenes/World/RigidBody3D.gd" id="5_gl142"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_vdbm8"]
+vertices = PackedVector3Array(98.4197, 10.5, 91.9197, 98.4197, 10.5, -86.8303, 97.4197, 11, -88.0803, -122.08, 10.5, -88.3303, -123.33, 10.5, -87.0803, -123.33, 10.5, 91.9197, -122.33, 11, 93.1697, 96.9197, 10.5, 93.4197, 97.6697, 11, 92.6697, 97.9197, 11, -87.4553, 90.339, 10.5, -88.0884, -122.705, 11.25, -87.7053, -122.83, 11.5, 92.5447, 89.8471, 10.5, 93.4116, -120.855, 11.75, -87.3553, 90.6473, 11.75, -85.8381, -122.355, 11.75, 91.1838, 96.6565, 11.75, 91.1879, 89.1814, 11.75, 91.183, 96.6874, 11.75, -85.8442, -122.324, 11.75, -85.8483, -9.81441, 11.75, -87.3423)
+polygons = [PackedInt32Array(13, 17, 7), PackedInt32Array(7, 17, 8), PackedInt32Array(8, 17, 0), PackedInt32Array(0, 19, 1), PackedInt32Array(1, 19, 9), PackedInt32Array(9, 19, 2), PackedInt32Array(2, 19, 10), PackedInt32Array(10, 21, 3), PackedInt32Array(3, 14, 11), PackedInt32Array(11, 20, 4), PackedInt32Array(4, 20, 5), PackedInt32Array(5, 16, 12), PackedInt32Array(12, 16, 6), PackedInt32Array(6, 18, 13), PackedInt32Array(13, 18, 17), PackedInt32Array(17, 19, 0), PackedInt32Array(19, 15, 10), PackedInt32Array(21, 14, 3), PackedInt32Array(10, 15, 21), PackedInt32Array(14, 20, 11), PackedInt32Array(20, 16, 5), PackedInt32Array(16, 18, 6), PackedInt32Array(18, 19, 17), PackedInt32Array(19, 18, 15), PackedInt32Array(21, 20, 14), PackedInt32Array(15, 18, 21), PackedInt32Array(20, 21, 16), PackedInt32Array(16, 21, 18)]
+geometry_parsed_geometry_type = 2
+agent_max_climb = 10.0
+agent_max_slope = 90.0
+region_merge_size = 150.0
+vertices_per_polygon = 100.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mogb8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_54j5v"]
+render_priority = 0
+shader = ExtResource("4_h7h73")
+shader_parameter/inner_distance_threshold = 0.45
+shader_parameter/inner_color = Color(0.298039, 0.478431, 0.878431, 1)
+shader_parameter/outer_color = null
+
+[sub_resource type="GDScript" id="GDScript_0tpm7"]
+script/source = "extends MeshInstance3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+func _physics_process(delta):
+	move_and_slide()
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2aie"]
+
+[node name="Main3" type="Node3D"]
+
+[node name="CameraBase" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.794065, 0.607833, 0, -0.607833, 0.794065, 0, 0, 0)
+script = ExtResource("3_gs2h3")
+
+[node name="Camera3D" type="Camera3D" parent="CameraBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.54619, 78.9344)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.97464, 0.223778, 0, -0.223778, 0.97464, 48.8091, 127.133, 221.991)
+
+[node name="NavRegionMain" type="NavigationRegion3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_vdbm8")
+script = ExtResource("1_h55im")
+
+[node name="Units" type="Node3D" parent="NavRegionMain"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="TileMapExpiriment" parent="NavRegionMain" instance=ExtResource("2_ln84y")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="BoxMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 35.4703, 0)
+mesh = SubResource("BoxMesh_mogb8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_54j5v")
+script = SubResource("GDScript_0tpm7")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BoxMesh"]
+script = ExtResource("5_gl142")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxMesh/RigidBody3D"]
+shape = SubResource("BoxShape3D_e2aie")
+
+[node name="BoxMesh2" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 11.9396, 25.7276, 0)
+mesh = SubResource("BoxMesh_mogb8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_54j5v")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BoxMesh2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxMesh2/RigidBody3D"]
+shape = SubResource("BoxShape3D_e2aie")
+
+[node name="BoxMesh3" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -12.6654, 25.7276, 0)
+mesh = SubResource("BoxMesh_mogb8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_54j5v")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BoxMesh3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxMesh3/RigidBody3D"]
+shape = SubResource("BoxShape3D_e2aie")

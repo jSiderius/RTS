@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2v7buf63dtn3"]
+
+[ext_resource type="Script" path="res://Scenes/Units/GeneralInfantry/Unit.gd" id="1_fmv7w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b0yd8"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bfu4k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2mc7"]
+albedo_color = Color(0.235294, 0.886275, 0.215686, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yn3ai"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0d5pt"]
+albedo_color = Color(0.0980392, 0.431373, 0.215686, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tligi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e68i0"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="Unit" type="CharacterBody3D" groups=["units"]]
+collision_mask = 3
+script = ExtResource("1_fmv7w")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_b0yd8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_bfu4k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_l2mc7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(2.268, 0, 0, 0, 1.724, 0, 0, 0, 0.9, -0.000209689, 1.5305, 1.67385)
+mesh = SubResource("BoxMesh_yn3ai")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0d5pt")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.19642, 0, 0, 0, 0.170107, 0, 0, 0, 2.19642, 0, 0.127794, 0)
+visible = false
+mesh = SubResource("CylinderMesh_tligi")
+surface_material_override/0 = SubResource("StandardMaterial3D_e68i0")

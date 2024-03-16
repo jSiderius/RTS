@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1koato78qcfw"
+path="res://.godot/imported/BarrierParking.obj-283e8fbfec6264341f4ebf3e5539c063.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BarrierParking.obj-283e8fbfec6264341f4ebf3e5539c063.mesh"]
+
+source_file="res://Assets/Buildings/MilitaryBase/OBJ/BarrierParking.obj"
+dest_files=["res://.godot/imported/BarrierParking.obj-283e8fbfec6264341f4ebf3e5539c063.mesh", "res://.godot/imported/BarrierParking.obj-283e8fbfec6264341f4ebf3e5539c063.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

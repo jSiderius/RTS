@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://oc064fjdgqxn"
+path="res://.godot/imported/MedicTent.obj-235832bd1e7463c75801a85c27ebe4ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/MedicTent.obj-235832bd1e7463c75801a85c27ebe4ad.mesh"]
+
+source_file="res://Assets/Buildings/MilitaryBase/OBJ/MedicTent.obj"
+dest_files=["res://.godot/imported/MedicTent.obj-235832bd1e7463c75801a85c27ebe4ad.mesh", "res://.godot/imported/MedicTent.obj-235832bd1e7463c75801a85c27ebe4ad.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

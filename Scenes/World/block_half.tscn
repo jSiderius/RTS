@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c05k8kc5juixs"]
+
+[ext_resource type="PackedScene" uid="uid://cgcxuy5lb5yot" path="res://Assets/TileMap/Models/GLTF format/blockHalf.glb" id="1_wo85j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw0fw"]
+
+[node name="blockHalf2" instance=ExtResource("1_wo85j")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_pw0fw")

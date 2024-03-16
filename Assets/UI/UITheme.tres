@@ -1,0 +1,154 @@
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://ctwc3vll6brq3"]
+
+[ext_resource type="FontFile" uid="uid://d3ffdapn3qvvb" path="res://Assets/UI/Valorax-lg25V.otf" id="1_ec68l"]
+[ext_resource type="Texture2D" uid="uid://bm77b5g2mabmf" path="res://Assets/UI/crate_tex.png" id="2_bexxh"]
+[ext_resource type="Texture2D" uid="uid://px6hiwphlm1b" path="res://Assets/WoodTextures/button1.png" id="3_ed8a0"]
+[ext_resource type="Texture2D" uid="uid://dvs638y3qn6oc" path="res://Assets/UI/map_placeholder.png" id="4_f120n"]
+[ext_resource type="Texture2D" uid="uid://dgb6rxhnydirh" path="res://Assets/WoodTextures/panel.png" id="5_sggmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqyhm"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 0.662745)
+skew = Vector2(0.1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.505882, 0.305882, 0.0470588, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aumcs"]
+texture = ExtResource("2_bexxh")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vm70e"]
+texture = ExtResource("3_ed8a0")
+modulate_color = Color(0.270588, 0.270588, 0.270588, 0.847059)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pi6d0"]
+texture = ExtResource("3_ed8a0")
+modulate_color = Color(1, 0.886275, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcyit"]
+texture = ExtResource("3_ed8a0")
+modulate_color = Color(0.921569, 0.901961, 0.686275, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0a4c0"]
+texture = ExtResource("3_ed8a0")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3m6nk"]
+texture = ExtResource("3_ed8a0")
+modulate_color = Color(1, 1, 1, 0.560784)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2tgp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.365, 0.365, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4shj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iirfe"]
+texture = ExtResource("4_f120n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfek1"]
+texture = ExtResource("5_sggmh")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kf5ni"]
+bg_color = Color(0.054902, 0.882353, 0.133333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqb0j"]
+bg_color = Color(0.4, 0.4, 0.4, 0.67451)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86oia"]
+bg_color = Color(0, 0.647059, 0.109804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctfid"]
+bg_color = Color(0.909804, 0.890196, 0, 1)
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[resource]
+AttributePanelContainer/base_type = &"PanelContainer"
+AttributePanelContainer/styles/panel = SubResource("StyleBoxFlat_hqyhm")
+BigPanelContainer/base_type = &"PanelContainer"
+BigPanelContainer/styles/panel = SubResource("StyleBoxTexture_aumcs")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_ec68l")
+Button/styles/disabled = SubResource("StyleBoxTexture_vm70e")
+Button/styles/focus = SubResource("StyleBoxTexture_pi6d0")
+Button/styles/hover = SubResource("StyleBoxTexture_dcyit")
+Button/styles/normal = SubResource("StyleBoxTexture_0a4c0")
+Button/styles/pressed = SubResource("StyleBoxTexture_3m6nk")
+ButtonLabel/base_type = &"Label"
+ButtonLabel/font_sizes/font_size = 12
+Header/base_type = &"Label"
+Header/colors/font_color = Color(0.356863, 0.690196, 0.796078, 1)
+Header/colors/font_outline_color = Color(0, 0, 0, 1)
+Header/colors/font_shadow_color = Color(0.580392, 0, 0, 1)
+Header/constants/line_spacing = 0
+Header/constants/outline_size = 0
+Header/constants/shadow_offset_x = 0
+Header/constants/shadow_offset_y = 0
+Header/constants/shadow_outline_size = 0
+Header/font_sizes/font_size = 30
+Header/fonts/font = ExtResource("1_ec68l")
+Header/styles/normal = SubResource("StyleBoxFlat_n2tgp")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 22
+Label/fonts/font = ExtResource("1_ec68l")
+Label/styles/normal = SubResource("StyleBoxEmpty_s4shj")
+MapPanelContainer/base_type = &"PanelContainer"
+MapPanelContainer/styles/panel = SubResource("StyleBoxTexture_iirfe")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_qfek1")
+PowerPanelContainerCapSpace/base_type = &"PanelContainer"
+PowerPanelContainerCapSpace/styles/panel = SubResource("StyleBoxFlat_kf5ni")
+PowerPanelContainerEmpty/base_type = &"PanelContainer"
+PowerPanelContainerEmpty/styles/panel = SubResource("StyleBoxFlat_pqb0j")
+PowerPanelContainerTemp/base_type = &"PanelContainer"
+PowerPanelContainerTemp/styles/panel = SubResource("StyleBoxFlat_86oia")
+PowerPanelContainerUsed/base_type = &"PanelContainer"
+PowerPanelContainerUsed/styles/panel = SubResource("StyleBoxFlat_ctfid")

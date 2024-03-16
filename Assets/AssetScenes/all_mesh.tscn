@@ -1,0 +1,774 @@
+[gd_scene load_steps=146 format=3 uid="uid://cjhi3srbv4uij"]
+
+[ext_resource type="ArrayMesh" uid="uid://bi61wdoebjtl6" path="res://Assets/Buildings/MilitaryBase/OBJ/Barrel.obj" id="1_oplt3"]
+[ext_resource type="ArrayMesh" uid="uid://b1koato78qcfw" path="res://Assets/Buildings/MilitaryBase/OBJ/BarrierParking.obj" id="2_ebqxn"]
+[ext_resource type="ArrayMesh" uid="uid://d1g2xbwvxey6s" path="res://Assets/Buildings/MilitaryBase/OBJ/Bathroom.obj" id="3_lf2ug"]
+[ext_resource type="ArrayMesh" uid="uid://h7vfjigxfpc4" path="res://Assets/Buildings/MilitaryBase/OBJ/ConcreteBlock.obj" id="4_xljor"]
+[ext_resource type="ArrayMesh" uid="uid://cjb4n6m3nj3tm" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_01.obj" id="5_fhdl2"]
+[ext_resource type="ArrayMesh" uid="uid://ddg055jx8eoie" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_02.obj" id="6_so81u"]
+[ext_resource type="ArrayMesh" uid="uid://6nwic2vxuwqu" path="res://Assets/Buildings/MilitaryBase/OBJ/Container_03.obj" id="7_ob5b7"]
+[ext_resource type="ArrayMesh" uid="uid://bkexy3ag8uxi4" path="res://Assets/Buildings/MilitaryBase/OBJ/Explosive_Barrel.obj" id="8_11wba"]
+[ext_resource type="ArrayMesh" uid="uid://b6e8qrhr4i0td" path="res://Assets/Buildings/MilitaryBase/OBJ/GasTank.obj" id="9_aj4jj"]
+[ext_resource type="ArrayMesh" uid="uid://bcf40pvsdpx33" path="res://Assets/Buildings/MilitaryBase/OBJ/GateKeeperStation.obj" id="10_mlhmp"]
+[ext_resource type="ArrayMesh" uid="uid://bneite3bw4y6v" path="res://Assets/Buildings/MilitaryBase/OBJ/HelicopterBase.obj" id="11_i13bl"]
+[ext_resource type="ArrayMesh" uid="uid://dmu86aggq5qea" path="res://Assets/Buildings/MilitaryBase/OBJ/LightPole.obj" id="12_kv56n"]
+[ext_resource type="ArrayMesh" uid="uid://oc064fjdgqxn" path="res://Assets/Buildings/MilitaryBase/OBJ/MedicTent.obj" id="13_aonqe"]
+[ext_resource type="ArrayMesh" uid="uid://b5g4dinbo5d2i" path="res://Assets/Buildings/MilitaryBase/OBJ/Quarter.obj" id="14_3meox"]
+[ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/Buildings/MilitaryBase/OBJ/RadioStation.obj" id="15_r1n73"]
+[ext_resource type="ArrayMesh" uid="uid://dnp0gme7blbe3" path="res://Assets/Buildings/MilitaryBase/OBJ/Refectory.obj" id="16_lhll3"]
+[ext_resource type="ArrayMesh" uid="uid://sji023diydkj" path="res://Assets/Buildings/MilitaryBase/OBJ/SandsSack.obj" id="17_ypn1s"]
+[ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/Buildings/MilitaryBase/OBJ/SniperTower.obj" id="18_dple4"]
+[ext_resource type="ArrayMesh" uid="uid://tx7rxvd4y1q6" path="res://Assets/Buildings/MilitaryBase/OBJ/Storage.obj" id="19_xl41f"]
+[ext_resource type="ArrayMesh" uid="uid://bo2nslxm8tuib" path="res://Assets/Buildings/MilitaryBase/OBJ/TargetPratice.obj" id="20_mhwxn"]
+[ext_resource type="ArrayMesh" uid="uid://dhsirsmm2gvfe" path="res://Assets/Buildings/MilitaryBase/OBJ/Wall_01.obj" id="21_173iq"]
+[ext_resource type="ArrayMesh" uid="uid://64qxac2elrxe" path="res://Assets/Buildings/MilitaryBase/OBJ/Wall_02.obj" id="22_d0mnu"]
+[ext_resource type="ArrayMesh" uid="uid://tqb0wdbkxd67" path="res://Assets/Buildings/MilitaryBase/OBJ/WoodenBox.obj" id="23_utb4j"]
+[ext_resource type="PackedScene" uid="uid://bbonugo48aha" path="res://Assets/TileMap/Models/GLTF format/arrow.glb" id="24_ncck2"]
+[ext_resource type="PackedScene" uid="uid://74n7kokd0h2c" path="res://Assets/TileMap/Models/GLTF format/arrows.glb" id="25_cg6i3"]
+[ext_resource type="PackedScene" uid="uid://b7bnmiq866soy" path="res://Assets/TileMap/Models/GLTF format/barrel.glb" id="26_h0rpm"]
+[ext_resource type="PackedScene" uid="uid://crq2vhsmw4xus" path="res://Assets/TileMap/Models/GLTF format/blockCliff.glb" id="27_eukri"]
+[ext_resource type="PackedScene" uid="uid://1qjagl21f6b3" path="res://Assets/TileMap/Models/GLTF format/blockCliffCorner.glb" id="28_6gig6"]
+[ext_resource type="PackedScene" uid="uid://cjt7p8ndvyt6c" path="res://Assets/TileMap/Models/GLTF format/blockCornerLarge.glb" id="29_qeqel"]
+[ext_resource type="PackedScene" uid="uid://dqnr6pt4vdcby" path="res://Assets/TileMap/Models/GLTF format/blockCornerSmall.glb" id="30_ycfn4"]
+[ext_resource type="PackedScene" uid="uid://cx757bveswqyi" path="res://Assets/TileMap/Models/GLTF format/blockCurve.glb" id="31_exwcd"]
+[ext_resource type="PackedScene" uid="uid://dr4g2i58mqr8g" path="res://Assets/TileMap/Models/GLTF format/blockCurveHalf.glb" id="32_n241n"]
+[ext_resource type="PackedScene" uid="uid://b0pobtdpviage" path="res://Assets/TileMap/ModifiedMeshs/block.tscn" id="33_cvpl3"]
+[ext_resource type="PackedScene" uid="uid://dsiq8tt4cjocb" path="res://Assets/TileMap/Models/GLTF format/blockCurveLow.glb" id="34_alsq5"]
+[ext_resource type="PackedScene" uid="uid://unywlxfymlgc" path="res://Assets/TileMap/Models/GLTF format/blockDirt.glb" id="35_exixl"]
+[ext_resource type="PackedScene" uid="uid://da8qcbrpv8kke" path="res://Assets/TileMap/Models/GLTF format/blockDirtHalf.glb" id="36_qbcdg"]
+[ext_resource type="PackedScene" uid="uid://dp1kp6wwkten2" path="res://Assets/TileMap/Models/GLTF format/blockDirtRamp.glb" id="37_gqtsd"]
+[ext_resource type="PackedScene" uid="uid://c06lx0w40u2pp" path="res://Assets/TileMap/Models/GLTF format/blockDirtRampHalf.glb" id="38_7i1b6"]
+[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="38_v3d0s"]
+[ext_resource type="PackedScene" uid="uid://df62h4waq5p1s" path="res://Assets/TileMap/Models/GLTF format/blockEnd.glb" id="39_0cvcj"]
+[ext_resource type="ArrayMesh" uid="uid://cptdq57x1573q" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_2.obj" id="39_nx7ys"]
+[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="40_2g6jf"]
+[ext_resource type="PackedScene" uid="uid://cgcxuy5lb5yot" path="res://Assets/TileMap/Models/GLTF format/blockHalf.glb" id="40_pn0iw"]
+[ext_resource type="PackedScene" uid="uid://4snskxj54n8m" path="res://Assets/TileMap/Models/GLTF format/blockHexagon.glb" id="41_1sdtr"]
+[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="41_grt7v"]
+[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="42_a6qsa"]
+[ext_resource type="PackedScene" uid="uid://clirr04b57rwi" path="res://Assets/TileMap/Models/GLTF format/blockHexagonLow.glb" id="42_sgogx"]
+[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="43_b88xo"]
+[ext_resource type="PackedScene" uid="uid://cr5r718j3oktl" path="res://Assets/TileMap/Models/GLTF format/blockLarge.glb" id="43_l1ed5"]
+[ext_resource type="PackedScene" uid="uid://yyo1pmagw20m" path="res://Assets/TileMap/Models/GLTF format/blockLevel.glb" id="44_1lbba"]
+[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="44_vq83y"]
+[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="45_bnkdm"]
+[ext_resource type="PackedScene" uid="uid://ba67qqntv4nw7" path="res://Assets/TileMap/Models/GLTF format/blockLong.glb" id="45_isnqp"]
+[ext_resource type="PackedScene" uid="uid://gefaowd0317q" path="res://Assets/TileMap/Models/GLTF format/blockMoving.glb" id="46_hifqy"]
+[ext_resource type="PackedScene" uid="uid://ccr1p2lmj2rtq" path="res://Assets/TileMap/Models/GLTF format/blockMovingBlue.glb" id="47_m4kxw"]
+[ext_resource type="PackedScene" uid="uid://41l0n7gq2y5w" path="res://Assets/TileMap/Models/GLTF format/blockMovingLarge.glb" id="48_hqefd"]
+[ext_resource type="PackedScene" uid="uid://cof3yvbg78lap" path="res://Assets/TileMap/Models/GLTF format/blockQuarter.glb" id="49_iq8mo"]
+[ext_resource type="PackedScene" uid="uid://dyfemabw74qgh" path="res://Assets/TileMap/Models/GLTF format/blockRounded.glb" id="50_v2ddl"]
+[ext_resource type="PackedScene" uid="uid://cthykmtdcgo47" path="res://Assets/TileMap/Models/GLTF format/blockRoundedLarge.glb" id="51_yvn0v"]
+[ext_resource type="PackedScene" uid="uid://d0pjgrci1xv1x" path="res://Assets/TileMap/Models/GLTF format/blockRoundedLong.glb" id="52_1cjk5"]
+[ext_resource type="PackedScene" uid="uid://drh7s1xqxxe1f" path="res://Assets/TileMap/Models/GLTF format/blockRoundedLow.glb" id="53_ewt0w"]
+[ext_resource type="PackedScene" uid="uid://ufrpuiep62a6" path="res://Assets/TileMap/Models/GLTF format/blockRoundedLowLong.glb" id="54_ego4y"]
+[ext_resource type="PackedScene" uid="uid://dknglb1ihbrrh" path="res://Assets/TileMap/Models/GLTF format/blockSlope.glb" id="55_w8nbu"]
+[ext_resource type="PackedScene" uid="uid://lmg3sv8yyqew" path="res://Assets/TileMap/Models/GLTF format/blockSlopeHalf.glb" id="56_1i442"]
+[ext_resource type="PackedScene" uid="uid://b4ov1qqi3wkt6" path="res://Assets/TileMap/Models/GLTF format/blockSnow.glb" id="57_x0n0i"]
+[ext_resource type="PackedScene" uid="uid://c4ao3xxwf1cme" path="res://Assets/TileMap/Models/GLTF format/blockSnowCliff.glb" id="58_5beuo"]
+[ext_resource type="PackedScene" uid="uid://cawpfx5bg0gm2" path="res://Assets/TileMap/Models/GLTF format/blockSnowCliffCorner.glb" id="59_rk6wh"]
+[ext_resource type="PackedScene" uid="uid://bfa8awlio5uhu" path="res://Assets/TileMap/Models/GLTF format/blockSnowCornerLarge.glb" id="60_0hmbl"]
+[ext_resource type="PackedScene" uid="uid://cerovarjkmuc5" path="res://Assets/TileMap/Models/GLTF format/blockSnowCornerSmall.glb" id="61_ujkbn"]
+[ext_resource type="PackedScene" uid="uid://bcn60kwb4g5n7" path="res://Assets/TileMap/Models/GLTF format/blockSnowCurve.glb" id="62_dvo6m"]
+[ext_resource type="PackedScene" uid="uid://dfwhxn461lhms" path="res://Assets/TileMap/Models/GLTF format/blockSnowCurveHalf.glb" id="63_lftia"]
+[ext_resource type="PackedScene" uid="uid://nwcfaf36xvk6" path="res://Assets/TileMap/Models/GLTF format/blockSnowCurveLow.glb" id="64_fgikj"]
+[ext_resource type="PackedScene" uid="uid://bg4mi1eyi35u6" path="res://Assets/TileMap/Models/GLTF format/blockSnowEnd.glb" id="65_fru4g"]
+[ext_resource type="PackedScene" uid="uid://bgyvo6vji3ef2" path="res://Assets/TileMap/Models/GLTF format/blockSnowHalf.glb" id="66_eo2xb"]
+[ext_resource type="PackedScene" uid="uid://dj4t7aeu66wt" path="res://Assets/TileMap/Models/GLTF format/blockSnowHexagon.glb" id="67_7dpa1"]
+[ext_resource type="PackedScene" uid="uid://bequft1npwh00" path="res://Assets/TileMap/Models/GLTF format/blockSnowHexagonLow.glb" id="68_dgu3c"]
+[ext_resource type="PackedScene" uid="uid://c6c4i4702ju6y" path="res://Assets/TileMap/Models/GLTF format/blockSnowLarge.glb" id="69_mi5v6"]
+[ext_resource type="PackedScene" uid="uid://c4xgrix1d65cn" path="res://Assets/TileMap/Models/GLTF format/blockSnowLevel.glb" id="70_fmo15"]
+[ext_resource type="PackedScene" uid="uid://wagly4hs2hxk" path="res://Assets/TileMap/Models/GLTF format/blockSnowLong.glb" id="71_trtoa"]
+[ext_resource type="PackedScene" uid="uid://cyxttbs8b8q87" path="res://Assets/TileMap/Models/GLTF format/blockSnowQuarter.glb" id="72_tft0v"]
+[ext_resource type="PackedScene" uid="uid://cdwby5u0hpoud" path="res://Assets/TileMap/Models/GLTF format/blockSnowRounded.glb" id="73_y6b0s"]
+[ext_resource type="PackedScene" uid="uid://bs1b6jwrbgx76" path="res://Assets/TileMap/Models/GLTF format/blockSnowRoundedLarge.glb" id="74_p8j4m"]
+[ext_resource type="PackedScene" uid="uid://7gxb4jj013sq" path="res://Assets/TileMap/Models/GLTF format/blockSnowRoundedLong.glb" id="75_5f6tf"]
+[ext_resource type="PackedScene" uid="uid://kmhyh8sj8t2e" path="res://Assets/TileMap/Models/GLTF format/blockSnowRoundedLow.glb" id="76_qswl1"]
+[ext_resource type="PackedScene" uid="uid://c2qajtff4gytx" path="res://Assets/TileMap/Models/GLTF format/blockSnowRoundedLowLong.glb" id="77_pvl28"]
+[ext_resource type="PackedScene" uid="uid://digpcptm1beet" path="res://Assets/TileMap/Models/GLTF format/blockSnowSlope.glb" id="78_vfkfn"]
+[ext_resource type="PackedScene" uid="uid://crnmpgko2h88" path="res://Assets/TileMap/Models/GLTF format/blockSnowSlopeHalf.glb" id="79_o8e1d"]
+[ext_resource type="PackedScene" uid="uid://by28v5q20nmcv" path="res://Assets/TileMap/Models/GLTF format/bomb.glb" id="80_jx03o"]
+[ext_resource type="PackedScene" uid="uid://cjiyljwewuiul" path="res://Assets/TileMap/Models/GLTF format/bridge.glb" id="81_l7vfl"]
+[ext_resource type="PackedScene" uid="uid://d1ipslpq77wog" path="res://Assets/TileMap/Models/GLTF format/bridgeHalf.glb" id="82_vrflt"]
+[ext_resource type="PackedScene" uid="uid://cvvj7edk12hko" path="res://Assets/TileMap/Models/GLTF format/bridgeRamp.glb" id="83_m3pmi"]
+[ext_resource type="PackedScene" uid="uid://k82tnuo37b2n" path="res://Assets/TileMap/Models/GLTF format/buttonRound.glb" id="84_i8unp"]
+[ext_resource type="PackedScene" uid="uid://b0d7nufnd0wjk" path="res://Assets/TileMap/Models/GLTF format/buttonSquare.glb" id="85_egkx6"]
+[ext_resource type="PackedScene" uid="uid://hx74mrob3psx" path="res://Assets/TileMap/Models/GLTF format/chest.glb" id="86_y6gda"]
+[ext_resource type="PackedScene" uid="uid://dj7mfb72gb45y" path="res://Assets/TileMap/Models/GLTF format/coinBronze.glb" id="87_yyuel"]
+[ext_resource type="PackedScene" uid="uid://bktuuh4vs0qrr" path="res://Assets/TileMap/Models/GLTF format/coinGold.glb" id="88_hps2b"]
+[ext_resource type="PackedScene" uid="uid://dtwxyp0fiimkq" path="res://Assets/TileMap/Models/GLTF format/coinSilver.glb" id="89_2gdc7"]
+[ext_resource type="PackedScene" uid="uid://b3jmx2tyasy2j" path="res://Assets/TileMap/Models/GLTF format/crate.glb" id="90_y12xd"]
+[ext_resource type="PackedScene" uid="uid://bdmk7be6y5tu4" path="res://Assets/TileMap/Models/GLTF format/crateItem.glb" id="91_vv0tx"]
+[ext_resource type="PackedScene" uid="uid://cbmc1s57opn65" path="res://Assets/TileMap/Models/GLTF format/crateItemStrong.glb" id="92_dpaf2"]
+[ext_resource type="PackedScene" uid="uid://c7jkotmi0vfr8" path="res://Assets/TileMap/Models/GLTF format/crateStrong.glb" id="93_wliry"]
+[ext_resource type="PackedScene" uid="uid://dv20dy6hlq7f0" path="res://Assets/TileMap/Models/GLTF format/doorClosed.glb" id="94_p17m5"]
+[ext_resource type="PackedScene" uid="uid://bfq56b0wk750d" path="res://Assets/TileMap/Models/GLTF format/doorLargeClosed.glb" id="95_m23gu"]
+[ext_resource type="PackedScene" uid="uid://cyp8frsoio37s" path="res://Assets/TileMap/Models/GLTF format/doorLargeOpen.glb" id="96_nyykg"]
+[ext_resource type="PackedScene" uid="uid://kvts8s0yo0vw" path="res://Assets/TileMap/Models/GLTF format/doorOpen.glb" id="97_r1pde"]
+[ext_resource type="PackedScene" uid="uid://cph0b0qxbx32c" path="res://Assets/TileMap/Models/GLTF format/fence.glb" id="98_j5u4o"]
+[ext_resource type="PackedScene" uid="uid://dd8y5ncbtkka6" path="res://Assets/TileMap/Models/GLTF format/fenceBroken.glb" id="99_gnicd"]
+[ext_resource type="PackedScene" uid="uid://slav83rartfa" path="res://Assets/TileMap/Models/GLTF format/fenceCorner.glb" id="100_ql6x1"]
+[ext_resource type="PackedScene" uid="uid://d1sbs4qawgu4j" path="res://Assets/TileMap/Models/GLTF format/fenceCornerCurved.glb" id="101_jx8ct"]
+[ext_resource type="PackedScene" uid="uid://dwh4ni2wsl3i6" path="res://Assets/TileMap/Models/GLTF format/fenceLow.glb" id="102_ns3ja"]
+[ext_resource type="PackedScene" uid="uid://dhu4gm602ktri" path="res://Assets/TileMap/Models/GLTF format/fenceLowBroken.glb" id="103_uh886"]
+[ext_resource type="PackedScene" uid="uid://s00p5rnydag7" path="res://Assets/TileMap/Models/GLTF format/fenceLowCorner.glb" id="104_ves2l"]
+[ext_resource type="PackedScene" uid="uid://bngbuxc1cibh6" path="res://Assets/TileMap/Models/GLTF format/fenceLowCornerCurved.glb" id="105_a54or"]
+[ext_resource type="PackedScene" uid="uid://bwwgo7eo1tqgv" path="res://Assets/TileMap/Models/GLTF format/flag.glb" id="106_cp8l1"]
+[ext_resource type="PackedScene" uid="uid://bqe1x13gueoh7" path="res://Assets/TileMap/Models/GLTF format/flowers.glb" id="107_aoelv"]
+[ext_resource type="PackedScene" uid="uid://clx1m0bu2mllh" path="res://Assets/TileMap/Models/GLTF format/flowersLow.glb" id="108_upst4"]
+[ext_resource type="PackedScene" uid="uid://ctr1x4b7mbe4b" path="res://Assets/TileMap/Models/GLTF format/heart.glb" id="109_7ps7x"]
+[ext_resource type="PackedScene" uid="uid://t452ovcpalp7" path="res://Assets/TileMap/Models/GLTF format/hedge.glb" id="110_7w2db"]
+[ext_resource type="PackedScene" uid="uid://cbhlsrth5qyma" path="res://Assets/TileMap/Models/GLTF format/hedgeCorner.glb" id="111_1lmuh"]
+[ext_resource type="PackedScene" uid="uid://bc4vkkwarv1v3" path="res://Assets/TileMap/Models/GLTF format/jewel.glb" id="112_pt72r"]
+[ext_resource type="PackedScene" uid="uid://dknd7h7fisosp" path="res://Assets/TileMap/Models/GLTF format/key.glb" id="113_7qbpy"]
+[ext_resource type="PackedScene" uid="uid://drjuy5rtsumhn" path="res://Assets/TileMap/Models/GLTF format/ladder.glb" id="114_kglp7"]
+[ext_resource type="PackedScene" uid="uid://by780nttgsuo6" path="res://Assets/TileMap/Models/GLTF format/ladderBroken.glb" id="115_aslku"]
+[ext_resource type="PackedScene" uid="uid://cklltpxm8of8d" path="res://Assets/TileMap/Models/GLTF format/ladderLong.glb" id="116_h3th0"]
+[ext_resource type="PackedScene" uid="uid://qgo53uvlg1g4" path="res://Assets/TileMap/Models/GLTF format/lever.glb" id="117_5uh3f"]
+[ext_resource type="PackedScene" uid="uid://cxwsr25b33xd7" path="res://Assets/TileMap/Models/GLTF format/lock.glb" id="118_g1t7p"]
+[ext_resource type="PackedScene" uid="uid://bo6bi47mogjel" path="res://Assets/TileMap/Models/GLTF format/mushrooms.glb" id="119_m84ax"]
+[ext_resource type="PackedScene" uid="uid://cmr2lk4aswa2g" path="res://Assets/TileMap/Models/GLTF format/plant.glb" id="120_iatvm"]
+[ext_resource type="PackedScene" uid="uid://2pitq8s1e802" path="res://Assets/TileMap/Models/GLTF format/platform.glb" id="121_jikvw"]
+[ext_resource type="PackedScene" uid="uid://cn1r47fxy4462" path="res://Assets/TileMap/Models/GLTF format/poles.glb" id="122_1v6i1"]
+[ext_resource type="PackedScene" uid="uid://dnbuyvdfep68f" path="res://Assets/TileMap/Models/GLTF format/rocks.glb" id="123_7pxwy"]
+[ext_resource type="PackedScene" uid="uid://ddai55u4f4hy4" path="res://Assets/TileMap/Models/GLTF format/saw.glb" id="124_hlmpl"]
+[ext_resource type="PackedScene" uid="uid://bqbfvnlayu3v1" path="res://Assets/TileMap/Models/GLTF format/sign.glb" id="125_nea6n"]
+[ext_resource type="PackedScene" uid="uid://dd08am1txtan1" path="res://Assets/TileMap/Models/GLTF format/spikeBlock.glb" id="126_kbnyy"]
+[ext_resource type="PackedScene" uid="uid://bt6l13hcpudl" path="res://Assets/TileMap/Models/GLTF format/spikeBlockWide.glb" id="127_w0fgs"]
+[ext_resource type="PackedScene" uid="uid://c4p52y6pyfdxk" path="res://Assets/TileMap/Models/GLTF format/spikes.glb" id="128_qy1p3"]
+[ext_resource type="PackedScene" uid="uid://daj3qn0pl3sua" path="res://Assets/TileMap/Models/GLTF format/spikesHidden.glb" id="129_1i73t"]
+[ext_resource type="PackedScene" uid="uid://bswwnu5g1mtkx" path="res://Assets/TileMap/Models/GLTF format/spikesLarge.glb" id="130_6qduw"]
+[ext_resource type="PackedScene" uid="uid://byce5cm2s3s5v" path="res://Assets/TileMap/Models/GLTF format/stones.glb" id="131_voc3l"]
+[ext_resource type="PackedScene" uid="uid://mlhlbfxau6b" path="res://Assets/TileMap/Models/GLTF format/tree.glb" id="132_e080b"]
+[ext_resource type="PackedScene" uid="uid://cbr86tqqvxmdw" path="res://Assets/TileMap/Models/GLTF format/treePine.glb" id="133_7bxpx"]
+[ext_resource type="PackedScene" uid="uid://ophln71mjw0t" path="res://Assets/TileMap/Models/GLTF format/treePineSmall.glb" id="134_iusfa"]
+[ext_resource type="PackedScene" uid="uid://bwx0gypeom4hv" path="res://Assets/TileMap/Models/GLTF format/treePineSmallSnow.glb" id="135_fv8v7"]
+[ext_resource type="PackedScene" uid="uid://cueg8r7qjiusw" path="res://Assets/TileMap/Models/GLTF format/treePineSnow.glb" id="136_lpm03"]
+[ext_resource type="PackedScene" uid="uid://bi7nnc0adkx7b" path="res://Assets/TileMap/Models/GLTF format/treeSnow.glb" id="137_p7l8v"]
+
+[node name="AllMesh" type="Node3D"]
+
+[node name="Templates" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 57.2757, 0, 57.2757)
+visible = false
+
+[node name="Fences" type="Node3D" parent="Templates"]
+
+[node name="fence2" parent="Templates/Fences" instance=ExtResource("98_j5u4o")]
+visible = false
+
+[node name="fenceBroken2" parent="Templates/Fences" instance=ExtResource("99_gnicd")]
+visible = false
+
+[node name="fenceCorner2" parent="Templates/Fences" instance=ExtResource("100_ql6x1")]
+visible = false
+
+[node name="fenceCornerCurved2" parent="Templates/Fences" instance=ExtResource("101_jx8ct")]
+visible = false
+
+[node name="fenceLow2" parent="Templates/Fences" instance=ExtResource("102_ns3ja")]
+visible = false
+
+[node name="fenceLowBroken2" parent="Templates/Fences" instance=ExtResource("103_uh886")]
+visible = false
+
+[node name="fenceLowCorner2" parent="Templates/Fences" instance=ExtResource("104_ves2l")]
+visible = false
+
+[node name="fenceLowCornerCurved2" parent="Templates/Fences" instance=ExtResource("105_a54or")]
+visible = false
+
+[node name="Base" type="Node3D" parent="Templates"]
+
+[node name="HelicopterBase" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("11_i13bl")
+
+[node name="Quarter" type="MeshInstance3D" parent="Templates/Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+visible = false
+mesh = ExtResource("14_3meox")
+
+[node name="RadioStation" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("15_r1n73")
+
+[node name="Refectory" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("16_lhll3")
+
+[node name="SniperTower" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("18_dple4")
+
+[node name="Storage" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("19_xl41f")
+
+[node name="Container01" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("5_fhdl2")
+
+[node name="Container02" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("6_so81u")
+
+[node name="Container03" type="MeshInstance3D" parent="Templates/Base"]
+visible = false
+mesh = ExtResource("7_ob5b7")
+
+[node name="spikesHidden2" parent="Templates" instance=ExtResource("129_1i73t")]
+
+[node name="Cosmetic" type="Node3D" parent="Templates"]
+
+[node name="Barrel" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("1_oplt3")
+
+[node name="BarrierParking" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("2_ebqxn")
+
+[node name="Bathroom" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("3_lf2ug")
+
+[node name="ConcreteBlock" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("4_xljor")
+
+[node name="ExplosiveBarrel" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("8_11wba")
+
+[node name="GasTank" type="MeshInstance3D" parent="Templates/Cosmetic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+visible = false
+mesh = ExtResource("9_aj4jj")
+
+[node name="GateKeeperStation" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("10_mlhmp")
+
+[node name="LightPole" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("12_kv56n")
+
+[node name="MedicTent" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("13_aonqe")
+
+[node name="SandsSack" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("17_ypn1s")
+
+[node name="TargetPratice" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("20_mhwxn")
+
+[node name="WoodenBox" type="MeshInstance3D" parent="Templates/Cosmetic"]
+visible = false
+mesh = ExtResource("23_utb4j")
+
+[node name="spikesHidden2" parent="Templates/Cosmetic" instance=ExtResource("129_1i73t")]
+visible = false
+
+[node name="mushrooms2" parent="Templates/Cosmetic" instance=ExtResource("119_m84ax")]
+visible = false
+
+[node name="plant2" parent="Templates/Cosmetic" instance=ExtResource("120_iatvm")]
+visible = false
+
+[node name="rocks2" parent="Templates/Cosmetic" instance=ExtResource("123_7pxwy")]
+visible = false
+
+[node name="stones2" parent="Templates/Cosmetic" instance=ExtResource("131_voc3l")]
+visible = false
+
+[node name="tree2" parent="Templates/Cosmetic" instance=ExtResource("132_e080b")]
+visible = false
+
+[node name="treePine2" parent="Templates/Cosmetic" instance=ExtResource("133_7bxpx")]
+visible = false
+
+[node name="treePineSmall2" parent="Templates/Cosmetic" instance=ExtResource("134_iusfa")]
+visible = false
+
+[node name="ToonShooter" type="Node3D" parent="Templates"]
+
+[node name="Structure1" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("38_v3d0s")
+
+[node name="Structure2" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("39_nx7ys")
+
+[node name="Structure3" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("40_2g6jf")
+
+[node name="Structure4" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("41_grt7v")
+
+[node name="GasTank" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("42_a6qsa")
+
+[node name="Pipes" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("43_b88xo")
+
+[node name="WaterTankFloor" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("44_vq83y")
+
+[node name="WaterTankPlatform" type="MeshInstance3D" parent="Templates/ToonShooter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
+mesh = ExtResource("45_bnkdm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 57.2757, 0, 57.2757)
+light_energy = 1.98
+
+[node name="Barrel" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("1_oplt3")
+
+[node name="BarrierParking" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("2_ebqxn")
+
+[node name="Bathroom" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("3_lf2ug")
+
+[node name="ConcreteBlock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("4_xljor")
+
+[node name="Container01" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("5_fhdl2")
+
+[node name="Container02" type="MeshInstance3D" parent="."]
+mesh = ExtResource("6_so81u")
+
+[node name="Container03" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("7_ob5b7")
+
+[node name="ExplosiveBarrel" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("8_11wba")
+
+[node name="GasTank" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("9_aj4jj")
+
+[node name="GateKeeperStation" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("10_mlhmp")
+
+[node name="HelicopterBase" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("11_i13bl")
+
+[node name="LightPole" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("12_kv56n")
+
+[node name="MedicTent" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("13_aonqe")
+
+[node name="Quarter" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("14_3meox")
+
+[node name="RadioStation" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("15_r1n73")
+
+[node name="Refectory" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("16_lhll3")
+
+[node name="SandsSack" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("17_ypn1s")
+
+[node name="SniperTower" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("18_dple4")
+
+[node name="Storage" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("19_xl41f")
+
+[node name="TargetPratice" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("20_mhwxn")
+
+[node name="Wall01" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("21_173iq")
+
+[node name="Wall02" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("22_d0mnu")
+
+[node name="WoodenBox" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("23_utb4j")
+
+[node name="arrow" parent="." instance=ExtResource("24_ncck2")]
+visible = false
+
+[node name="arrows2" parent="." instance=ExtResource("25_cg6i3")]
+visible = false
+
+[node name="barrel2" parent="." instance=ExtResource("26_h0rpm")]
+visible = false
+
+[node name="blockCliff2" parent="." instance=ExtResource("27_eukri")]
+visible = false
+
+[node name="blockCliffCorner2" parent="." instance=ExtResource("28_6gig6")]
+visible = false
+
+[node name="blockCornerLarge2" parent="." instance=ExtResource("29_qeqel")]
+visible = false
+
+[node name="blockCornerSmall2" parent="." instance=ExtResource("30_ycfn4")]
+visible = false
+
+[node name="blockCurve2" parent="." instance=ExtResource("31_exwcd")]
+visible = false
+
+[node name="blockCurveHalf2" parent="." instance=ExtResource("32_n241n")]
+visible = false
+
+[node name="block2" parent="." instance=ExtResource("33_cvpl3")]
+visible = false
+
+[node name="blockCurveLow2" parent="." instance=ExtResource("34_alsq5")]
+visible = false
+
+[node name="blockDirt2" parent="." instance=ExtResource("35_exixl")]
+visible = false
+
+[node name="blockDirtHalf" parent="." instance=ExtResource("36_qbcdg")]
+visible = false
+
+[node name="blockDirtRamp2" parent="." instance=ExtResource("37_gqtsd")]
+visible = false
+
+[node name="blockDirtRampHalf2" parent="." instance=ExtResource("38_7i1b6")]
+visible = false
+
+[node name="blockEnd2" parent="." instance=ExtResource("39_0cvcj")]
+visible = false
+
+[node name="blockHalf" parent="." instance=ExtResource("40_pn0iw")]
+visible = false
+
+[node name="blockHexagon2" parent="." instance=ExtResource("41_1sdtr")]
+visible = false
+
+[node name="blockHexagonLow2" parent="." instance=ExtResource("42_sgogx")]
+visible = false
+
+[node name="blockLarge2" parent="." instance=ExtResource("43_l1ed5")]
+visible = false
+
+[node name="blockLevel2" parent="." instance=ExtResource("44_1lbba")]
+visible = false
+
+[node name="blockLong2" parent="." instance=ExtResource("45_isnqp")]
+visible = false
+
+[node name="blockMoving2" parent="." instance=ExtResource("46_hifqy")]
+visible = false
+
+[node name="blockMovingBlue2" parent="." instance=ExtResource("47_m4kxw")]
+visible = false
+
+[node name="blockMovingLarge2" parent="." instance=ExtResource("48_hqefd")]
+visible = false
+
+[node name="blockQuarter2" parent="." instance=ExtResource("49_iq8mo")]
+visible = false
+
+[node name="blockRounded2" parent="." instance=ExtResource("50_v2ddl")]
+visible = false
+
+[node name="blockRoundedLarge2" parent="." instance=ExtResource("51_yvn0v")]
+visible = false
+
+[node name="blockRoundedLong2" parent="." instance=ExtResource("52_1cjk5")]
+visible = false
+
+[node name="blockRoundedLow2" parent="." instance=ExtResource("53_ewt0w")]
+visible = false
+
+[node name="blockRoundedLowLong2" parent="." instance=ExtResource("54_ego4y")]
+visible = false
+
+[node name="blockSlope2" parent="." instance=ExtResource("55_w8nbu")]
+visible = false
+
+[node name="blockSlopeHalf2" parent="." instance=ExtResource("56_1i442")]
+visible = false
+
+[node name="blockSnow2" parent="." instance=ExtResource("57_x0n0i")]
+visible = false
+
+[node name="blockSnowCliff2" parent="." instance=ExtResource("58_5beuo")]
+visible = false
+
+[node name="blockSnowCliffCorner2" parent="." instance=ExtResource("59_rk6wh")]
+visible = false
+
+[node name="blockSnowCornerLarge2" parent="." instance=ExtResource("60_0hmbl")]
+visible = false
+
+[node name="blockSnowCornerSmall2" parent="." instance=ExtResource("61_ujkbn")]
+visible = false
+
+[node name="blockSnowCurve2" parent="." instance=ExtResource("62_dvo6m")]
+visible = false
+
+[node name="blockSnowCurveHalf2" parent="." instance=ExtResource("63_lftia")]
+visible = false
+
+[node name="blockSnowCurveLow2" parent="." instance=ExtResource("64_fgikj")]
+visible = false
+
+[node name="blockSnowEnd2" parent="." instance=ExtResource("65_fru4g")]
+visible = false
+
+[node name="blockSnowHalf2" parent="." instance=ExtResource("66_eo2xb")]
+visible = false
+
+[node name="blockSnowHexagon2" parent="." instance=ExtResource("67_7dpa1")]
+visible = false
+
+[node name="blockSnowHexagonLow2" parent="." instance=ExtResource("68_dgu3c")]
+visible = false
+
+[node name="blockSnowLarge2" parent="." instance=ExtResource("69_mi5v6")]
+visible = false
+
+[node name="blockSnowLevel2" parent="." instance=ExtResource("70_fmo15")]
+visible = false
+
+[node name="blockSnowLong2" parent="." instance=ExtResource("71_trtoa")]
+visible = false
+
+[node name="blockSnowQuarter2" parent="." instance=ExtResource("72_tft0v")]
+visible = false
+
+[node name="blockSnowRounded2" parent="." instance=ExtResource("73_y6b0s")]
+visible = false
+
+[node name="blockSnowRoundedLarge2" parent="." instance=ExtResource("74_p8j4m")]
+visible = false
+
+[node name="blockSnowRoundedLong2" parent="." instance=ExtResource("75_5f6tf")]
+visible = false
+
+[node name="blockSnowRoundedLow2" parent="." instance=ExtResource("76_qswl1")]
+visible = false
+
+[node name="blockSnowRoundedLowLong2" parent="." instance=ExtResource("77_pvl28")]
+visible = false
+
+[node name="blockSnowSlope2" parent="." instance=ExtResource("78_vfkfn")]
+visible = false
+
+[node name="blockSnowSlopeHalf2" parent="." instance=ExtResource("79_o8e1d")]
+visible = false
+
+[node name="bomb2" parent="." instance=ExtResource("80_jx03o")]
+visible = false
+
+[node name="bridge2" parent="." instance=ExtResource("81_l7vfl")]
+visible = false
+
+[node name="bridgeHalf2" parent="." instance=ExtResource("82_vrflt")]
+visible = false
+
+[node name="bridgeRamp2" parent="." instance=ExtResource("83_m3pmi")]
+visible = false
+
+[node name="buttonRound2" parent="." instance=ExtResource("84_i8unp")]
+visible = false
+
+[node name="buttonSquare2" parent="." instance=ExtResource("85_egkx6")]
+visible = false
+
+[node name="chest2" parent="." instance=ExtResource("86_y6gda")]
+visible = false
+
+[node name="coinBronze2" parent="." instance=ExtResource("87_yyuel")]
+visible = false
+
+[node name="coinGold2" parent="." instance=ExtResource("88_hps2b")]
+visible = false
+
+[node name="coinSilver2" parent="." instance=ExtResource("89_2gdc7")]
+visible = false
+
+[node name="crate2" parent="." instance=ExtResource("90_y12xd")]
+visible = false
+
+[node name="crateItem2" parent="." instance=ExtResource("91_vv0tx")]
+visible = false
+
+[node name="crateItemStrong2" parent="." instance=ExtResource("92_dpaf2")]
+visible = false
+
+[node name="crateStrong2" parent="." instance=ExtResource("93_wliry")]
+visible = false
+
+[node name="doorClosed2" parent="." instance=ExtResource("94_p17m5")]
+visible = false
+
+[node name="doorLargeClosed2" parent="." instance=ExtResource("95_m23gu")]
+visible = false
+
+[node name="doorLargeOpen2" parent="." instance=ExtResource("96_nyykg")]
+visible = false
+
+[node name="doorOpen2" parent="." instance=ExtResource("97_r1pde")]
+visible = false
+
+[node name="fence2" parent="." instance=ExtResource("98_j5u4o")]
+visible = false
+
+[node name="fenceBroken2" parent="." instance=ExtResource("99_gnicd")]
+visible = false
+
+[node name="fenceCorner2" parent="." instance=ExtResource("100_ql6x1")]
+visible = false
+
+[node name="fenceCornerCurved2" parent="." instance=ExtResource("101_jx8ct")]
+visible = false
+
+[node name="fenceLow2" parent="." instance=ExtResource("102_ns3ja")]
+visible = false
+
+[node name="fenceLowBroken2" parent="." instance=ExtResource("103_uh886")]
+visible = false
+
+[node name="fenceLowCorner2" parent="." instance=ExtResource("104_ves2l")]
+visible = false
+
+[node name="fenceLowCornerCurved2" parent="." instance=ExtResource("105_a54or")]
+visible = false
+
+[node name="flag2" parent="." instance=ExtResource("106_cp8l1")]
+visible = false
+
+[node name="flowers2" parent="." instance=ExtResource("107_aoelv")]
+visible = false
+
+[node name="flowersLow2" parent="." instance=ExtResource("108_upst4")]
+visible = false
+
+[node name="heart2" parent="." instance=ExtResource("109_7ps7x")]
+visible = false
+
+[node name="hedge2" parent="." instance=ExtResource("110_7w2db")]
+visible = false
+
+[node name="hedgeCorner2" parent="." instance=ExtResource("111_1lmuh")]
+visible = false
+
+[node name="jewel2" parent="." instance=ExtResource("112_pt72r")]
+visible = false
+
+[node name="key2" parent="." instance=ExtResource("113_7qbpy")]
+visible = false
+
+[node name="ladder2" parent="." instance=ExtResource("114_kglp7")]
+visible = false
+
+[node name="ladderBroken2" parent="." instance=ExtResource("115_aslku")]
+visible = false
+
+[node name="ladderLong2" parent="." instance=ExtResource("116_h3th0")]
+visible = false
+
+[node name="lever2" parent="." instance=ExtResource("117_5uh3f")]
+visible = false
+
+[node name="lock2" parent="." instance=ExtResource("118_g1t7p")]
+visible = false
+
+[node name="mushrooms2" parent="." instance=ExtResource("119_m84ax")]
+visible = false
+
+[node name="plant2" parent="." instance=ExtResource("120_iatvm")]
+visible = false
+
+[node name="platform2" parent="." instance=ExtResource("121_jikvw")]
+visible = false
+
+[node name="poles2" parent="." instance=ExtResource("122_1v6i1")]
+visible = false
+
+[node name="rocks2" parent="." instance=ExtResource("123_7pxwy")]
+visible = false
+
+[node name="saw2" parent="." instance=ExtResource("124_hlmpl")]
+visible = false
+
+[node name="sign2" parent="." instance=ExtResource("125_nea6n")]
+visible = false
+
+[node name="spikeBlock2" parent="." instance=ExtResource("126_kbnyy")]
+visible = false
+
+[node name="spikeBlockWide2" parent="." instance=ExtResource("127_w0fgs")]
+visible = false
+
+[node name="spikes2" parent="." instance=ExtResource("128_qy1p3")]
+visible = false
+
+[node name="spikesHidden2" parent="." instance=ExtResource("129_1i73t")]
+visible = false
+
+[node name="spikesLarge2" parent="." instance=ExtResource("130_6qduw")]
+visible = false
+
+[node name="stones2" parent="." instance=ExtResource("131_voc3l")]
+visible = false
+
+[node name="tree2" parent="." instance=ExtResource("132_e080b")]
+visible = false
+
+[node name="treePine2" parent="." instance=ExtResource("133_7bxpx")]
+visible = false
+
+[node name="treePineSmall2" parent="." instance=ExtResource("134_iusfa")]
+visible = false
+
+[node name="treePineSmallSnow2" parent="." instance=ExtResource("135_fv8v7")]
+visible = false
+
+[node name="treePineSnow2" parent="." instance=ExtResource("136_lpm03")]
+visible = false
+
+[node name="treeSnow2" parent="." instance=ExtResource("137_p7l8v")]
+visible = false

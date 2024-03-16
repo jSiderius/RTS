@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3af8y38xtd8x"
+path="res://.godot/imported/StreetLight.obj-99801eddbb8c91d164cc6cce5fd43267.mesh"
+
+[deps]
+
+files=["res://.godot/imported/StreetLight.obj-99801eddbb8c91d164cc6cce5fd43267.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/StreetLight.obj"
+dest_files=["res://.godot/imported/StreetLight.obj-99801eddbb8c91d164cc6cce5fd43267.mesh", "res://.godot/imported/StreetLight.obj-99801eddbb8c91d164cc6cce5fd43267.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

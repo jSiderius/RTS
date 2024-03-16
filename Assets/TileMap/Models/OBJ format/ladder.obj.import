@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://buqvjar8m0jtw"
+path="res://.godot/imported/ladder.obj-a395b2656b1b263f000fb7efc41768dc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ladder.obj-a395b2656b1b263f000fb7efc41768dc.mesh"]
+
+source_file="res://Assets/TileMap/Models/OBJ format/ladder.obj"
+dest_files=["res://.godot/imported/ladder.obj-a395b2656b1b263f000fb7efc41768dc.mesh", "res://.godot/imported/ladder.obj-a395b2656b1b263f000fb7efc41768dc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

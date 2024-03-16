@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doejhguot68yg"
+path="res://.godot/imported/Barrier_Fixed.obj-b7f5c7d9a35cb5181eb0a9b13de96482.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Barrier_Fixed.obj-b7f5c7d9a35cb5181eb0a9b13de96482.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Fixed.obj"
+dest_files=["res://.godot/imported/Barrier_Fixed.obj-b7f5c7d9a35cb5181eb0a9b13de96482.mesh", "res://.godot/imported/Barrier_Fixed.obj-b7f5c7d9a35cb5181eb0a9b13de96482.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bka1awup7t5n5"
+path="res://.godot/imported/Sofa.obj-267f6ba1025a48453ee03cb2f2f152bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sofa.obj-267f6ba1025a48453ee03cb2f2f152bd.mesh"]
+
+source_file="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sofa.obj"
+dest_files=["res://.godot/imported/Sofa.obj-267f6ba1025a48453ee03cb2f2f152bd.mesh", "res://.godot/imported/Sofa.obj-267f6ba1025a48453ee03cb2f2f152bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxd36fb3akdro"]
+
+[ext_resource type="Script" path="res://Scenes/Camera/CameraBase.gd" id="1_u0srq"]
+[ext_resource type="Script" path="res://Scenes/World/navRegionMain.gd" id="2_tlj8y"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_epy48"]
+geometry_parsed_geometry_type = 2
+agent_max_climb = 10.0
+agent_max_slope = 90.0
+region_merge_size = 150.0
+vertices_per_polygon = 100.0
+
+[sub_resource type="Environment" id="Environment_wol88"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_pv3mq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CameraBase" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.794065, 0.607833, 0, -0.607833, 0.794065, 0, 0, 0)
+script = ExtResource("1_u0srq")
+
+[node name="Camera3D" type="Camera3D" parent="CameraBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 73.014)
+
+[node name="NavRegionMain" type="NavigationRegion3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_epy48")
+script = ExtResource("2_tlj8y")
+
+[node name="Units" type="Node3D" parent="NavRegionMain"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wol88")
+camera_attributes = SubResource("CameraAttributesPractical_pv3mq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.192, 63.4682, -28.2666)

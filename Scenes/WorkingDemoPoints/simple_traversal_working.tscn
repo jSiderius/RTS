@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5jcq70khmcjx"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_ecmki"]
+[ext_resource type="PackedScene" uid="uid://bdsc2h3fq3i5r" path="res://Scenes/UI/BuildingsUI.tscn" id="2_k5it2"]
+[ext_resource type="PackedScene" uid="uid://dhfqmt2eseedf" path="res://Scenes/UI/UnitsUI.tscn" id="3_70k7d"]
+[ext_resource type="PackedScene" uid="uid://cymu7a6dtcti8" path="res://Scenes/UI/intro_ui.tscn" id="4_jfvbt"]
+[ext_resource type="PackedScene" uid="uid://djd6dbahvgwvh" path="res://Scenes/World/main.tscn" id="5_ivapa"]
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_ecmki")
+
+[node name="BuildingsUI" parent="." instance=ExtResource("2_k5it2")]
+
+[node name="UnitsUI" parent="." instance=ExtResource("3_70k7d")]
+
+[node name="IntroUI" parent="." instance=ExtResource("4_jfvbt")]
+
+[node name="Node3D" parent="." instance=ExtResource("5_ivapa")]

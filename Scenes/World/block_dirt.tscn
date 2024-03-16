@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgy87eepuqkhj"]
+
+[ext_resource type="PackedScene" uid="uid://unywlxfymlgc" path="res://Assets/TileMap/Models/GLTF format/blockDirt.glb" id="1_kewce"]
+
+[node name="blockDirt3" instance=ExtResource("1_kewce")]
