@@ -64,6 +64,13 @@ script = ExtResource("6_aa04f")
 [node name="Camera3D" type="Camera3D" parent="CameraBase"]
 transform = Transform3D(0.62853, 0.336189, -0.701375, -0.353847, 0.926633, 0.127065, 0.692635, 0.168315, 0.701375, -269, -31.5462, 337.7)
 
+[node name="SelectionBox" type="Control" parent="CameraBase"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_31uxq")
+
 [node name="Collectables" type="Node3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
@@ -204,10 +211,3 @@ transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 
 
 [node name="SimpleTerrain" parent="NavRegionMain" instance=ExtResource("9_u80md")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-
-[node name="SelectionBox" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("7_31uxq")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dvwucnq5rev5v"]
 
-[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/selection_script.gd" id="1_a0bgd"]
+[ext_resource type="Script" path="res://Scenes/Collectables/selection_script.gd" id="1_ybe77"]
 [ext_resource type="ArrayMesh" uid="uid://cwpbbef6gf3so" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Crate.obj" id="2_ug85r"]
 [ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="3_o7n8e"]
 [ext_resource type="ArrayMesh" uid="uid://dxkvrn5s7ig23" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Grenade.obj" id="4_0l7od"]
@@ -19,7 +19,7 @@ albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 collision_layer = 4
 collision_mask = 7
-script = ExtResource("1_a0bgd")
+script = ExtResource("1_ybe77")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)

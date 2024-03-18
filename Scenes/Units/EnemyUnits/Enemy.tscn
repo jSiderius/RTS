@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cg5ef6fa6ljea"]
 
-[ext_resource type="Script" path="res://Scenes/Units/EnemyUnits/Enemy.gd" id="1_v1lib"]
+[ext_resource type="Script" path="res://Scenes/Units/EnemyUnits/enemy.gd" id="1_v1lib"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_ekjyv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y1vad"]

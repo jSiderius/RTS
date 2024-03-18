@@ -1,5 +1,7 @@
 extends StaticBody3D
 
+# Simple script for health and selectability
+
 @onready var selection_ring = $SelectionRing
 @onready var health_bar = %HealthBar
 var health = 100.0
@@ -19,5 +21,4 @@ func damage(d):
 		queue_free()
 		get_tree().quit()
 
-func kill(): 
-	queue_free()
+

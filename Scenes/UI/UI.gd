@@ -7,6 +7,7 @@ class_name UI
 @onready var power_capspace = %PowerCapSpace
 @onready var power_used = %PowerUsed
 
+# Declaration of time variable and setter that also updates the in-scene label
 @onready var time = Time.get_ticks_msec():
 	set(new_time):
 		time = new_time
@@ -30,8 +31,8 @@ func _process(delta):
 	_update_money_label()
 	_update_power_bars()
 	
+# Updates the label values so they can be set from global_data.gd
 func _update_price_energy_labels(): 
-	#var hq_price = %bruvHQPrice
 	%HeadQuartersPrice.text = str(GlobalData.headquarters_cost)
 	%HeadQuartersEnergy.text = str(GlobalData.headquarters_power)
 	%RefineryPrice.text = str(GlobalData.refinery_cost)
@@ -49,26 +50,33 @@ func _update_price_energy_labels():
 	%NuclearPlantPrice.text = str(GlobalData.nuclear_plant_cost)
 	%NuclearPlantEnergy.text = str(GlobalData.nuclear_plant_power)
 	
+# Update function for the time label
 func _update_time_label(): 
 	if (int(time) % 60 < 10.0): 
 		time_label.text = str( ( time - (int(time) % 60) ) / 60.0) + ":0" + str(int(time) % 60)
 	else: 
 		time_label.text = str( ( time - (int(time) % 60) ) / 60.0) + ":" + str(int(time) % 60)
-		
+
+# Update function for the money label
 func _update_money_label(): 
 	money_label.text = "$" + str(floor(GlobalData.money))
-	
+
+# Update function for the power bars on the left hand side
+# I intend to update this into blocks so it is more clear how much power is beingused 
 func _update_power_bars(): 
-	power_empty.size_flags_stretch_ratio = ( GlobalData.getPowerTotal() -  GlobalData.getPowerOwned() ) / GlobalData.getPowerTotal()
-	power_capspace.size_flags_stretch_ratio = ( GlobalData.getPowerOwned() - GlobalData.getPowerUsed() ) / GlobalData.getPowerTotal()
-	power_used.size_flags_stretch_ratio = GlobalData.getPowerUsed() / GlobalData.getPowerTotal()
+	power_empty.size_flags_stretch_ratio = ( GlobalData.power_total -  GlobalData.power_owned ) / GlobalData.power_total
+	power_capspace.size_flags_stretch_ratio = ( GlobalData.power_owned - GlobalData.power_used ) / GlobalData.power_total
+	power_used.size_flags_stretch_ratio = GlobalData.power_used / GlobalData.power_total
 	
-func _on_button_pressed(): # buildings button
-		GlobalData.setBuildingsUI(true)
+# When the buildings button is pressed change the global data to indicate which page is being displayed
+func _on_button_pressed(): 
+		GlobalData.buildings_ui = true
 
-func _on_button_2_pressed(): # soldier button
-	GlobalData.setBuildingsUI(false)
+# When the soldier button is pressed change the global data to indicate which page is being displayed
+func _on_button_2_pressed(): 
+	GlobalData.buildings_ui = false
 
+# Emit signal to be picked up by the game
 func _headquarters_button_pressed():
 	emit_signal("headquarters_pressed")
 func _quarters_button_pressed():
@@ -83,6 +91,8 @@ func _nuclear_plant_button_pressed():
 	emit_signal("nuclear_plant_pressed")
 func _power_plant_button_pressed(): 
 	emit_signal("power_plant_pressed")
+	
+#TODO: implement unit buying, signals, ...
 
 
 

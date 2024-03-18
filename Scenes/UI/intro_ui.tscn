@@ -1,8 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cymu7a6dtcti8"]
 
 [ext_resource type="Script" path="res://Scenes/UI/intro_ui.gd" id="1_4wgep"]
-[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UITheme.tres" id="1_ryfn5"]
-[ext_resource type="Script" path="res://Scenes/UI/IntroMessageContainer.gd" id="2_psew6"]
+[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="1_ryfn5"]
+
+[sub_resource type="GDScript" id="GDScript_rjjer"]
+script/source = "extends PanelContainer  
+
+# Very simple script to delete the button oncecliced
+func _on_ok_pressed():
+	queue_free()
+"
 
 [node name="IntroUi" type="CanvasLayer"]
 script = ExtResource("1_4wgep")
@@ -31,7 +38,7 @@ grow_vertical = 2
 scale = Vector2(1.00973, 1.00986)
 theme = ExtResource("1_ryfn5")
 theme_type_variation = &"BigPanelContainer"
-script = ExtResource("2_psew6")
+script = SubResource("GDScript_rjjer")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/IntroMessageContainer"]
 layout_mode = 2

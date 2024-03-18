@@ -1,3 +1,5 @@
+# IGNORE THIS, EARLY DRAFT OF TERRAIN AND DEFINITELY A MESS
+
 extends Node3D
 
 var grid_block = preload("res://Scenes/World/grid_block.tscn")

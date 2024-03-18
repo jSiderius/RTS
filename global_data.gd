@@ -64,22 +64,5 @@ func getBuildingsUI():
 func setBuildingsUI(bui): 
 	buildings_ui = bui
 	
-func getPowerTotal(): 
-	return power_total
-	
-func setPowerTotal(p): 
-	power_total = p
-	
-func getPowerOwned():
-	return power_owned
-	
-func setPowerOwned(p): 
-	power_owned = p 
-	
-func getPowerUsed(): 
-	return power_used
-	
-func setPowerUsed(p): 
-	power_used = p
 	
 

@@ -1,23 +1,23 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhfqmt2eseedf"]
+[gd_scene load_steps=16 format=3 uid="uid://bdsc2h3fq3i5r"]
 
-[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="1_3lba2"]
-[ext_resource type="Script" path="res://Scenes/UI/UI.gd" id="1_pumdx"]
-[ext_resource type="Texture2D" uid="uid://bj0t7s4gtnywf" path="res://Assets/UI/building_placeholder.png" id="2_aqxc6"]
-[ext_resource type="Texture2D" uid="uid://p4cmxjni572a" path="res://Assets/UI/soldier_placeholder.png" id="3_qvaee"]
-[ext_resource type="Texture2D" uid="uid://bf3f4tfutjica" path="res://Assets/UI/headquarters_icon.png" id="5_dl4h8"]
-[ext_resource type="Texture2D" uid="uid://ca7wfhbupnabn" path="res://Assets/UI/money-icon.png" id="6_2ge31"]
-[ext_resource type="Texture2D" uid="uid://cf5ln0n2s38l8" path="res://Assets/UI/power-icon.png" id="7_w40k0"]
-[ext_resource type="Texture2D" uid="uid://cahra0srumii" path="res://Assets/UI/refinery_icon.png" id="8_0ygal"]
-[ext_resource type="Texture2D" uid="uid://j24iy7h0hhu3" path="res://Assets/UI/barracks_icon.png" id="9_qtrsn"]
-[ext_resource type="Texture2D" uid="uid://bj3woosox6oxq" path="res://Assets/UI/power_plant_icon.png" id="10_8p02e"]
-[ext_resource type="Texture2D" uid="uid://b7e427pyem705" path="res://Assets/UI/turret_icon.png" id="11_qs6jy"]
-[ext_resource type="Texture2D" uid="uid://bnc0syvyprdm1" path="res://Assets/UI/factory_icon.png" id="12_jd7r7"]
-[ext_resource type="Texture2D" uid="uid://dwrhsmjgjoqdf" path="res://Assets/UI/airport_icon.png" id="13_duo11"]
-[ext_resource type="Texture2D" uid="uid://vanr1g13kfxy" path="res://Assets/UI/nuclear_plant_icon.png" id="14_gomvn"]
-[ext_resource type="Texture2D" uid="uid://bcqvg7sarjhnr" path="res://Assets/Buildings/Preview/headquarters.png" id="15_nlayf"]
+[ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_3at1p"]
+[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="2_jov4v"]
+[ext_resource type="Texture2D" uid="uid://p4cmxjni572a" path="res://Assets/UI/soldier_placeholder.png" id="3_2ty8j"]
+[ext_resource type="Texture2D" uid="uid://bj0t7s4gtnywf" path="res://Assets/UI/building_placeholder.png" id="3_nrc0u"]
+[ext_resource type="Texture2D" uid="uid://bcqvg7sarjhnr" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/Preview/headquarters.png" id="5_74123"]
+[ext_resource type="Texture2D" uid="uid://bf3f4tfutjica" path="res://Assets/UI/headquarters_icon.png" id="5_s72fe"]
+[ext_resource type="Texture2D" uid="uid://ca7wfhbupnabn" path="res://Assets/UI/money-icon.png" id="6_i0d7h"]
+[ext_resource type="Texture2D" uid="uid://cf5ln0n2s38l8" path="res://Assets/UI/power-icon.png" id="7_hyud4"]
+[ext_resource type="Texture2D" uid="uid://cahra0srumii" path="res://Assets/UI/refinery_icon.png" id="8_2nldn"]
+[ext_resource type="Texture2D" uid="uid://j24iy7h0hhu3" path="res://Assets/UI/barracks_icon.png" id="9_d6bl4"]
+[ext_resource type="Texture2D" uid="uid://bj3woosox6oxq" path="res://Assets/UI/power_plant_icon.png" id="10_wwruc"]
+[ext_resource type="Texture2D" uid="uid://b7e427pyem705" path="res://Assets/UI/turret_icon.png" id="11_wa7mr"]
+[ext_resource type="Texture2D" uid="uid://bnc0syvyprdm1" path="res://Assets/UI/factory_icon.png" id="12_kkjvg"]
+[ext_resource type="Texture2D" uid="uid://dwrhsmjgjoqdf" path="res://Assets/UI/airport_icon.png" id="13_nu58w"]
+[ext_resource type="Texture2D" uid="uid://vanr1g13kfxy" path="res://Assets/UI/nuclear_plant_icon.png" id="14_mufvl"]
 
-[node name="UnitsUi" type="CanvasLayer"]
-script = ExtResource("1_pumdx")
+[node name="BuildingsUI" type="CanvasLayer"]
+script = ExtResource("1_3at1p")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -41,7 +41,7 @@ offset_top = 18.0
 offset_right = -18.0
 offset_bottom = 954.0
 grow_horizontal = 0
-theme = ExtResource("1_3lba2")
+theme = ExtResource("2_jov4v")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
 layout_mode = 2
@@ -124,11 +124,11 @@ size_flags_stretch_ratio = 3.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button"]
 layout_mode = 0
-offset_left = 38.0
+offset_left = 37.0
 offset_top = 9.0
-offset_right = 56.0
+offset_right = 54.0
 offset_bottom = 22.0
-texture = ExtResource("2_aqxc6")
+texture = ExtResource("3_nrc0u")
 expand_mode = 1
 
 [node name="Button2" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -143,7 +143,7 @@ offset_left = 43.0
 offset_top = 8.0
 offset_right = 61.0
 offset_bottom = 24.0
-texture = ExtResource("3_qvaee")
+texture = ExtResource("3_2ty8j")
 expand_mode = 1
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
@@ -222,7 +222,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("5_dl4h8")
+texture = ExtResource("5_s72fe")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -240,7 +240,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -248,7 +248,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -322,7 +322,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("8_0ygal")
+texture = ExtResource("8_2nldn")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -340,7 +340,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -348,7 +348,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -427,7 +427,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("9_qtrsn")
+texture = ExtResource("9_d6bl4")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -445,7 +445,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -453,7 +453,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -528,7 +528,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("10_8p02e")
+texture = ExtResource("10_wwruc")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -546,7 +546,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -554,7 +554,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -633,7 +633,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("11_qs6jy")
+texture = ExtResource("11_wa7mr")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -651,7 +651,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -659,7 +659,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -734,7 +734,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("12_jd7r7")
+texture = ExtResource("12_kkjvg")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -752,7 +752,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -760,7 +760,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -839,7 +839,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("13_duo11")
+texture = ExtResource("13_nu58w")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -857,7 +857,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -865,7 +865,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -940,7 +940,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("14_gomvn")
+texture = ExtResource("14_mufvl")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -958,7 +958,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -966,7 +966,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -1046,7 +1046,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("15_nlayf")
+texture = ExtResource("5_74123")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -1064,7 +1064,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -1072,7 +1072,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -1146,7 +1146,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("15_nlayf")
+texture = ExtResource("5_74123")
 expand_mode = 1
 
 [node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -1164,7 +1164,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_2ge31")
+texture = ExtResource("6_i0d7h")
 expand_mode = 1
 
 [node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
@@ -1172,7 +1172,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_w40k0")
+texture = ExtResource("7_hyud4")
 expand_mode = 1
 
 [node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -1208,3 +1208,12 @@ size_flags_stretch_ratio = 2.4
 
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton" to="." method="_headquarters_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton" to="." method="_refinery_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton" to="." method="_quarters_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton" to="." method="_power_plant_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton" to="." method="_factory_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton" to="." method="_airport_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton" to="." method="_nuclear_plant_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton" to="." method="_headquarters_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton" to="." method="_headquarters_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://duejdjcopirhu"]
 
-[ext_resource type="Script" path="res://Scenes/Units/GeneralInfantry/Unit.gd" id="1_d2g1b"]
+[ext_resource type="Script" path="res://Scenes/Units/GeneralInfantry/unit.gd" id="1_d2g1b"]
 [ext_resource type="ArrayMesh" uid="uid://bgk4cj8f5mg8c" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Scout_Car.obj" id="2_c6tfp"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_pahow"]
 
@@ -12,7 +12,7 @@ size = Vector3(5, 9, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpyhd"]
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
-[node name="ResourceTruck" type="CharacterBody3D" groups=["ResourceTruck", "ResourceUnit", "units"]]
+[node name="ResourceTruck" type="CharacterBody3D" groups=["ResourceTruck", "ResourceUnit", "Unit", "units"]]
 collision_mask = 5
 script = ExtResource("1_d2g1b")
 

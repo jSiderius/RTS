@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bhhniqjwc2sv6"]
 
-[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/selection_script.gd" id="1_nrdpo"]
+[ext_resource type="Script" path="res://Scenes/Collectables/selection_script.gd" id="1_nrdpo"]
 [ext_resource type="ArrayMesh" uid="uid://cojy8xjo54vh7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Health.obj" id="2_w7puf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1pgn"]

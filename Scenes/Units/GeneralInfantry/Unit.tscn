@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://d2v7buf63dtn3"]
 
-[ext_resource type="Script" path="res://Scenes/Units/GeneralInfantry/Unit.gd" id="1_fmv7w"]
-[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_kumyj"]
-[ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="3_acf7n"]
-[ext_resource type="ArrayMesh" uid="uid://bhuwucvre7gwl" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Pistol.obj" id="4_6457e"]
+[ext_resource type="Script" path="res://Scenes/Units/GeneralInfantry/unit.gd" id="1_e7ktp"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_gtbg0"]
+[ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="3_ueb23"]
+[ext_resource type="ArrayMesh" uid="uid://bhuwucvre7gwl" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Pistol.obj" id="4_kyo7r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b0yd8"]
 radius = 2.0
@@ -24,9 +24,9 @@ albedo_color = Color(0.203922, 0, 0.337255, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e68i0"]
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
-[node name="Unit" type="CharacterBody3D" groups=["AttackingUnit", "HealableUnit", "WeaponUpgradeUnit", "units"]]
+[node name="Unit" type="CharacterBody3D" groups=["AttackingUnit", "HealableUnit", "Unit", "WeaponUpgradeUnit", "units"]]
 collision_mask = 5
-script = ExtResource("1_fmv7w")
+script = ExtResource("1_e7ktp")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -52,7 +52,7 @@ visible = false
 mesh = SubResource("CylinderMesh_tligi")
 surface_material_override/0 = SubResource("StandardMaterial3D_e68i0")
 
-[node name="HealthBar" parent="." instance=ExtResource("2_kumyj")]
+[node name="HealthBar" parent="." instance=ExtResource("2_gtbg0")]
 unique_name_in_owner = true
 transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0, 2.55831, 0)
 
@@ -60,11 +60,11 @@ transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.2
 unique_name_in_owner = true
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.562475, 0.665362, -0.0280852)
 visible = false
-mesh = ExtResource("3_acf7n")
+mesh = ExtResource("3_ueb23")
 skeleton = NodePath("../..")
 
 [node name="LightWeapon" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.523938, 0.67428, -0.0280852)
-mesh = ExtResource("4_6457e")
+mesh = ExtResource("4_kyo7r")
 skeleton = NodePath("../..")
