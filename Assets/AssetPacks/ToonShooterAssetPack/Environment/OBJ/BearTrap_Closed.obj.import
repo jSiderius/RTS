@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://capwvjht24kxr"
+path="res://.godot/imported/BearTrap_Closed.obj-7a457db19bc907faab7afb100832bf25.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BearTrap_Closed.obj-7a457db19bc907faab7afb100832bf25.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/BearTrap_Closed.obj"
+dest_files=["res://.godot/imported/BearTrap_Closed.obj-7a457db19bc907faab7afb100832bf25.mesh", "res://.godot/imported/BearTrap_Closed.obj-7a457db19bc907faab7afb100832bf25.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

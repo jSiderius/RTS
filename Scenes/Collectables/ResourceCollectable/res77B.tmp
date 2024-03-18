@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkakinwr3qloa"]
+
+[ext_resource type="PackedScene" uid="uid://bdmk7be6y5tu4" path="res://Assets/AssetPacks/TileMapAssetPack/Models/GLTF format/crateItem.glb" id="1_d8va2"]
+[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/resource_collectable.gd" id="1_lbs4r"]
+[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/ResourceCollectableStaticBody.gd" id="3_qd448"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nyxyv"]
+
+[node name="ResourceCollectable" type="Node3D" groups=["Collectables", "ResourceCollectable"]]
+script = ExtResource("1_lbs4r")
+
+[node name="crateItem2" parent="." instance=ExtResource("1_d8va2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="crateItem2"]
+collision_layer = 4
+script = ExtResource("3_qd448")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crateItem2/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_nyxyv")

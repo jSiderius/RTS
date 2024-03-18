@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhsirsmm2gvfe"
+path="res://.godot/imported/Wall_01.obj-d86d520bfcfc2e92933fa1886606ca0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_01.obj-d86d520bfcfc2e92933fa1886606ca0c.mesh"]
+
+source_file="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Wall_01.obj"
+dest_files=["res://.godot/imported/Wall_01.obj-d86d520bfcfc2e92933fa1886606ca0c.mesh", "res://.godot/imported/Wall_01.obj-d86d520bfcfc2e92933fa1886606ca0c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

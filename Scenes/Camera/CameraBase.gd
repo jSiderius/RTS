@@ -15,11 +15,22 @@ func _process(delta):
 	calc_move(m_pos, delta)
 	if Input.is_action_just_pressed("main_command"):
 		move_selected_units(m_pos)
+		
+		var u = get_unit_under_mouse(m_pos)
+		print(u)
+		clear_targets()
+		if u and (u.is_in_group("EnemyUnit") or u.is_in_group("EnemyBuilding")): 
+			target_enemy_unit(u)
+		if u and u.is_in_group("ResourceCollectable"):
+			target_resource_collectable(u)
+		if u and u.is_in_group("HealthCollectable"):
+			target_health_collectable(u)
+		if u and u.is_in_group("WeaponUpgradeCollectable"):
+			target_weapon_upgrade(u)
 	if Input.is_action_just_pressed("alt_command"):
 		selection_box.start_sel_pos = m_pos
 		start_sel_pos = m_pos
 	if Input.is_action_pressed("alt_command"):
-		#print("call")
 		selection_box.m_pos = m_pos
 		selection_box.visible = true
 	else: 
@@ -53,11 +64,11 @@ func move_all_units(m_pos):
 	if result: 
 		get_tree().call_group("units", "update_target_location", result.position)
 
-func select_units(m_pos): 
-	var new_selected_units = [] 
+func select_units(m_pos):
+	var new_selected_units = []
 	if m_pos.distance_squared_to(start_sel_pos) < 30: 
 		var u = get_unit_under_mouse(m_pos)
-		if u: 
+		if u and u.is_in_group("units"):
 			new_selected_units.append(u)
 	else: 
 		new_selected_units = get_units_in_box(start_sel_pos, m_pos)
@@ -68,13 +79,11 @@ func select_units(m_pos):
 	selected_units = new_selected_units
 	
 func get_unit_under_mouse(m_pos): 
-	var result = raycast_from_mouse(m_pos, 0x1)
-	#print(result, get_groups())
-	if result and result.collider.is_in_group("units"): #Unit logic
-		return result.collider #Not sure if I'm using colliders rn
+	var result = raycast_from_mouse(m_pos, 0x5)
+	if result and (result.collider.is_in_group("units") or result.collider.is_in_group("EnemyUnit")) or result.collider.is_in_group("Collectable") or result.collider.is_in_group("Enemy_Building"):
+		return result.collider 
 
 func get_units_in_box(top_left, bot_right): 
-	print("get_units_in_box()")
 	if top_left.x > bot_right.x: 
 		var temp = top_left.x
 		top_left.x = bot_right.x
@@ -98,6 +107,30 @@ func raycast_from_mouse(m_pos, collision_mask):
 	params.from = ray_start
 	params.to = ray_end
 	params.exclude = []
-	params.collision_mask = collision_mask #COLLISION MASK CAN BE HARD CODED IN FROM ITS BINARY, LOOK INTO THIS IF IT BECOMES RELEVANT
+	params.collision_mask = collision_mask 
 	
 	return space_state.intersect_ray(params)
+
+func target_enemy_unit(enemy): 
+	for unit in selected_units: 
+		if unit.is_in_group("AttackingUnit"):
+			unit.set_target(enemy) 
+
+func target_resource_collectable(resource): 
+	for unit in selected_units: 
+		if unit.is_in_group("ResourceUnit"):
+			unit.set_target(resource) 
+
+func target_health_collectable(health):
+	for unit in selected_units: 
+		if unit.is_in_group("HealableUnit"):
+			unit.set_target(health) 
+
+func target_weapon_upgrade(weapon):
+	for unit in selected_units: 
+		if unit.is_in_group("WeaponUpgradeUnit"):
+			unit.set_target(weapon) 
+		
+func clear_targets(): 
+	for unit in selected_units: 
+		unit.clear_target() 

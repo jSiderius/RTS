@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvwucnq5rev5v"]
+
+[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/selection_script.gd" id="1_a0bgd"]
+[ext_resource type="ArrayMesh" uid="uid://cwpbbef6gf3so" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Crate.obj" id="2_ug85r"]
+[ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="3_o7n8e"]
+[ext_resource type="ArrayMesh" uid="uid://dxkvrn5s7ig23" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Grenade.obj" id="4_0l7od"]
+[ext_resource type="ArrayMesh" uid="uid://djef5xvrwmot1" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Knife_1.obj" id="5_ch20x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_unn5n"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_us2gd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbpi8"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="WeaponUpgradeCollectable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Collectable", "WeaponUpgradeCollectable"]]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_a0bgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_unn5n")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="StaticBody3D"]
+unique_name_in_owner = true
+transform = Transform3D(0.8, 0, 0, 0, 0.05, 0, 0, 0, 0.8, 0, 0.0713365, 0)
+visible = false
+mesh = SubResource("CylinderMesh_us2gd")
+surface_material_override/0 = SubResource("StandardMaterial3D_rbpi8")
+
+[node name="Crate" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.00204203, 0, -0.00718993)
+mesh = ExtResource("2_ug85r")
+
+[node name="Ak" type="MeshInstance3D" parent="StaticBody3D/Crate"]
+transform = Transform3D(0.707107, -0.707107, -3.09086e-08, 0, -4.37114e-08, 1, -0.707107, -0.707107, -3.09086e-08, -0.0387878, 0.779685, -0.227863)
+mesh = ExtResource("3_o7n8e")
+skeleton = NodePath("../..")
+
+[node name="Grenade" type="MeshInstance3D" parent="StaticBody3D/Crate"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0150511, 0.812477, 0.17403)
+mesh = ExtResource("4_0l7od")
+skeleton = NodePath("../..")
+
+[node name="Grenade2" type="MeshInstance3D" parent="StaticBody3D/Crate"]
+transform = Transform3D(-0.192365, 0, -0.461514, 0, 0.5, 0, 0.461514, 0, -0.192365, 0.225442, 0.815071, 0.200689)
+mesh = ExtResource("4_0l7od")
+skeleton = NodePath("../..")
+
+[node name="Knife1" type="MeshInstance3D" parent="StaticBody3D/Crate"]
+transform = Transform3D(0.573323, -0.808028, 0.135612, -0.0784744, 0.1106, 0.990762, -0.815562, -0.578669, -2.52944e-08, 0.216298, 0.784945, -0.0280852)
+mesh = ExtResource("5_ch20x")
+skeleton = NodePath("../..")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6nwic2vxuwqu"
+path="res://.godot/imported/Container_03.obj-19c2c47db8f1b3b69021dba26e49cd3d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Container_03.obj-19c2c47db8f1b3b69021dba26e49cd3d.mesh"]
+
+source_file="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Container_03.obj"
+dest_files=["res://.godot/imported/Container_03.obj-19c2c47db8f1b3b69021dba26e49cd3d.mesh", "res://.godot/imported/Container_03.obj-19c2c47db8f1b3b69021dba26e49cd3d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t5brgxq8sk37"
+path="res://.godot/imported/blockRoundedLong.obj-cdde6207e85373a715252b39d6790d1c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockRoundedLong.obj-cdde6207e85373a715252b39d6790d1c.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/blockRoundedLong.obj"
+dest_files=["res://.godot/imported/blockRoundedLong.obj-cdde6207e85373a715252b39d6790d1c.mesh", "res://.godot/imported/blockRoundedLong.obj-cdde6207e85373a715252b39d6790d1c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

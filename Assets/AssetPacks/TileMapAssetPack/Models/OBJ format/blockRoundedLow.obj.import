@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlegrnia3ioop"
+path="res://.godot/imported/blockRoundedLow.obj-e9bab3e4c57e31e196c2fab1e8fbf37e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockRoundedLow.obj-e9bab3e4c57e31e196c2fab1e8fbf37e.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/blockRoundedLow.obj"
+dest_files=["res://.godot/imported/blockRoundedLow.obj-e9bab3e4c57e31e196c2fab1e8fbf37e.mesh", "res://.godot/imported/blockRoundedLow.obj-e9bab3e4c57e31e196c2fab1e8fbf37e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

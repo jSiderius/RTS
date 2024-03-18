@@ -1,62 +1,177 @@
-[gd_scene load_steps=56 format=3 uid="uid://j4srgh0135ed"]
+[gd_scene load_steps=72 format=3 uid="uid://j4srgh0135ed"]
 
-[ext_resource type="ArrayMesh" uid="uid://doejhguot68yg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Fixed.obj" id="1_bgl4t"]
-[ext_resource type="ArrayMesh" uid="uid://dapxwkc8ev3cn" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Large.obj" id="2_18r4o"]
-[ext_resource type="ArrayMesh" uid="uid://caxlqqjw1t3xm" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Single.obj" id="3_s6wm7"]
-[ext_resource type="ArrayMesh" uid="uid://dg1uupnkox86w" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Barrier_Trash.obj" id="4_v00gs"]
-[ext_resource type="ArrayMesh" uid="uid://capwvjht24kxr" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BearTrap_Closed.obj" id="5_nv067"]
-[ext_resource type="ArrayMesh" uid="uid://cn27b6t805cqe" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BearTrap_Open.obj" id="6_0tnch"]
-[ext_resource type="ArrayMesh" uid="uid://dswlvox2vw70k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BrickWall_1.obj" id="7_gscou"]
-[ext_resource type="ArrayMesh" uid="uid://blob3l7efs0mc" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/BrickWall_2.obj" id="8_y44u1"]
-[ext_resource type="ArrayMesh" uid="uid://cajggbtlv5g7u" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_1.obj" id="9_ttggu"]
-[ext_resource type="ArrayMesh" uid="uid://pxeg8f1p0avh" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_2.obj" id="10_ys3wr"]
-[ext_resource type="ArrayMesh" uid="uid://dasaekm2o8hqi" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_3.obj" id="11_30nl4"]
-[ext_resource type="ArrayMesh" uid="uid://did4pcghyv513" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_4.obj" id="12_wwump"]
-[ext_resource type="ArrayMesh" uid="uid://w63sw5epvqiv" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Container_Long.obj" id="13_qs1ox"]
-[ext_resource type="ArrayMesh" uid="uid://cuue0gq8w2862" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Container_Small.obj" id="14_c4nmy"]
-[ext_resource type="ArrayMesh" uid="uid://cwpbbef6gf3so" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Crate.obj" id="15_1w2vi"]
-[ext_resource type="ArrayMesh" uid="uid://qqwgkpterbc8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_BrokenCar.obj" id="16_7vico"]
-[ext_resource type="ArrayMesh" uid="uid://c86rtg52otjn8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_1.obj" id="17_lis7k"]
-[ext_resource type="ArrayMesh" uid="uid://cva2ahfauksjk" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_2.obj" id="18_w3e4p"]
-[ext_resource type="ArrayMesh" uid="uid://cvebxtiaiedmf" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_3.obj" id="19_y7ajl"]
-[ext_resource type="ArrayMesh" uid="uid://mlrgw82tqkpc" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Pile.obj" id="20_k2nwv"]
-[ext_resource type="ArrayMesh" uid="uid://eeqoyq0dnvlq" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Debris_Tires.obj" id="21_tgmkk"]
-[ext_resource type="ArrayMesh" uid="uid://b2qyksu4yh4k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel.obj" id="22_pkof8"]
-[ext_resource type="ArrayMesh" uid="uid://d2i4wodpmpl3g" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel_Spilled.obj" id="23_dgfyb"]
-[ext_resource type="ArrayMesh" uid="uid://cgm34batfrgsf" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Fence.obj" id="24_ja0b4"]
-[ext_resource type="ArrayMesh" uid="uid://7fn6txtn7l4n" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Fence_Long.obj" id="25_42p0p"]
-[ext_resource type="ArrayMesh" uid="uid://b0bd7y1h4jbib" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/GasCan.obj" id="26_pxpe4"]
-[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="27_nl56s"]
-[ext_resource type="ArrayMesh" uid="uid://cojy8xjo54vh7" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Health.obj" id="28_rstgr"]
-[ext_resource type="ArrayMesh" uid="uid://bs21223x1rxod" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Key.obj" id="29_kjqiu"]
-[ext_resource type="ArrayMesh" uid="uid://dex4yixfgs2n6" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Landmine.obj" id="30_huq7o"]
-[ext_resource type="ArrayMesh" uid="uid://b5ew3p7n576m3" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/MetalFence.obj" id="31_6445l"]
-[ext_resource type="ArrayMesh" uid="uid://cavs02nhgvxya" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pallet.obj" id="32_dgnep"]
-[ext_resource type="ArrayMesh" uid="uid://dfcuqsdahfttu" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pallet_Broken.obj" id="33_08ii3"]
-[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="34_wmhuj"]
-[ext_resource type="ArrayMesh" uid="uid://c548kmli417cu" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/SackTrench.obj" id="35_tuyre"]
-[ext_resource type="ArrayMesh" uid="uid://f4r23ufk8idb" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/SackTrench_Small.obj" id="36_viv0s"]
-[ext_resource type="ArrayMesh" uid="uid://b5rt61wmuwuww" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sign.obj" id="37_2bpps"]
-[ext_resource type="ArrayMesh" uid="uid://bka1awup7t5n5" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sofa.obj" id="38_ewbmh"]
-[ext_resource type="ArrayMesh" uid="uid://683aef5oi8ff" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Sofa_Small.obj" id="39_eoste"]
-[ext_resource type="ArrayMesh" uid="uid://3af8y38xtd8x" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/StreetLight.obj" id="40_yuarr"]
-[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="41_b7a74"]
-[ext_resource type="ArrayMesh" uid="uid://cptdq57x1573q" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_2.obj" id="42_2hyjj"]
-[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="43_riy5u"]
-[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="44_bysau"]
-[ext_resource type="ArrayMesh" uid="uid://c1glcve5ey6al" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tank.obj" id="45_2kvnb"]
-[ext_resource type="ArrayMesh" uid="uid://mgnyq3g3j1si" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrafficCone.obj" id="46_ysumv"]
-[ext_resource type="ArrayMesh" uid="uid://b51bewxfo8y8s" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrashContainer.obj" id="47_oylt7"]
-[ext_resource type="ArrayMesh" uid="uid://bmrwxiuc1djqi" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/TrashContainer_Open.obj" id="48_1rjkf"]
-[ext_resource type="ArrayMesh" uid="uid://cy2qsno6b70i1" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_1.obj" id="49_2rb0m"]
-[ext_resource type="ArrayMesh" uid="uid://rifg6sxp660b" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_2.obj" id="50_0mbok"]
-[ext_resource type="ArrayMesh" uid="uid://ctckqjo0vvl5k" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_3.obj" id="51_a6ou4"]
-[ext_resource type="ArrayMesh" uid="uid://cr0al22cau4e" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/Tree_4.obj" id="52_65c6v"]
-[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="53_w1ksg"]
-[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="54_peea4"]
-[ext_resource type="ArrayMesh" uid="uid://c8lg4r6515hjg" path="res://Assets/ToonShooterAssetPack/Environment/OBJ/WoodPlanks.obj" id="55_bywhq"]
+[ext_resource type="ArrayMesh" uid="uid://doejhguot68yg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Fixed.obj" id="1_bgl4t"]
+[ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="1_w6qok"]
+[ext_resource type="ArrayMesh" uid="uid://dapxwkc8ev3cn" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Large.obj" id="2_18r4o"]
+[ext_resource type="ArrayMesh" uid="uid://csyspqor0w5b" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/FireGrenade.obj" id="2_s7f5t"]
+[ext_resource type="ArrayMesh" uid="uid://dxkvrn5s7ig23" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Grenade.obj" id="3_i8cvh"]
+[ext_resource type="ArrayMesh" uid="uid://caxlqqjw1t3xm" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Single.obj" id="3_s6wm7"]
+[ext_resource type="ArrayMesh" uid="uid://bdmg0g74fkev1" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/GrenadeLauncher.obj" id="4_epjnv"]
+[ext_resource type="ArrayMesh" uid="uid://dg1uupnkox86w" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Trash.obj" id="4_v00gs"]
+[ext_resource type="ArrayMesh" uid="uid://djef5xvrwmot1" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Knife_1.obj" id="5_7ymqn"]
+[ext_resource type="ArrayMesh" uid="uid://capwvjht24kxr" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/BearTrap_Closed.obj" id="5_nv067"]
+[ext_resource type="ArrayMesh" uid="uid://cn27b6t805cqe" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/BearTrap_Open.obj" id="6_0tnch"]
+[ext_resource type="ArrayMesh" uid="uid://xy788q7ewdyj" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Knife_2.obj" id="6_agcwm"]
+[ext_resource type="ArrayMesh" uid="uid://bhuwucvre7gwl" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Pistol.obj" id="7_e1jq5"]
+[ext_resource type="ArrayMesh" uid="uid://dswlvox2vw70k" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/BrickWall_1.obj" id="7_gscou"]
+[ext_resource type="ArrayMesh" uid="uid://cg30l2rdosue2" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Revolver.obj" id="8_ql643"]
+[ext_resource type="ArrayMesh" uid="uid://blob3l7efs0mc" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/BrickWall_2.obj" id="8_y44u1"]
+[ext_resource type="ArrayMesh" uid="uid://5rhnpew7bbnn" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Revolver_Small.obj" id="9_mhaf3"]
+[ext_resource type="ArrayMesh" uid="uid://cajggbtlv5g7u" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_1.obj" id="9_ttggu"]
+[ext_resource type="ArrayMesh" uid="uid://jgd5p35xlocj" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/RocketLauncher.obj" id="10_6tlc5"]
+[ext_resource type="ArrayMesh" uid="uid://pxeg8f1p0avh" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_2.obj" id="10_ys3wr"]
+[ext_resource type="ArrayMesh" uid="uid://dasaekm2o8hqi" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_3.obj" id="11_30nl4"]
+[ext_resource type="ArrayMesh" uid="uid://cpmi21tw0mfxg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/ShortCannon.obj" id="11_as2m5"]
+[ext_resource type="ArrayMesh" uid="uid://dhkr1j0ng1c2q" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Shotgun.obj" id="12_iy10d"]
+[ext_resource type="ArrayMesh" uid="uid://did4pcghyv513" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_4.obj" id="12_wwump"]
+[ext_resource type="ArrayMesh" uid="uid://d4hiwsbx832ht" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Shovel.obj" id="13_hkvqf"]
+[ext_resource type="ArrayMesh" uid="uid://w63sw5epvqiv" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Container_Long.obj" id="13_qs1ox"]
+[ext_resource type="ArrayMesh" uid="uid://cuue0gq8w2862" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Container_Small.obj" id="14_c4nmy"]
+[ext_resource type="ArrayMesh" uid="uid://bb6evc8a37a2s" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/SMG.obj" id="14_mw26x"]
+[ext_resource type="ArrayMesh" uid="uid://cwpbbef6gf3so" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Crate.obj" id="15_1w2vi"]
+[ext_resource type="ArrayMesh" uid="uid://ccxn16jlu7cam" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Sniper.obj" id="15_pon3t"]
+[ext_resource type="ArrayMesh" uid="uid://qqwgkpterbc8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_BrokenCar.obj" id="16_7vico"]
+[ext_resource type="ArrayMesh" uid="uid://bylgjotr5euwt" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/Sniper_2.obj" id="16_p3skr"]
+[ext_resource type="ArrayMesh" uid="uid://c86rtg52otjn8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_1.obj" id="17_lis7k"]
+[ext_resource type="ArrayMesh" uid="uid://cva2ahfauksjk" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_2.obj" id="18_w3e4p"]
+[ext_resource type="ArrayMesh" uid="uid://cvebxtiaiedmf" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Papers_3.obj" id="19_y7ajl"]
+[ext_resource type="ArrayMesh" uid="uid://mlrgw82tqkpc" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Pile.obj" id="20_k2nwv"]
+[ext_resource type="ArrayMesh" uid="uid://eeqoyq0dnvlq" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Tires.obj" id="21_tgmkk"]
+[ext_resource type="ArrayMesh" uid="uid://b2qyksu4yh4k" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel.obj" id="22_pkof8"]
+[ext_resource type="ArrayMesh" uid="uid://d2i4wodpmpl3g" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/ExplodingBarrel_Spilled.obj" id="23_dgfyb"]
+[ext_resource type="ArrayMesh" uid="uid://cgm34batfrgsf" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Fence.obj" id="24_ja0b4"]
+[ext_resource type="ArrayMesh" uid="uid://7fn6txtn7l4n" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Fence_Long.obj" id="25_42p0p"]
+[ext_resource type="ArrayMesh" uid="uid://b0bd7y1h4jbib" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/GasCan.obj" id="26_pxpe4"]
+[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="27_nl56s"]
+[ext_resource type="ArrayMesh" uid="uid://cojy8xjo54vh7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Health.obj" id="28_rstgr"]
+[ext_resource type="ArrayMesh" uid="uid://bs21223x1rxod" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Key.obj" id="29_kjqiu"]
+[ext_resource type="ArrayMesh" uid="uid://dex4yixfgs2n6" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Landmine.obj" id="30_huq7o"]
+[ext_resource type="ArrayMesh" uid="uid://b5ew3p7n576m3" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/MetalFence.obj" id="31_6445l"]
+[ext_resource type="ArrayMesh" uid="uid://cavs02nhgvxya" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Pallet.obj" id="32_dgnep"]
+[ext_resource type="ArrayMesh" uid="uid://dfcuqsdahfttu" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Pallet_Broken.obj" id="33_08ii3"]
+[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="34_wmhuj"]
+[ext_resource type="ArrayMesh" uid="uid://c548kmli417cu" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/SackTrench.obj" id="35_tuyre"]
+[ext_resource type="ArrayMesh" uid="uid://f4r23ufk8idb" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/SackTrench_Small.obj" id="36_viv0s"]
+[ext_resource type="ArrayMesh" uid="uid://b5rt61wmuwuww" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Sign.obj" id="37_2bpps"]
+[ext_resource type="ArrayMesh" uid="uid://bka1awup7t5n5" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Sofa.obj" id="38_ewbmh"]
+[ext_resource type="ArrayMesh" uid="uid://683aef5oi8ff" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Sofa_Small.obj" id="39_eoste"]
+[ext_resource type="ArrayMesh" uid="uid://3af8y38xtd8x" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/StreetLight.obj" id="40_yuarr"]
+[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="41_b7a74"]
+[ext_resource type="ArrayMesh" uid="uid://cptdq57x1573q" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_2.obj" id="42_2hyjj"]
+[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="43_riy5u"]
+[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="44_bysau"]
+[ext_resource type="ArrayMesh" uid="uid://c1glcve5ey6al" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Tank.obj" id="45_2kvnb"]
+[ext_resource type="ArrayMesh" uid="uid://mgnyq3g3j1si" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/TrafficCone.obj" id="46_ysumv"]
+[ext_resource type="ArrayMesh" uid="uid://b51bewxfo8y8s" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/TrashContainer.obj" id="47_oylt7"]
+[ext_resource type="ArrayMesh" uid="uid://bmrwxiuc1djqi" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/TrashContainer_Open.obj" id="48_1rjkf"]
+[ext_resource type="ArrayMesh" uid="uid://cy2qsno6b70i1" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Tree_1.obj" id="49_2rb0m"]
+[ext_resource type="ArrayMesh" uid="uid://rifg6sxp660b" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Tree_2.obj" id="50_0mbok"]
+[ext_resource type="ArrayMesh" uid="uid://ctckqjo0vvl5k" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Tree_3.obj" id="51_a6ou4"]
+[ext_resource type="ArrayMesh" uid="uid://cr0al22cau4e" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Tree_4.obj" id="52_65c6v"]
+[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="53_w1ksg"]
+[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="54_peea4"]
+[ext_resource type="ArrayMesh" uid="uid://c8lg4r6515hjg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WoodPlanks.obj" id="55_bywhq"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Weapons" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+
+[node name="Ak" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("1_w6qok")
+skeleton = NodePath("../..")
+
+[node name="FireGrenade" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("2_s7f5t")
+skeleton = NodePath("../..")
+
+[node name="Grenade" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("3_i8cvh")
+skeleton = NodePath("../..")
+
+[node name="GrenadeLauncher" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("4_epjnv")
+skeleton = NodePath("../..")
+
+[node name="Knife1" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("5_7ymqn")
+skeleton = NodePath("../..")
+
+[node name="Knife2" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("6_agcwm")
+skeleton = NodePath("../..")
+
+[node name="Pistol" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("7_e1jq5")
+skeleton = NodePath("../..")
+
+[node name="Revolver" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("8_ql643")
+skeleton = NodePath("../..")
+
+[node name="RevolverSmall" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("9_mhaf3")
+skeleton = NodePath("../..")
+
+[node name="RocketLauncher" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01899, 0, -0.0280852)
+visible = false
+mesh = ExtResource("10_6tlc5")
+skeleton = NodePath("../..")
+
+[node name="ShortCannon" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("11_as2m5")
+skeleton = NodePath("../..")
+
+[node name="Shotgun" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("12_iy10d")
+skeleton = NodePath("../..")
+
+[node name="Shovel" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("13_hkvqf")
+skeleton = NodePath("../..")
+
+[node name="Smg" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("14_mw26x")
+skeleton = NodePath("../..")
+
+[node name="Sniper" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("15_pon3t")
+skeleton = NodePath("../..")
+
+[node name="Sniper2" type="MeshInstance3D" parent="Weapons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
+visible = false
+mesh = ExtResource("16_p3skr")
+skeleton = NodePath("../..")
 
 [node name="BarrierFixed" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
@@ -130,7 +245,6 @@ mesh = ExtResource("14_c4nmy")
 
 [node name="Crate" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
-visible = false
 mesh = ExtResource("15_1w2vi")
 
 [node name="DebrisBrokenCar" type="MeshInstance3D" parent="."]

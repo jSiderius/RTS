@@ -56,7 +56,7 @@ func _update_time_label():
 		time_label.text = str( ( time - (int(time) % 60) ) / 60.0) + ":" + str(int(time) % 60)
 		
 func _update_money_label(): 
-	money_label.text = "$" + str(floor(GlobalData.getMoney()))
+	money_label.text = "$" + str(floor(GlobalData.money))
 	
 func _update_power_bars(): 
 	power_empty.size_flags_stretch_ratio = ( GlobalData.getPowerTotal() -  GlobalData.getPowerOwned() ) / GlobalData.getPowerTotal()

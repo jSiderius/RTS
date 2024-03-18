@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b51bewxfo8y8s"
+path="res://.godot/imported/TrashContainer.obj-4a49d7674e89689c3c3c13cc56a0a12b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TrashContainer.obj-4a49d7674e89689c3c3c13cc56a0a12b.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/TrashContainer.obj"
+dest_files=["res://.godot/imported/TrashContainer.obj-4a49d7674e89689c3c3c13cc56a0a12b.mesh", "res://.godot/imported/TrashContainer.obj-4a49d7674e89689c3c3c13cc56a0a12b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

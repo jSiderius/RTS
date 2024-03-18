@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://cg5ef6fa6ljea"]
+
+[ext_resource type="Script" path="res://Scenes/Units/EnemyUnits/Enemy.gd" id="1_v1lib"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_ekjyv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y1vad"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ivg20"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odwtf"]
+albedo_color = Color(0.909804, 0, 0.121569, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rpr3p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xdkt"]
+albedo_color = Color(0.415441, 0, 0.0321706, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8g7l5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0fw7"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="Enemy" type="StaticBody3D" groups=["EnemyUnit"]]
+collision_mask = 3
+script = ExtResource("1_v1lib")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["EnemyUnit"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_y1vad")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_ivg20")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_odwtf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(2.268, 0, 0, 0, 1.724, 0, 0, 0, 0.9, -0.000209689, 1.5305, 1.67385)
+mesh = SubResource("BoxMesh_rpr3p")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1xdkt")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.19642, 0, 0, 0, 0.170107, 0, 0, 0, 2.19642, 0, 0.127794, 0)
+visible = false
+mesh = SubResource("CylinderMesh_8g7l5")
+surface_material_override/0 = SubResource("StandardMaterial3D_y0fw7")
+
+[node name="HealthBar" parent="." groups=["EnemyUnit"] instance=ExtResource("2_ekjyv")]
+unique_name_in_owner = true
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.55831, 0)

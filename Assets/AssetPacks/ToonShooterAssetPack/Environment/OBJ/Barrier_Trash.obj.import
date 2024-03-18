@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg1uupnkox86w"
+path="res://.godot/imported/Barrier_Trash.obj-11b8f4f764bc183e851aab6828bf415a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Barrier_Trash.obj-11b8f4f764bc183e851aab6828bf415a.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Trash.obj"
+dest_files=["res://.godot/imported/Barrier_Trash.obj-11b8f4f764bc183e851aab6828bf415a.mesh", "res://.godot/imported/Barrier_Trash.obj-11b8f4f764bc183e851aab6828bf415a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

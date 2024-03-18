@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cm37pnbu7gdv5"
+path="res://.godot/imported/blockSnowCornerSmall.obj-3aae99364ec0f0b93b422bbba9c34b45.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockSnowCornerSmall.obj-3aae99364ec0f0b93b422bbba9c34b45.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/blockSnowCornerSmall.obj"
+dest_files=["res://.godot/imported/blockSnowCornerSmall.obj-3aae99364ec0f0b93b422bbba9c34b45.mesh", "res://.godot/imported/blockSnowCornerSmall.obj-3aae99364ec0f0b93b422bbba9c34b45.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

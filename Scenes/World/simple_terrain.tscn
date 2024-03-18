@@ -1,0 +1,356 @@
+[gd_scene load_steps=19 format=3 uid="uid://jprfemyb3jbn"]
+
+[ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/RadioStation.obj" id="1_wy2qp"]
+[ext_resource type="ArrayMesh" uid="uid://b5g4dinbo5d2i" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Quarter.obj" id="2_cnt5w"]
+[ext_resource type="ArrayMesh" uid="uid://dnp0gme7blbe3" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Refectory.obj" id="3_qpttf"]
+[ext_resource type="ArrayMesh" uid="uid://tx7rxvd4y1q6" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Storage.obj" id="4_ji7k6"]
+[ext_resource type="ArrayMesh" uid="uid://bneite3bw4y6v" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/HelicopterBase.obj" id="5_gi1p6"]
+[ext_resource type="PackedScene" uid="uid://citp6id14eisi" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/a585d4ea-4c1c-4b86-b3dd-35b3161a5681.glb" id="6_kl7jy"]
+[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="7_lcbks"]
+[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="8_ivgl8"]
+[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="9_nnsis"]
+[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="10_62h6c"]
+[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="11_bmxqe"]
+[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="12_7nn1h"]
+[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="13_xgppg"]
+[ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="14_xaqtf"]
+[ext_resource type="Texture2D" uid="uid://dj2ytkgedawp6" path="res://Assets/Textures/dirt.png" id="15_wh7yt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4w50"]
+albedo_texture = ExtResource("15_wh7yt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wato4"]
+material = SubResource("StandardMaterial3D_v4w50")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1v6l0"]
+size = Vector3(1, 0, 1)
+
+[node name="SimpleTerrain" type="Node3D"]
+
+[node name="Base" type="Node3D" parent="."]
+
+[node name="Headquarters" type="MeshInstance3D" parent="Base"]
+transform = Transform3D(0.176777, 0, -0.176777, 0, 0.25, 0, 0.176777, 0, 0.176777, 0, 2.5, 0)
+mesh = ExtResource("1_wy2qp")
+
+[node name="Quarters" type="Node3D" parent="Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Quarter1" type="MeshInstance3D" parent="Base/Quarters"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -12, 1.7, -5)
+mesh = ExtResource("2_cnt5w")
+skeleton = NodePath("../..")
+
+[node name="Quarter2" type="MeshInstance3D" parent="Base/Quarters"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -12, 1.7, -8)
+mesh = ExtResource("2_cnt5w")
+skeleton = NodePath("../..")
+
+[node name="Quarter3" type="MeshInstance3D" parent="Base/Quarters"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -12, 1.7, -11)
+mesh = ExtResource("2_cnt5w")
+skeleton = NodePath("../..")
+
+[node name="Quarter4" type="MeshInstance3D" parent="Base/Quarters"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -12, 1.7, -14)
+mesh = ExtResource("2_cnt5w")
+skeleton = NodePath("../..")
+
+[node name="Refineries" type="Node3D" parent="Base"]
+
+[node name="Refinery1" type="MeshInstance3D" parent="Base/Refineries"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 5)
+mesh = ExtResource("3_qpttf")
+
+[node name="Refinery2" type="MeshInstance3D" parent="Base/Refineries"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 8)
+mesh = ExtResource("3_qpttf")
+
+[node name="Refinery3" type="MeshInstance3D" parent="Base/Refineries"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 11)
+mesh = ExtResource("3_qpttf")
+
+[node name="Refinery4" type="MeshInstance3D" parent="Base/Refineries"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 14)
+mesh = ExtResource("3_qpttf")
+
+[node name="Factories" type="Node3D" parent="Base"]
+
+[node name="Factory1" type="MeshInstance3D" parent="Base/Factories"]
+transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.75, 15, 6.5, -12)
+mesh = ExtResource("4_ji7k6")
+
+[node name="Factory2" type="MeshInstance3D" parent="Base/Factories"]
+transform = Transform3D(0.25, 0, 0, 0, 0.35, 0, 0, 0, 0.75, 10, 5, -12)
+mesh = ExtResource("4_ji7k6")
+
+[node name="Airports" type="Node3D" parent="Base"]
+
+[node name="Airport1" type="MeshInstance3D" parent="Base/Airports"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11, 1, 13)
+mesh = ExtResource("5_gi1p6")
+
+[node name="Airport2" type="MeshInstance3D" parent="Base/Airports"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11, 1, 7)
+mesh = ExtResource("5_gi1p6")
+
+[node name="NuclearPlant" parent="Base" instance=ExtResource("6_kl7jy")]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, -0.614279, 1.01132, -13.0158)
+
+[node name="PowerPlants" type="Node3D" parent="Base"]
+
+[node name="PowerPlant1" type="Node3D" parent="Base/PowerPlants"]
+transform = Transform3D(-2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 5.09496, 0, 14.4772)
+
+[node name="Structure" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000189498, -0.000203133, 0.000182152)
+mesh = ExtResource("7_lcbks")
+skeleton = NodePath("../..")
+
+[node name="WaterTankPlatform2" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.931, 3.29, -0.131001)
+mesh = ExtResource("8_ivgl8")
+skeleton = NodePath("../WaterTankPlatform")
+
+[node name="WaterTankPlatform" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.669, 3.29, -0.131001)
+mesh = ExtResource("8_ivgl8")
+skeleton = NodePath("../..")
+
+[node name="PowerPlant2" type="Node3D" parent="Base/PowerPlants"]
+transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 2.53624, 0.997783, 14.4971)
+
+[node name="Structure" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+mesh = ExtResource("9_nnsis")
+skeleton = NodePath("../..")
+
+[node name="PowerGenerator" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.869, 6.461, 2.013)
+mesh = ExtResource("10_62h6c")
+skeleton = NodePath("../..")
+
+[node name="Pipes" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, -2.078, 3.234, -0.209)
+mesh = ExtResource("11_bmxqe")
+skeleton = NodePath("../..")
+
+[node name="GasTank1" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.626, 6.47, 3.962)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank2" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(-0.4324, 0, -0.901682, 0, 1, 0, 0.901682, 0, -0.4324, -0.626, 6.46, 2.951)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank3" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(-0.020296, -0.00709604, 0.999769, -0.330037, 0.943968, 0, -0.94375, -0.32996, -0.0215008, -0.460788, 0.0587983, 2.51863)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank4" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant2"]
+transform = Transform3D(-4.37033e-08, 0.999816, 0.0191975, -1, -4.37114e-08, 0, 8.39147e-10, -0.0191975, 0.999816, 0.250728, 0.506392, 2.50333)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="PowerPlant3" type="Node3D" parent="Base/PowerPlants"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.959802, -3.89794, 18.81)
+
+[node name="Container" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.18254, -2.88864)
+mesh = ExtResource("13_xgppg")
+skeleton = NodePath("../..")
+
+[node name="Pipes1" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -2.48949, 11.4253, -2.97556)
+mesh = ExtResource("11_bmxqe")
+skeleton = NodePath("../..")
+
+[node name="Pipes2" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(1.14641e-15, -2.62268e-08, 0.6, -0.6, -2.62268e-08, 0, 2.62268e-08, -0.6, -2.62268e-08, -1.55622, 10.9384, -4.7013)
+mesh = ExtResource("11_bmxqe")
+skeleton = NodePath("../..")
+
+[node name="GasTank1" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, 0.499811, 11.5769, -3.9755)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank2" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, -0.350515, 11.5769, -3.36387)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank3" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, -0.288779, 11.5769, -3.9755)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="GasTank4" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant3"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, 0.499811, 11.5769, -3.36387)
+mesh = ExtResource("12_7nn1h")
+skeleton = NodePath("../..")
+
+[node name="PowerPlant4" type="Node3D" parent="Base/PowerPlants"]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, -2.14404, 0, 14.4772)
+
+[node name="Structure" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000189498, -0.000203133, 0.000182152)
+mesh = ExtResource("7_lcbks")
+skeleton = NodePath("../..")
+
+[node name="WaterTankPlatform2" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.931, 3.29, -0.131001)
+mesh = ExtResource("8_ivgl8")
+skeleton = NodePath("../WaterTankPlatform")
+
+[node name="WaterTankPlatform" type="MeshInstance3D" parent="Base/PowerPlants/PowerPlant4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.669, 3.29, -0.131001)
+mesh = ExtResource("8_ivgl8")
+skeleton = NodePath("../..")
+
+[node name="PowerPlant2" type="Node3D" parent="Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 61.1996, 0)
+
+[node name="Towers" type="Node3D" parent="Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+visible = false
+
+[node name="SniperTower" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -6)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower10" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -6)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower2" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 6)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower9" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 6)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower5" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 15)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower8" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 15)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower6" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -15)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower11" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -15)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower3" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower17" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, 24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower18" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, 24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower19" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, 24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower7" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower4" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower14" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower15" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower16" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower13" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="SniperTower12" type="MeshInstance3D" parent="Base/Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
+mesh = ExtResource("14_xaqtf")
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 1, 0)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -80, 1, 0)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -80, 1, 80)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 1, 80)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 1, -80)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -80, 1, -80)
+mesh = SubResource("PlaneMesh_wato4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D6/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_1v6l0")

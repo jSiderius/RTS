@@ -64,12 +64,6 @@ func getBuildingsUI():
 func setBuildingsUI(bui): 
 	buildings_ui = bui
 	
-func getMoney():
-	return money
-
-func setMoney(m): 
-	money = m 
-	
 func getPowerTotal(): 
 	return power_total
 	

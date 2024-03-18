@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dex4yixfgs2n6"
+path="res://.godot/imported/Landmine.obj-816398822e8cab8f104438e783a2fc0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Landmine.obj-816398822e8cab8f104438e783a2fc0c.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Landmine.obj"
+dest_files=["res://.godot/imported/Landmine.obj-816398822e8cab8f104438e783a2fc0c.mesh", "res://.godot/imported/Landmine.obj-816398822e8cab8f104438e783a2fc0c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csyspqor0w5b"
+path="res://.godot/imported/FireGrenade.obj-023e3a593118c007a408e4b74cfb3089.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FireGrenade.obj-023e3a593118c007a408e4b74cfb3089.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/FireGrenade.obj"
+dest_files=["res://.godot/imported/FireGrenade.obj-023e3a593118c007a408e4b74cfb3089.mesh", "res://.godot/imported/FireGrenade.obj-023e3a593118c007a408e4b74cfb3089.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

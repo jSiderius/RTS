@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgcnojowcbu6k"
+path="res://.godot/imported/plant.obj-179084474fe37c25e3a09f01685011b5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plant.obj-179084474fe37c25e3a09f01685011b5.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/plant.obj"
+dest_files=["res://.godot/imported/plant.obj-179084474fe37c25e3a09f01685011b5.mesh", "res://.godot/imported/plant.obj-179084474fe37c25e3a09f01685011b5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

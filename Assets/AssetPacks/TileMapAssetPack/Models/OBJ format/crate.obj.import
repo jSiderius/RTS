@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://12b5hqhxiht8"
+path="res://.godot/imported/crate.obj-a323aa648ff4ae504e4a626d81bd4b85.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crate.obj-a323aa648ff4ae504e4a626d81bd4b85.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/crate.obj"
+dest_files=["res://.godot/imported/crate.obj-a323aa648ff4ae504e4a626d81bd4b85.mesh", "res://.godot/imported/crate.obj-a323aa648ff4ae504e4a626d81bd4b85.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

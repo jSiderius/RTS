@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm3nsnly5pjjo"
+path="res://.godot/imported/coinBronze.obj-a08acee7bb52127becf12301d15982dd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coinBronze.obj-a08acee7bb52127becf12301d15982dd.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/coinBronze.obj"
+dest_files=["res://.godot/imported/coinBronze.obj-a08acee7bb52127becf12301d15982dd.mesh", "res://.godot/imported/coinBronze.obj-a08acee7bb52127becf12301d15982dd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

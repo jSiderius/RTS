@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3weleycaoyl2"
+path="res://.godot/imported/blockSnowCurveLow.obj-e3c8f10d2b0156197c39436bcbe13c3f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockSnowCurveLow.obj-e3c8f10d2b0156197c39436bcbe13c3f.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/blockSnowCurveLow.obj"
+dest_files=["res://.godot/imported/blockSnowCurveLow.obj-e3c8f10d2b0156197c39436bcbe13c3f.mesh", "res://.godot/imported/blockSnowCurveLow.obj-e3c8f10d2b0156197c39436bcbe13c3f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

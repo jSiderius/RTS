@@ -2,14 +2,22 @@ extends Node3D
 
 @onready var buildings_ui = $BuildingsUI
 @onready var units_ui = $UnitsUI
-@onready var headquarters = $NavRegionMain/Terrain/Base/Headquarters
-@onready var quarters : Array = [$NavRegionMain/Terrain/Base/Quarters/Quarter1, $NavRegionMain/Terrain/Base/Quarters/Quarter2, $NavRegionMain/Terrain/Base/Quarters/Quarter3, $NavRegionMain/Terrain/Base/Quarters/Quarter4] 
-@onready var refineries : Array = [$NavRegionMain/Terrain/Base/Refineries/Refinery1, $NavRegionMain/Terrain/Base/Refineries/Refinery2, $NavRegionMain/Terrain/Base/Refineries/Refinery3, $NavRegionMain/Terrain/Base/Refineries/Refinery4] 
-@onready var factories : Array = [$NavRegionMain/Terrain/Base/Factories/Factory1, $NavRegionMain/Terrain/Base/Factories/Factory2]
-@onready var airports : Array = [$NavRegionMain/Terrain/Base/Airports/Airport1, $NavRegionMain/Terrain/Base/Airports/Airport2]
-@onready var nuclear_plant = $NavRegionMain/Terrain/Base/NuclearPlant
-@onready var power_plants = [$NavRegionMain/Terrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant4]
-#@onready var towers 
+@onready var headquarters = $NavRegionMain/SimpleTerrain/Base/Headquarters
+@onready var quarters : Array = [$NavRegionMain/SimpleTerrain/Base/Quarters/Quarter1, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter2, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter3, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter4] 
+@onready var refineries : Array = [$NavRegionMain/SimpleTerrain/Base/Refineries/Refinery1, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery2, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery3, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery4] 
+@onready var factories : Array = [$NavRegionMain/SimpleTerrain/Base/Factories/Factory1, $NavRegionMain/SimpleTerrain/Base/Factories/Factory2]
+@onready var airports : Array = [$NavRegionMain/SimpleTerrain/Base/Airports/Airport1, $NavRegionMain/SimpleTerrain/Base/Airports/Airport2]
+@onready var nuclear_plant = $NavRegionMain/SimpleTerrain/Base/NuclearPlant
+@onready var power_plants = [$NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant4]
+@onready var towers = $NavRegionMain/SimpleTerrain/Base/Towers
+
+var headquarters_start_time = null
+var quarters_start_time = null
+var refinery_start_time = null
+var factory_start_time = null
+var airport_start_time = null
+var nuclear_plant_start_time = null
+var power_plant_start_time = null
 
 var num_headquarters = false
 var num_quarters = 0
@@ -35,6 +43,7 @@ func _init_signals():
 func _init_visibility(): 
 	headquarters.visible = false
 	nuclear_plant.visible = false
+	towers.visible = false
 	for quarter in quarters: 
 		quarter.visible = false 
 	for refinery in refineries: 
@@ -54,11 +63,12 @@ func _process(delta):
 	else: 
 		buildings_ui.visible = false
 		units_ui.visible = true
-	GlobalData.setMoney(GlobalData.getMoney() + 10.0 * delta)
+	#GlobalData.setMoney(GlobalData.getMoney() + 10.0 * delta)
 
 func _on_headquarters_pressed():
 	num_headquarters = true 
 	headquarters.visible = true 
+	#headquarters.modulate.a = 0.5
 func _on_quarters_pressed():
 	if num_quarters >= quarters.size(): 
 		return  

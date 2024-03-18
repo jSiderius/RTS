@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1vfbqb5i2lt8"
+path="res://.godot/imported/SniperTower.obj-23451ac6a263a16a583003871ccea282.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SniperTower.obj-23451ac6a263a16a583003871ccea282.mesh"]
+
+source_file="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj"
+dest_files=["res://.godot/imported/SniperTower.obj-23451ac6a263a16a583003871ccea282.mesh", "res://.godot/imported/SniperTower.obj-23451ac6a263a16a583003871ccea282.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

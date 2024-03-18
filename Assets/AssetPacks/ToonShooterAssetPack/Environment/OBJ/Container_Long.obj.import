@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://w63sw5epvqiv"
+path="res://.godot/imported/Container_Long.obj-4ac7d7af9f819d6cb95791e5869d2692.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Container_Long.obj-4ac7d7af9f819d6cb95791e5869d2692.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Container_Long.obj"
+dest_files=["res://.godot/imported/Container_Long.obj-4ac7d7af9f819d6cb95791e5869d2692.mesh", "res://.godot/imported/Container_Long.obj-4ac7d7af9f819d6cb95791e5869d2692.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

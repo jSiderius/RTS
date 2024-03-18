@@ -7,10 +7,10 @@ var unit = preload("res://Scenes/Units/GeneralInfantry/Unit.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#instantiateGridBlock(Vector3(0.0, 0.0, 0.0))
-	instantiateUnit(Vector3(-120.0, 5.0, 8.0))
-	instantiateUnit(Vector3(-120.0, 5.0, 4.0))
-	instantiateUnit(Vector3(-120.0, 5.0, -4.0))
-	instantiateUnit(Vector3(-120.0, 5.0, -8.0))
+	#instantiateUnit(Vector3(-120.0, 5.0, 8.0))
+	#instantiateUnit(Vector3(-120.0, 5.0, 4.0))
+	#instantiateUnit(Vector3(-120.0, 5.0, -4.0))
+	#instantiateUnit(Vector3(-120.0, 5.0, -8.0))
 	
 	NavigationServer3D.set_debug_enabled(true)
 	#NavigationServer3D.navmesh_set_debug_mode(NavigationServer.navmesh_get_debug_mode() | NavigationServer.DEBUG_DRAW_MESH)

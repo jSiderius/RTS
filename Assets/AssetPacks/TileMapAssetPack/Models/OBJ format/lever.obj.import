@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnwfhgt5apv7m"
+path="res://.godot/imported/lever.obj-025d076021438d9a2f6d8221d8486210.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lever.obj-025d076021438d9a2f6d8221d8486210.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/lever.obj"
+dest_files=["res://.godot/imported/lever.obj-025d076021438d9a2f6d8221d8486210.mesh", "res://.godot/imported/lever.obj-025d076021438d9a2f6d8221d8486210.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

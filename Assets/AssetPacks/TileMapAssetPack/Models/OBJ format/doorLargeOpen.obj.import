@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk8kgvpr66isl"
+path="res://.godot/imported/doorLargeOpen.obj-e84e73371891524954c5ba3ff98c4daf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/doorLargeOpen.obj-e84e73371891524954c5ba3ff98c4daf.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/doorLargeOpen.obj"
+dest_files=["res://.godot/imported/doorLargeOpen.obj-e84e73371891524954c5ba3ff98c4daf.mesh", "res://.godot/imported/doorLargeOpen.obj-e84e73371891524954c5ba3ff98c4daf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

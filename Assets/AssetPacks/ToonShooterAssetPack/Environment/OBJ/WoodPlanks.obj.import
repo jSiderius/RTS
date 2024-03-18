@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8lg4r6515hjg"
+path="res://.godot/imported/WoodPlanks.obj-1ca3d5fd696f98091809bf000a6a7702.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WoodPlanks.obj-1ca3d5fd696f98091809bf000a6a7702.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WoodPlanks.obj"
+dest_files=["res://.godot/imported/WoodPlanks.obj-1ca3d5fd696f98091809bf000a6a7702.mesh", "res://.godot/imported/WoodPlanks.obj-1ca3d5fd696f98091809bf000a6a7702.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6e8qrhr4i0td"
+path="res://.godot/imported/GasTank.obj-06ffd0c5d556a95d61284fe20646670f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GasTank.obj-06ffd0c5d556a95d61284fe20646670f.mesh"]
+
+source_file="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/GasTank.obj"
+dest_files=["res://.godot/imported/GasTank.obj-06ffd0c5d556a95d61284fe20646670f.mesh", "res://.godot/imported/GasTank.obj-06ffd0c5d556a95d61284fe20646670f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

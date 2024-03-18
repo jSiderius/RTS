@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://yo1sl6nt7s8d"
+path="res://.godot/imported/blockSnowCurveHalf.obj-e898546cd667a26eb9609997cfa0ac06.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockSnowCurveHalf.obj-e898546cd667a26eb9609997cfa0ac06.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/blockSnowCurveHalf.obj"
+dest_files=["res://.godot/imported/blockSnowCurveHalf.obj-e898546cd667a26eb9609997cfa0ac06.mesh", "res://.godot/imported/blockSnowCurveHalf.obj-e898546cd667a26eb9609997cfa0ac06.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

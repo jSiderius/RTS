@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eeqoyq0dnvlq"
+path="res://.godot/imported/Debris_Tires.obj-42c260b418e870909d50af312d49170d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Debris_Tires.obj-42c260b418e870909d50af312d49170d.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Debris_Tires.obj"
+dest_files=["res://.godot/imported/Debris_Tires.obj-42c260b418e870909d50af312d49170d.mesh", "res://.godot/imported/Debris_Tires.obj-42c260b418e870909d50af312d49170d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bg0753ia00po"
+path="res://.godot/imported/Character_Enemy.obj-efa5126c17cac0e79dc607a4c339f5b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Character_Enemy.obj-efa5126c17cac0e79dc607a4c339f5b1.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/OBJ/Character_Enemy.obj"
+dest_files=["res://.godot/imported/Character_Enemy.obj-efa5126c17cac0e79dc607a4c339f5b1.mesh", "res://.godot/imported/Character_Enemy.obj-efa5126c17cac0e79dc607a4c339f5b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7fn6txtn7l4n"
+path="res://.godot/imported/Fence_Long.obj-27bb3bf28af0e24418cb8bd76aa416ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Fence_Long.obj-27bb3bf28af0e24418cb8bd76aa416ab.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Fence_Long.obj"
+dest_files=["res://.godot/imported/Fence_Long.obj-27bb3bf28af0e24418cb8bd76aa416ab.mesh", "res://.godot/imported/Fence_Long.obj-27bb3bf28af0e24418cb8bd76aa416ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

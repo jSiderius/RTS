@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://did4pcghyv513"
+path="res://.godot/imported/CardboardBoxes_4.obj-678f18f3e18551a91a4063e4c763fdb6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CardboardBoxes_4.obj-678f18f3e18551a91a4063e4c763fdb6.mesh"]
+
+source_file="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/CardboardBoxes_4.obj"
+dest_files=["res://.godot/imported/CardboardBoxes_4.obj-678f18f3e18551a91a4063e4c763fdb6.mesh", "res://.godot/imported/CardboardBoxes_4.obj-678f18f3e18551a91a4063e4c763fdb6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

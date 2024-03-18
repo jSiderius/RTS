@@ -9,6 +9,7 @@
 [node name="Block" parent="." instance=ExtResource("1_w5x7v")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Block"]
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.25, 0)

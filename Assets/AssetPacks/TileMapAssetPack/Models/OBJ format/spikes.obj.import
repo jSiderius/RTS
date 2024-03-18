@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pce2gfmb168u"
+path="res://.godot/imported/spikes.obj-c7ddf9196469981d8cf1b37304dcd091.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spikes.obj-c7ddf9196469981d8cf1b37304dcd091.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/spikes.obj"
+dest_files=["res://.godot/imported/spikes.obj-c7ddf9196469981d8cf1b37304dcd091.mesh", "res://.godot/imported/spikes.obj-c7ddf9196469981d8cf1b37304dcd091.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

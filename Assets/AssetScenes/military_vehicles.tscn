@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxt1q7hgbo1hm"]
+
+[ext_resource type="ArrayMesh" uid="uid://g84e1o864yim" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Aircraft.obj" id="1_ikqle"]
+[ext_resource type="ArrayMesh" uid="uid://btktj2fvexa2a" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AmbulanceCar.obj" id="2_q3100"]
+[ext_resource type="ArrayMesh" uid="uid://j64oqht8xjgl" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Bike.obj" id="3_e86jx"]
+[ext_resource type="ArrayMesh" uid="uid://clu78nh8g7lyl" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Jeep.obj" id="4_g8vlu"]
+[ext_resource type="ArrayMesh" uid="uid://db47rdj3gkp24" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Light_Tank.obj" id="5_82myc"]
+[ext_resource type="ArrayMesh" uid="uid://cxue06hypa13u" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/MilitaryBoat.obj" id="6_x0b43"]
+[ext_resource type="ArrayMesh" uid="uid://ix23dcd2vif3" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Motor_Military.obj" id="7_5ykhn"]
+[ext_resource type="ArrayMesh" uid="uid://bgk4cj8f5mg8c" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Scout_Car.obj" id="8_s857w"]
+[ext_resource type="ArrayMesh" uid="uid://bflshbhcsm5fr" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Super_Tank.obj" id="9_qhh65"]
+
+[node name="MilitaryVehicles" type="Node3D"]
+
+[node name="Aircraft" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("1_ikqle")
+
+[node name="AmbulanceCar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("2_q3100")
+
+[node name="Bike" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("3_e86jx")
+
+[node name="Jeep" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("4_g8vlu")
+
+[node name="LightTank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+mesh = ExtResource("5_82myc")
+
+[node name="MilitaryBoat" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("6_x0b43")
+
+[node name="MotorMilitary" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("7_5ykhn")
+
+[node name="ScoutCar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("8_s857w")
+
+[node name="SuperTank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02974, 0, -3.79854)
+visible = false
+mesh = ExtResource("9_qhh65")

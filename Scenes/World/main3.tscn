@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhjocrguxpk4b"]
-
-[ext_resource type="Script" path="res://Scenes/World/terrain.gd" id="1_xth24"]
-
-[node name="Main3" type="Node3D"]
-script = ExtResource("1_xth24")

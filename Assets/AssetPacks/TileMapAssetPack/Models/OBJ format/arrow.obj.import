@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqdic706mno6m"
+path="res://.godot/imported/arrow.obj-d505cc5fd114869c4378e01e79e2987a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrow.obj-d505cc5fd114869c4378e01e79e2987a.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/arrow.obj"
+dest_files=["res://.godot/imported/arrow.obj-d505cc5fd114869c4378e01e79e2987a.mesh", "res://.godot/imported/arrow.obj-d505cc5fd114869c4378e01e79e2987a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

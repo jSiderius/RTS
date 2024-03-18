@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0u185kaf2o12"
+path="res://.godot/imported/coinGold.obj-a54834c40bedd0d33a42eb9e9a1f27b2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coinGold.obj-a54834c40bedd0d33a42eb9e9a1f27b2.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/coinGold.obj"
+dest_files=["res://.godot/imported/coinGold.obj-a54834c40bedd0d33a42eb9e9a1f27b2.mesh", "res://.godot/imported/coinGold.obj-a54834c40bedd0d33a42eb9e9a1f27b2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgky07qp21jht"
+path="res://.godot/imported/platform.obj-fcfe0f88b129f0d8464b63caaf8484be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/platform.obj-fcfe0f88b129f0d8464b63caaf8484be.mesh"]
+
+source_file="res://Assets/AssetPacks/TileMapAssetPack/Models/OBJ format/platform.obj"
+dest_files=["res://.godot/imported/platform.obj-fcfe0f88b129f0d8464b63caaf8484be.mesh", "res://.godot/imported/platform.obj-fcfe0f88b129f0d8464b63caaf8484be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

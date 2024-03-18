@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhhniqjwc2sv6"]
+
+[ext_resource type="Script" path="res://Scenes/Collectables/ResourceCollectable/selection_script.gd" id="1_nrdpo"]
+[ext_resource type="ArrayMesh" uid="uid://cojy8xjo54vh7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Health.obj" id="2_w7puf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1pgn"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fpgx4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilbfh"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="HealthCollectable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Collectable", "HealthCollectable"]]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_nrdpo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.419092, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_f1pgn")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="StaticBody3D"]
+unique_name_in_owner = true
+transform = Transform3D(0.8, 0, 0, 0, 0.05, 0, 0, 0, 0.8, 0, 0.0713365, 0)
+visible = false
+mesh = SubResource("CylinderMesh_fpgx4")
+surface_material_override/0 = SubResource("StandardMaterial3D_ilbfh")
+
+[node name="Health" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_w7puf")
