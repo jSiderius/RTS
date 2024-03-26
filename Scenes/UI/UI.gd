@@ -3,9 +3,6 @@ class_name UI
 
 @onready var time_label = %Time 
 @onready var money_label = %Money
-@onready var power_empty = %PowerEmpty
-@onready var power_capspace = %PowerCapSpace
-@onready var power_used = %PowerUsed
 
 # Declaration of time variable and setter that also updates the in-scene label
 @onready var time = Time.get_ticks_msec():
@@ -14,7 +11,7 @@ class_name UI
 		_update_time_label()
 
 signal headquarters_pressed() 
-signal quarters_pressed()
+signal barracks_pressed()
 signal refinery_pressed
 signal factory_pressed()
 signal airport_pressed() 
@@ -25,11 +22,28 @@ signal power_plant_pressed()
 func _ready(): 
 	_update_time_label()
 	_update_price_energy_labels()
+	_init_power_bars()
+	#_update_transparancy()
 
 func _process(delta):
 	time = floor(Time.get_ticks_msec() / 1000.0)
 	_update_money_label()
 	_update_power_bars()
+	_update_buildings_enabling()
+	
+func _update_buildings_enabling(): 
+	if not is_in_group("BuildingsUI"): return
+	if GlobalData.headquarters: 
+		%RefineryButton.disabled = false 
+		%PowerPlantButton.disabled = false 
+	if GlobalData.num_refineries > 0 and GlobalData.num_power_plants > 0: %BarracksButton.disabled = false 
+	if GlobalData.num_barracks > 0: 
+		%UnitsButton.disabled = false
+		%FactoryButton.disabled = false 
+	if GlobalData.num_factories > 0: %AirportButton.disabled = false 
+	if GlobalData.num_airports > 0: %NuclearPlantButton.disabled = false 
+	
+	
 	
 # Updates the label values so they can be set from global_data.gd
 func _update_price_energy_labels(): 
@@ -61,12 +75,35 @@ func _update_time_label():
 func _update_money_label(): 
 	money_label.text = "$" + str(floor(GlobalData.money))
 
+var power_bar = preload("res://Scenes/UI/power_bar.tscn")
+var bars : Array = [] 
+var num_bars = 50
+func _init_power_bars(): 
+	if not is_in_group("BuildingsUI"): return
+	var container = %PowerContainer
+	for i in range(num_bars): 
+		var instance = power_bar.instantiate()
+		instance.size_flags_vertical = 3
+		bars.append(instance)
+		container.add_child(instance)
+		
 # Update function for the power bars on the left hand side
-# I intend to update this into blocks so it is more clear how much power is beingused 
+# I intend to update this into blocks so it is more clear how much power is being used 
 func _update_power_bars(): 
-	power_empty.size_flags_stretch_ratio = ( GlobalData.power_total -  GlobalData.power_owned ) / GlobalData.power_total
-	power_capspace.size_flags_stretch_ratio = ( GlobalData.power_owned - GlobalData.power_used ) / GlobalData.power_total
-	power_used.size_flags_stretch_ratio = GlobalData.power_used / GlobalData.power_total
+	if not is_in_group("BuildingsUI"): return
+	#return
+	var power_empty = ( GlobalData.power_total -  GlobalData.power_owned ) / GlobalData.power_total
+	var power_capspace = ( GlobalData.power_owned - GlobalData.power_used ) / GlobalData.power_total
+	var power_used = GlobalData.power_used / GlobalData.power_total
+	for i in range(num_bars): 
+		var percent = float(num_bars - i) / float(num_bars)
+		if percent < power_used: 
+			#bars[i].modulate = Color(1.0,1.0,1.0)
+			bars[i].theme_type_variation = "PowerPanelContainerUsed"
+		elif percent < power_used + power_capspace: 
+			bars[i].theme_type_variation = "PowerPanelContainerCapSpace"
+		else: 
+			bars[i].theme_type_variation = "PowerPanelContainerEmpty"
 	
 # When the buildings button is pressed change the global data to indicate which page is being displayed
 func _on_button_pressed(): 
@@ -79,8 +116,8 @@ func _on_button_2_pressed():
 # Emit signal to be picked up by the game
 func _headquarters_button_pressed():
 	emit_signal("headquarters_pressed")
-func _quarters_button_pressed():
-	emit_signal("quarters_pressed")
+func _barracks_button_pressed():
+	emit_signal("barracks_pressed")
 func _refinery_button_pressed():
 	emit_signal("refinery_pressed")
 func _factory_button_pressed():

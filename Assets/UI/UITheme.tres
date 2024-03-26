@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=21 format=3 uid="uid://ctwc3vll6brq3"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://ctwc3vll6brq3"]
 
 [ext_resource type="FontFile" uid="uid://d3ffdapn3qvvb" path="res://Assets/UI/Valorax-lg25V.otf" id="1_ec68l"]
 [ext_resource type="Texture2D" uid="uid://bm77b5g2mabmf" path="res://Assets/UI/crate_tex.png" id="2_bexxh"]
@@ -28,9 +28,8 @@ texture_margin_bottom = 20.0
 texture = ExtResource("3_amwdo")
 modulate_color = Color(0.270588, 0.270588, 0.270588, 0.847059)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pi6d0"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vowsi"]
 texture = ExtResource("3_amwdo")
-modulate_color = Color(1, 0.886275, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcyit"]
 texture = ExtResource("3_amwdo")
@@ -72,21 +71,20 @@ texture_margin_top = 30.0
 texture_margin_right = 30.0
 texture_margin_bottom = 30.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6eoc"]
+bg_color = Color(0.054902, 0.882353, 0.133333, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kf5ni"]
 bg_color = Color(0.054902, 0.882353, 0.133333, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqb0j"]
 bg_color = Color(0.4, 0.4, 0.4, 0.67451)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86oia"]
 bg_color = Color(0, 0.647059, 0.109804, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctfid"]
 bg_color = Color(0.909804, 0.890196, 0, 1)
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
 
 [resource]
 AttributePanelContainer/base_type = &"PanelContainer"
@@ -112,7 +110,7 @@ Button/constants/outline_size = 0
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("1_ec68l")
 Button/styles/disabled = SubResource("StyleBoxTexture_vm70e")
-Button/styles/focus = SubResource("StyleBoxTexture_pi6d0")
+Button/styles/focus = SubResource("StyleBoxTexture_vowsi")
 Button/styles/hover = SubResource("StyleBoxTexture_dcyit")
 Button/styles/normal = SubResource("StyleBoxTexture_0a4c0")
 Button/styles/pressed = SubResource("StyleBoxTexture_3m6nk")
@@ -144,6 +142,8 @@ Label/styles/normal = SubResource("StyleBoxEmpty_s4shj")
 MapPanelContainer/base_type = &"PanelContainer"
 MapPanelContainer/styles/panel = SubResource("StyleBoxTexture_iirfe")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_qfek1")
+PowerBarMain/base_type = &"PanelContainer"
+PowerBarMain/styles/panel = SubResource("StyleBoxFlat_r6eoc")
 PowerPanelContainerCapSpace/base_type = &"PanelContainer"
 PowerPanelContainerCapSpace/styles/panel = SubResource("StyleBoxFlat_kf5ni")
 PowerPanelContainerEmpty/base_type = &"PanelContainer"

@@ -11,6 +11,7 @@ var select_pos = Vector2()
 func _ready():
 	_init_signals()
 	_init_visibility()
+	_init_global_data()
 
 func _process(delta):
 	# Updates which UI is displayed
@@ -86,7 +87,7 @@ func select_units(m_pos):
 func get_unit_under_mouse(m_pos, groups : Array[String]): 
 	var result = raycast_from_mouse(m_pos, 0x5) # Raycast from the mouse (collision mask 1 & 3)
 	# Check if the result exists and is a relevant node 
-	if result and GlobalFunctions.is_in_groups(result.collider, ["Unit", "EnemyUnit", "Collectable", "EnemyBuilding"]): 
+	if result and GlobalFunctions.is_in_groups(result.collider, groups): 
 		return result.collider 
 
 # Get the units under a drag and drop box
@@ -155,7 +156,7 @@ func clear_targets():
 @onready var buildings_ui = $BuildingsUI
 @onready var units_ui = $UnitsUI
 @onready var headquarters = $NavRegionMain/SimpleTerrain/Base/Headquarters
-@onready var quarters : Array = [$NavRegionMain/SimpleTerrain/Base/Quarters/Quarter1, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter2, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter3, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter4] 
+@onready var barracks : Array = [$NavRegionMain/SimpleTerrain/Base/Quarters/Quarter1, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter2, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter3, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter4] 
 @onready var refineries : Array = [$NavRegionMain/SimpleTerrain/Base/Refineries/Refinery1, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery2, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery3, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery4] 
 @onready var factories : Array = [$NavRegionMain/SimpleTerrain/Base/Factories/Factory1, $NavRegionMain/SimpleTerrain/Base/Factories/Factory2]
 @onready var airports : Array = [$NavRegionMain/SimpleTerrain/Base/Airports/Airport1, $NavRegionMain/SimpleTerrain/Base/Airports/Airport2]
@@ -163,25 +164,10 @@ func clear_targets():
 @onready var power_plants = [$NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant4]
 @onready var towers = $NavRegionMain/SimpleTerrain/Base/Towers
 
-var headquarters_start_time = null
-var quarters_start_time = null
-var refinery_start_time = null
-var factory_start_time = null
-var airport_start_time = null
-var nuclear_plant_start_time = null
-var power_plant_start_time = null
-
-var num_headquarters = false
-var num_quarters = 0
-var num_refineries = 0
-var num_factories = 0 
-var num_airports = 0 
-var num_nuclear_plant = false
-var num_power_plants = 0
-
 func _init_signals(): 
+	# IDEALLY CAN CONNECT THESE DIRECTLY TO GLOBAL FUNCTIONS WITH AN ARGUMENT 
 	buildings_ui.headquarters_pressed.connect(_on_headquarters_pressed)
-	buildings_ui.quarters_pressed.connect(_on_quarters_pressed)
+	buildings_ui.barracks_pressed.connect(_on_barracks_pressed)
 	buildings_ui.refinery_pressed.connect(_on_refinery_pressed)
 	buildings_ui.factory_pressed.connect(_on_factory_pressed)
 	buildings_ui.airport_pressed.connect(_on_airport_pressed)
@@ -192,8 +178,8 @@ func _init_visibility():
 	headquarters.visible = false
 	nuclear_plant.visible = false
 	towers.visible = false
-	for quarter in quarters: 
-		quarter.visible = false 
+	for barrack in barracks: 
+		barrack.visible = false 
 	for refinery in refineries: 
 		refinery.visible = false
 	for factory in factories: 
@@ -203,35 +189,37 @@ func _init_visibility():
 	for power_plant in power_plants: 
 		power_plant.visible = false 
 
+func _init_global_data(): 
+	GlobalData.max_barracks = barracks.size()
+	GlobalData.max_refineries = refineries.size()
+	GlobalData.max_factories = factories.size()
+	GlobalData.max_airports = airports.size()
+	GlobalData.max_power_plants = power_plants.size()
+	
 func _on_headquarters_pressed():
-	num_headquarters = true 
-	headquarters.visible = true 
-	#headquarters.modulate.a = 0.5
-func _on_quarters_pressed():
-	if num_quarters >= quarters.size(): 
-		return  
-	quarters[num_quarters].visible = true 
-	num_quarters += 1
+	#num_headquarters = true 
+	
+	#headquarters.modulate.a = 0.5 FOR BUILD TIME 
+	GlobalFunctions.buy_headquarters(headquarters) 
+		#headquarters.visible = true 
+	
+func _on_barracks_pressed():
+	GlobalFunctions.buy_barracks(barracks[GlobalData.num_barracks])
+	
 func _on_refinery_pressed():
-	if num_refineries >= refineries.size(): 
-		return  
-	refineries[num_refineries].visible = true 
-	num_refineries += 1
+	GlobalFunctions.buy_refinery(refineries[GlobalData.num_refineries])
+	
 func _on_factory_pressed(): 
-	if num_factories >= factories.size(): 
-		return
-	factories[num_factories].visible = true
-	num_factories += 1
+	GlobalFunctions.buy_factory(factories[GlobalData.num_factories])
+	
 func _on_airport_pressed():
-	if num_airports >= airports.size(): 
-		return  
-	airports[num_airports].visible = true 
-	num_airports += 1
+	GlobalFunctions.buy_airport(airports[GlobalData.num_airports])
+	
 func _on_nuclear_plant_pressed():
-	num_nuclear_plant = true 
-	nuclear_plant.visible = true 
+	GlobalFunctions.buy_nuclear_plant(nuclear_plant)
+		
 func _on_power_plant_pressed(): 
-	if num_power_plants >= power_plants.size(): 
-		return  
-	power_plants[num_power_plants].visible = true 
-	num_power_plants += 1
+	GlobalFunctions.buy_power_plant(power_plants[GlobalData.num_power_plants])
+
+func _update_building_visiblility(): 
+	pass

@@ -150,26 +150,29 @@ expand_mode = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="PowerContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PowerEmpty" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+[node name="PowerEmpty" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/PowerContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_type_variation = &"PowerPanelContainerEmpty"
 
-[node name="PowerCapSpace" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+[node name="PowerCapSpace" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/PowerContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_type_variation = &"PowerPanelContainerCapSpace"
 
-[node name="PowerUsed" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+[node name="PowerUsed" type="PanelContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/PowerContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -205,7 +208,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
 theme_type_variation = &"ButtonLabel"
-text = "Headquarters"
+text = "Non-Functional"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -216,6 +219,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -229,6 +233,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -266,6 +271,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="HeadQuartersEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -278,11 +284,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="RefineryButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1"]
 layout_mode = 2
@@ -305,7 +313,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
 theme_type_variation = &"ButtonLabel"
-text = "Refinery"
+text = "Units Tab"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -316,6 +324,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -329,6 +338,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -366,6 +376,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="RefineryEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -378,11 +389,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="ButtonDuoHBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer"]
 layout_mode = 2
@@ -421,6 +434,8 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -434,6 +449,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -471,6 +487,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="BarracksEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -483,11 +500,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="PowerPlantButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2"]
 layout_mode = 2
@@ -522,6 +541,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -535,6 +555,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -572,6 +593,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="PowerPlantEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -584,11 +606,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="ButtonDuoHBoxContainer3" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer"]
 layout_mode = 2
@@ -627,6 +651,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -640,6 +665,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -677,6 +703,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="TurretEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -689,11 +716,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="FactoryButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3"]
 layout_mode = 2
@@ -728,6 +757,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -741,6 +771,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -778,6 +809,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="FactoryEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -790,11 +822,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="ButtonDuoHBoxContainer4" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer"]
 layout_mode = 2
@@ -833,6 +867,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -846,6 +881,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -883,6 +919,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="AirportEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -895,11 +932,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="NuclearPlantButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4"]
 layout_mode = 2
@@ -934,6 +973,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -947,6 +987,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -984,6 +1025,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="NuclearPlantEnergy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 unique_name_in_owner = true
@@ -996,11 +1038,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="ButtonDuoHBoxContainer5" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer"]
 layout_mode = 2
@@ -1040,6 +1084,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -1053,6 +1098,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -1089,6 +1135,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Energy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 layout_mode = 2
@@ -1100,11 +1147,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [node name="QuartersButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5"]
 layout_mode = 2
@@ -1140,6 +1189,7 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.56
+mouse_filter = 1
 
 [node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -1153,6 +1203,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.1
+mouse_filter = 1
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -1189,6 +1240,7 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Energy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
 layout_mode = 2
@@ -1200,11 +1252,13 @@ text = "600"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
+mouse_filter = 1
 
 [node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.4
+mouse_filter = 1
 
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

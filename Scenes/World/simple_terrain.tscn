@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://jprfemyb3jbn"]
+[gd_scene load_steps=20 format=3 uid="uid://jprfemyb3jbn"]
 
 [ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/RadioStation.obj" id="1_wy2qp"]
 [ext_resource type="ArrayMesh" uid="uid://b5g4dinbo5d2i" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Quarter.obj" id="2_cnt5w"]
@@ -16,6 +16,10 @@
 [ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="14_xaqtf"]
 [ext_resource type="Texture2D" uid="uid://dj2ytkgedawp6" path="res://Assets/Textures/dirt.png" id="15_wh7yt"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqw5i"]
+transparency = 1
+albedo_color = Color(0.294118, 1, 0, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4w50"]
 albedo_texture = ExtResource("15_wh7yt")
 
@@ -32,6 +36,7 @@ size = Vector3(1, 0, 1)
 [node name="Headquarters" type="MeshInstance3D" parent="Base"]
 transform = Transform3D(0.176777, 0, -0.176777, 0, 0.25, 0, 0.176777, 0, 0.176777, 0, 2.5, 0)
 mesh = ExtResource("1_wy2qp")
+surface_material_override/0 = SubResource("StandardMaterial3D_oqw5i")
 
 [node name="Quarters" type="Node3D" parent="Base"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
