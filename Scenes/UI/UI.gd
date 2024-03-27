@@ -21,15 +21,16 @@ signal power_plant_pressed()
 
 func _ready(): 
 	_update_time_label()
-	_update_price_energy_labels()
+	_update_building_price_energy_labels()
+	_update_unit_price_energy_labels()
 	_init_power_bars()
-	#_update_transparancy()
 
 func _process(delta):
 	time = floor(Time.get_ticks_msec() / 1000.0)
 	_update_money_label()
 	_update_power_bars()
 	_update_buildings_enabling()
+	_update_units_enabling()
 	
 func _update_buildings_enabling(): 
 	if not is_in_group("BuildingsUI"): return
@@ -75,10 +76,22 @@ func _update_buildings_enabling():
 	if GlobalData.nuclear_plant_waiting == false: 
 		%NuclearPlantButton.disabled = false
 	
-	
+func _update_units_enabling(): 
+	if not is_in_group("UnitsUI"): return
+	if GlobalData.num_barracks > 1: 
+		%RIButton.disabled = false
+	if GlobalData.num_factories > 0: 
+		%TankButton.disabled = false 
+	if GlobalData.num_factories > 1: 
+		%ArmouredCarButton.disabled = false
+	if GlobalData.num_airports > 0: 
+		%MGChopperButton.disabled = false 
+	if GlobalData.num_airports > 1: 
+		%RocketChopperButton.disabled = false
 	
 # Updates the label values so they can be set from global_data.gd
-func _update_price_energy_labels(): 
+func _update_building_price_energy_labels(): 
+	if not is_in_group("BuildingsUI"): return
 	%HeadQuartersPrice.text = str(GlobalData.headquarters_cost)
 	%HeadQuartersEnergy.text = str(GlobalData.headquarters_power)
 	%RefineryPrice.text = str(GlobalData.refinery_cost)
@@ -95,6 +108,15 @@ func _update_price_energy_labels():
 	%AirportEnergy.text = str(GlobalData.airport_power)
 	%NuclearPlantPrice.text = str(GlobalData.nuclear_plant_cost)
 	%NuclearPlantEnergy.text = str(GlobalData.nuclear_plant_power)
+
+func _update_unit_price_energy_labels(): 
+	if not is_in_group("UnitsUI"): return
+	%GIPrice.text = str(GlobalData.general_infantry_cost)
+	%RIPrice.text = str(GlobalData.rocket_infantry_cost)
+	%TankPrice.text = str(GlobalData.tank_cost)
+	%ArmouredCarPrice.text = str(GlobalData.armoured_car_cost)  
+	%MGChopperPrice.text = str(GlobalData.mg_chopper_cost) 
+	%RocketChopperPrice.text = str(GlobalData.rocket_chopper_cost)
 	
 # Update function for the time label
 func _update_time_label(): 
@@ -111,7 +133,6 @@ var power_bar = preload("res://Scenes/UI/power_bar.tscn")
 var bars : Array = [] 
 var num_bars = 50
 func _init_power_bars(): 
-	if not is_in_group("BuildingsUI"): return
 	var container = %PowerContainer
 	for i in range(GlobalData.power_total): 
 		var instance = power_bar.instantiate()
@@ -122,8 +143,6 @@ func _init_power_bars():
 # Update function for the power bars on the left hand side
 # I intend to update this into blocks so it is more clear how much power is being used 
 func _update_power_bars(): 
-	if not is_in_group("BuildingsUI"): return
-
 	for i in range(GlobalData.power_total):
 		var ind = GlobalData.power_total - i - 1
 		if i < GlobalData.power_used: 

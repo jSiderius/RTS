@@ -17,7 +17,6 @@ func buy_headquarters(node):
 		return false
 	GlobalData.money -= GlobalData.headquarters_cost
 	GlobalData.headquarters_waiting = true
-	GlobalData.headquarters = true
 	
 	node.visible = true
 	set_node_transparancy(node, 0.6)
@@ -48,6 +47,7 @@ func buy_refinery(node):
 		await get_tree().create_timer(GlobalData.building_wait_time / 10).timeout
 		node.health += 10
 	set_node_transparancy(node, 1.0)
+	node.instantiate_truck()
 	node.health_bar_invisible()
 	GlobalData.num_refineries += 1
 	GlobalData.refineries_waiting = false 
@@ -107,6 +107,7 @@ func buy_factory(node):
 	GlobalData.factories_waiting
 	
 	node.visible = true
+	GlobalData.factories_waiting = true
 	set_node_transparancy(node, 0.6)
 	for i in range(10): 
 		await get_tree().create_timer(GlobalData.building_wait_time / 10).timeout
@@ -182,7 +183,6 @@ func set_node_transparancy(node, a):
 		var surface = node.get_active_material(i)
 		# Make sure the material exists and is compatible with transparency
 		if surface:
-			print_debug(i)
 			surface = surface.duplicate() 
 			var col = surface.albedo_color
 			if a == 1.0: 

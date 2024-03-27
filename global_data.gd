@@ -9,8 +9,10 @@ var power_owned = 0.0
 var power_used = 0.0
 
 # Constant amount of time to wait for a building to build, can be changed to individual if necessary
-var building_wait_time = 1.5 
+var building_wait_time = 0.2
 var popup_wait_time = 2.0
+
+var box_value = 100 # Boxes will probably have different values so this can be a get from the collided object 
  
 # Track the count, power usage, and cost of buildings 
 var headquarters_cost = 2500
@@ -59,9 +61,10 @@ var nuclear_plant_power = -14
 var nuclear_plant = false 
 var nuclear_plant_waiting = null 
 
-
-
-
-	
-	
-
+#Same for Units
+var general_infantry_cost = 100 
+var rocket_infantry_cost = 200 
+var tank_cost = 300 
+var armoured_car_cost = 400 
+var mg_chopper_cost = 500 
+var rocket_chopper_cost = 600 

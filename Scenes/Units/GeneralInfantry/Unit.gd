@@ -12,6 +12,7 @@ var attack_distance = 30.0	# Distance a unit needs to be from a target to attack
 var health = 50.0 # Starting health of the unit, eventually will be exported but this is all I need now
 var health_pickup = 50.0 # Determines the amount of health restored from a health collectable
 var weapon_pickup = 40.0 # Determines the amount of damage added from a weapon upgrade collectable
+var carrying_box = false
 
 # Shows the navigation lines on the screen, can turn this off here but I find them satisfying so they're in the prototype at least
 func _ready():
@@ -20,6 +21,8 @@ func _ready():
 # Update the health bar per frame
 func _process(delta):
 	health_bar.health = health
+	if is_in_group("ResourceTruck") and carrying_box and abs(global_position.distance_to(get_parent().global_position)) < 40:
+		cash_box()
 
 func _physics_process(delta): 
 	# Handling the target is called from physics process because depending on the current state we may want to not move
@@ -65,7 +68,8 @@ func handle_collisions(collision):
 	
 	# Handles a resource truck picking up a resource collectable
 	# TODO: This is a function because eventually I'll add move functionality (mesh with a box in truck bed, truck sets base as target and returns)
-	if collider.is_in_group("ResourceCollectable") and is_in_group("ResourceTruck"):
+	print(abs(global_position.distance_to(get_parent().global_position)))
+	if collider.is_in_group("ResourceCollectable") and is_in_group("ResourceTruck") and not carrying_box:
 		add_box(collider) 
 		
 	# Handles a healable unit picking up a health collectable
@@ -92,8 +96,19 @@ func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)	
 
 func add_box(collider):
+	print_debug("Add Box")
+	var parent = get_parent()
 	collider.get_parent().queue_free() 
-	GlobalData.money += 100  
+	update_target_location(parent.global_position)
+	parent.select() #There will be more logic with this, hack fix
+	carrying_box = true 
+
+func cash_box(): 
+	print_debug("Drop Box")
+	carrying_box = false  
+	GlobalData.money += GlobalData.box_value 
+	get_parent().deselect()
+	update_target_location(global_position)
 
 func select(): 
 	selection_ring.visible = true

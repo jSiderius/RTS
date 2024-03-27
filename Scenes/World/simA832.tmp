@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://jprfemyb3jbn"]
+[gd_scene load_steps=24 format=3 uid="uid://jprfemyb3jbn"]
 
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="1_31fa5"]
 [ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/RadioStation.obj" id="1_wy2qp"]
@@ -23,11 +23,6 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_jbqnc"]
 material = SubResource("StandardMaterial3D_0fsk3")
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_0jnwt"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjnyx"]
-albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4w50"]
 albedo_texture = ExtResource("15_wh7yt")
@@ -100,7 +95,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 9.0
 
 [node name="Refineries" type="Node3D" parent="Base"]
 
-[node name="Refinery1" type="MeshInstance3D" parent="Base/Refineries" groups=["Refinery", "Selectable"]]
+[node name="Refinery1" type="MeshInstance3D" parent="Base/Refineries" groups=["Refinery"]]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 5)
 mesh = ExtResource("3_qpttf")
 script = ExtResource("2_alagu")
@@ -110,13 +105,6 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 8, 0)
 
 [node name="ResourceTruck" parent="Base/Refineries/Refinery1" instance=ExtResource("6_4mlxc")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -18.3952, -2.68797, 0.223217)
-visible = false
-
-[node name="SelectionRing" type="MeshInstance3D" parent="Base/Refineries/Refinery1"]
-transform = Transform3D(25, 0, 0, 0, 0.17, 0, 0, 0, 15, 0, -2.3918, 0)
-visible = false
-mesh = SubResource("CylinderMesh_0jnwt")
-surface_material_override/0 = SubResource("StandardMaterial3D_cjnyx")
 
 [node name="Refinery2" type="MeshInstance3D" parent="Base/Refineries" groups=["Refinery"]]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12, 1.65, 8)

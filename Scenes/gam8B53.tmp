@@ -57,11 +57,11 @@ environment = SubResource("Environment_uck4y")
 [node name="IntroUI" parent="." instance=ExtResource("5_h8jva")]
 
 [node name="CameraBase" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, 193, 0, 153)
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, 0, 0, 0)
 script = ExtResource("6_aa04f")
 
 [node name="Camera3D" type="Camera3D" parent="CameraBase"]
-transform = Transform3D(0.62853, 0.33619, -0.701375, -0.353847, 0.926632, 0.127066, 0.692635, 0.168315, 0.701376, -198.433, -102.303, 460.255)
+transform = Transform3D(0.62853, 0.336189, -0.701375, -0.353847, 0.926633, 0.127065, 0.692635, 0.168315, 0.701375, -269, -31.5462, 337.7)
 
 [node name="Collectables" type="Node3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -162,15 +162,23 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Unit1" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -17.625)
+SPEED = null
+dps = null
 
 [node name="Unit2" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -13.875)
+SPEED = null
+dps = null
 
 [node name="Unit3" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -10)
+SPEED = null
+dps = null
 
 [node name="Unit4" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -6.5)
+SPEED = null
+dps = null
 
 [node name="Enemies" type="Node3D" parent="NavRegionMain/Units"]
 

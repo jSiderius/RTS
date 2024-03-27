@@ -1,10 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://bdsc2h3fq3i5r"]
+[gd_scene load_steps=31 format=3 uid="uid://bdsc2h3fq3i5r"]
 
 [ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_3at1p"]
 [ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="2_jov4v"]
 [ext_resource type="Texture2D" uid="uid://p4cmxjni572a" path="res://Assets/UI/soldier_placeholder.png" id="3_2ty8j"]
 [ext_resource type="Texture2D" uid="uid://bj0t7s4gtnywf" path="res://Assets/UI/building_placeholder.png" id="3_nrc0u"]
-[ext_resource type="Texture2D" uid="uid://bcqvg7sarjhnr" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/Preview/headquarters.png" id="5_74123"]
 [ext_resource type="Texture2D" uid="uid://bf3f4tfutjica" path="res://Assets/UI/headquarters_icon.png" id="5_s72fe"]
 [ext_resource type="Texture2D" uid="uid://ca7wfhbupnabn" path="res://Assets/UI/money-icon.png" id="6_i0d7h"]
 [ext_resource type="Texture2D" uid="uid://cf5ln0n2s38l8" path="res://Assets/UI/power-icon.png" id="7_hyud4"]
@@ -18,52 +17,48 @@
 
 [sub_resource type="InputEventKey" id="InputEventKey_2olxp"]
 device = -1
-pressed = true
-keycode = 84
-unicode = 116
+keycode = 81
+unicode = 113
 
 [sub_resource type="Shortcut" id="Shortcut_g52ic"]
 events = [SubResource("InputEventKey_2olxp")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_qwb6f"]
 device = -1
-pressed = true
-keycode = 89
-unicode = 121
+keycode = 87
+unicode = 119
 
 [sub_resource type="Shortcut" id="Shortcut_yygqd"]
 events = [SubResource("InputEventKey_qwb6f")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_dk5jr"]
 device = -1
-pressed = true
-keycode = 71
-unicode = 103
+keycode = 65
+unicode = 97
 
 [sub_resource type="Shortcut" id="Shortcut_0yq8t"]
 events = [SubResource("InputEventKey_dk5jr")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_ttjc8"]
 device = -1
-keycode = 72
-unicode = 104
+keycode = 83
+unicode = 115
 
 [sub_resource type="Shortcut" id="Shortcut_qhott"]
 events = [SubResource("InputEventKey_ttjc8")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_2d8cw"]
 device = -1
-pressed = true
-keycode = 66
-unicode = 98
+keycode = 90
+unicode = 122
 
 [sub_resource type="Shortcut" id="Shortcut_stv84"]
 events = [SubResource("InputEventKey_2d8cw")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_sbfdm"]
 device = -1
-keycode = 78
-unicode = 110
+keycode = 88
+unicode = 120
 
 [sub_resource type="Shortcut" id="Shortcut_04dld"]
 events = [SubResource("InputEventKey_sbfdm")]
@@ -1163,210 +1158,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton"]
-visible = false
-layout_mode = 0
-offset_right = 203.0
-offset_bottom = 80.0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer"]
-layout_mode = 2
-
-[node name="HeadquartersLabel" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-size_flags_stretch_ratio = 0.0
-theme_type_variation = &"ButtonLabel"
-text = "Headquarters"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-
-[node name="Spacer1" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.56
-mouse_filter = 1
-
-[node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("5_74123")
-expand_mode = 1
-
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 4.1
-mouse_filter = 1
-
-[node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.93
-
-[node name="MoneyIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_i0d7h")
-expand_mode = 1
-
-[node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_hyud4")
-expand_mode = 1
-
-[node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Price" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_type_variation = &"ButtonLabel"
-text = "600"
-
-[node name="Spacer" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-mouse_filter = 1
-
-[node name="Energy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_type_variation = &"ButtonLabel"
-text = "600"
-
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-mouse_filter = 1
-
-[node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.4
-mouse_filter = 1
-
 [node name="QuartersButton" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5"]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton"]
-visible = false
-layout_mode = 0
-offset_right = 203.0
-offset_bottom = 80.0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer"]
-layout_mode = 2
-
-[node name="QuartersLabel" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-size_flags_stretch_ratio = 0.0
-theme_type_variation = &"ButtonLabel"
-text = "Quarters"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-
-[node name="Spacer1" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.56
-mouse_filter = 1
-
-[node name="BuildingIcon" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("5_74123")
-expand_mode = 1
-
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 4.1
-mouse_filter = 1
-
-[node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.93
-
-[node name="MoneyIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("6_i0d7h")
-expand_mode = 1
-
-[node name="PowerIconTextureRect" type="TextureRect" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/IconsVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 6.95
-texture = ExtResource("7_hyud4")
-expand_mode = 1
-
-[node name="PricesVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Price" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_type_variation = &"ButtonLabel"
-text = "600"
-
-[node name="Spacer" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-mouse_filter = 1
-
-[node name="Energy" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_type_variation = &"ButtonLabel"
-text = "600"
-
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2/PricesVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
-mouse_filter = 1
-
-[node name="Spacer4" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.4
-mouse_filter = 1
 
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/UnitsButton" to="." method="_on_button_2_pressed"]
@@ -1377,5 +1172,3 @@ mouse_filter = 1
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton" to="." method="_factory_button_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton" to="." method="_airport_button_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton" to="." method="_nuclear_plant_button_pressed"]
-[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/HeadQuartersButton" to="." method="_headquarters_button_pressed"]
-[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer5/QuartersButton" to="." method="_headquarters_button_pressed"]
