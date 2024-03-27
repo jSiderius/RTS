@@ -197,28 +197,39 @@ func _init_global_data():
 	GlobalData.max_power_plants = power_plants.size()
 	
 func _on_headquarters_pressed():
-	#num_headquarters = true 
-	
-	#headquarters.modulate.a = 0.5 FOR BUILD TIME 
 	GlobalFunctions.buy_headquarters(headquarters) 
-		#headquarters.visible = true 
 	
 func _on_barracks_pressed():
+	if GlobalData.num_barracks >= GlobalData.max_barracks: 
+		GlobalFunctions.popup("Maximum barracks purchased")
+		return
 	GlobalFunctions.buy_barracks(barracks[GlobalData.num_barracks])
 	
 func _on_refinery_pressed():
+	if GlobalData.num_refineries >= GlobalData.max_refineries: 
+		GlobalFunctions.popup("Maximum refineries purchased")
+		return 
 	GlobalFunctions.buy_refinery(refineries[GlobalData.num_refineries])
 	
 func _on_factory_pressed(): 
+	if GlobalData.num_factories >= GlobalData.max_factories: 
+		GlobalFunctions.popup("Maximum factories purchased")
+		return
 	GlobalFunctions.buy_factory(factories[GlobalData.num_factories])
 	
 func _on_airport_pressed():
+	if GlobalData.num_airports >= GlobalData.max_airports: 
+		GlobalFunctions.popup("Maximum airports purchased")
+		return
 	GlobalFunctions.buy_airport(airports[GlobalData.num_airports])
 	
 func _on_nuclear_plant_pressed():
 	GlobalFunctions.buy_nuclear_plant(nuclear_plant)
 		
 func _on_power_plant_pressed(): 
+	if GlobalData.num_power_plants >= GlobalData.max_power_plants: 
+		GlobalFunctions.popup("Maximum power plants purchased")
+		return
 	GlobalFunctions.buy_power_plant(power_plants[GlobalData.num_power_plants])
 
 func _update_building_visiblility(): 

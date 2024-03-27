@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bdsc2h3fq3i5r"]
+[gd_scene load_steps=32 format=3 uid="uid://bdsc2h3fq3i5r"]
 
 [ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_3at1p"]
 [ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="2_jov4v"]
@@ -15,6 +15,75 @@
 [ext_resource type="Texture2D" uid="uid://bnc0syvyprdm1" path="res://Assets/UI/factory_icon.png" id="12_kkjvg"]
 [ext_resource type="Texture2D" uid="uid://dwrhsmjgjoqdf" path="res://Assets/UI/airport_icon.png" id="13_nu58w"]
 [ext_resource type="Texture2D" uid="uid://vanr1g13kfxy" path="res://Assets/UI/nuclear_plant_icon.png" id="14_mufvl"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2olxp"]
+device = -1
+pressed = true
+keycode = 84
+unicode = 116
+
+[sub_resource type="Shortcut" id="Shortcut_g52ic"]
+events = [SubResource("InputEventKey_2olxp")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_qwb6f"]
+device = -1
+pressed = true
+keycode = 89
+unicode = 121
+
+[sub_resource type="Shortcut" id="Shortcut_yygqd"]
+events = [SubResource("InputEventKey_qwb6f")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_dk5jr"]
+device = -1
+pressed = true
+keycode = 71
+unicode = 103
+
+[sub_resource type="Shortcut" id="Shortcut_0yq8t"]
+events = [SubResource("InputEventKey_dk5jr")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ttjc8"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_qhott"]
+events = [SubResource("InputEventKey_ttjc8")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2d8cw"]
+device = -1
+pressed = true
+keycode = 66
+unicode = 98
+
+[sub_resource type="Shortcut" id="Shortcut_stv84"]
+events = [SubResource("InputEventKey_2d8cw")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_sbfdm"]
+device = -1
+keycode = 78
+unicode = 110
+
+[sub_resource type="Shortcut" id="Shortcut_04dld"]
+events = [SubResource("InputEventKey_sbfdm")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_68dot"]
+device = -1
+keycode = 85
+unicode = 117
+
+[sub_resource type="Shortcut" id="Shortcut_mfjyx"]
+events = [SubResource("InputEventKey_68dot")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bs5rw"]
+device = -1
+pressed = true
+keycode = 73
+unicode = 105
+
+[sub_resource type="Shortcut" id="Shortcut_r4sms"]
+events = [SubResource("InputEventKey_bs5rw")]
 
 [node name="BuildingsUI" type="CanvasLayer" groups=["BuildingsUI"]]
 script = ExtResource("1_3at1p")
@@ -42,6 +111,7 @@ offset_right = -18.0
 offset_bottom = 954.0
 grow_horizontal = 0
 theme = ExtResource("2_jov4v")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
 layout_mode = 2
@@ -197,6 +267,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 action_mode = 0
+shortcut = SubResource("Shortcut_g52ic")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton"]
 layout_mode = 0
@@ -236,11 +307,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("5_s72fe")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "T"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/HeadQuartersButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -305,6 +376,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_yygqd")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton"]
 layout_mode = 0
@@ -344,11 +416,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("8_2nldn")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "y"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer1/RefineryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -417,6 +489,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_0yq8t")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton"]
 layout_mode = 0
@@ -458,11 +531,12 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("9_d6bl4")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "G
+"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/BarracksButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -527,6 +601,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_qhott")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton"]
 layout_mode = 0
@@ -567,11 +642,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("10_wwruc")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "H"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer2/PowerPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -640,6 +715,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_stv84")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton"]
 layout_mode = 0
@@ -680,11 +756,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("11_wa7mr")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "B"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/TurretButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -749,6 +825,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_04dld")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton"]
 layout_mode = 0
@@ -789,11 +866,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("12_kkjvg")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "n"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer3/FactoryButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -862,6 +939,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_mfjyx")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton"]
 layout_mode = 0
@@ -902,11 +980,12 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("13_nu58w")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "u
+"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/AirportButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -971,6 +1050,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 disabled = true
+shortcut = SubResource("Shortcut_r4sms")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton"]
 layout_mode = 0
@@ -1011,11 +1091,11 @@ size_flags_stretch_ratio = 6.95
 texture = ExtResource("14_mufvl")
 expand_mode = 1
 
-[node name="Spacer2" type="Control" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_stretch_ratio = 4.1
-mouse_filter = 1
+text = "i"
 
 [node name="IconsVBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/ButtonsVBoxContainer/ButtonDuoHBoxContainer4/NuclearPlantButton/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2

@@ -33,6 +33,8 @@ func _process(delta):
 	
 func _update_buildings_enabling(): 
 	if not is_in_group("BuildingsUI"): return
+	
+	# Logic for disabling buttons on building progression
 	if GlobalData.headquarters: 
 		%RefineryButton.disabled = false 
 		%PowerPlantButton.disabled = false 
@@ -42,6 +44,36 @@ func _update_buildings_enabling():
 		%FactoryButton.disabled = false 
 	if GlobalData.num_factories > 0: %AirportButton.disabled = false 
 	if GlobalData.num_airports > 0: %NuclearPlantButton.disabled = false 
+	
+	# Logic for disabling buttons during wait times
+	if GlobalData.headquarters_waiting: 
+		%HeadQuartersButton.disabled = true
+	if GlobalData.headquarters_waiting == false: 
+		%HeadQuartersButton.disabled = false
+	if GlobalData.refineries_waiting: 
+		%RefineryButton.disabled = true
+	if GlobalData.refineries_waiting == false: 
+		%RefineryButton.disabled = false
+	if GlobalData.barracks_waiting: 
+		%BarracksButton.disabled = true
+	if GlobalData.barracks_waiting == false: 
+		%BarracksButton.disabled = false
+	if GlobalData.power_plants_waiting: 
+		%PowerPlantButton.disabled = true
+	if GlobalData.power_plants_waiting == false: 
+		%PowerPlantButton.disabled = false
+	if GlobalData.factories_waiting: 
+		%FactoryButton.disabled = true
+	if GlobalData.factories_waiting == false: 
+		%FactoryButton.disabled = false
+	if GlobalData.airports_waiting: 
+		%AirportButton.disabled = true
+	if GlobalData.airports_waiting == false: 
+		%AirportButton.disabled = false
+	if GlobalData.nuclear_plant_waiting: 
+		%NuclearPlantButton.disabled = true
+	if GlobalData.nuclear_plant_waiting == false: 
+		%NuclearPlantButton.disabled = false
 	
 	
 	
@@ -81,7 +113,7 @@ var num_bars = 50
 func _init_power_bars(): 
 	if not is_in_group("BuildingsUI"): return
 	var container = %PowerContainer
-	for i in range(num_bars): 
+	for i in range(GlobalData.power_total): 
 		var instance = power_bar.instantiate()
 		instance.size_flags_vertical = 3
 		bars.append(instance)
@@ -91,19 +123,15 @@ func _init_power_bars():
 # I intend to update this into blocks so it is more clear how much power is being used 
 func _update_power_bars(): 
 	if not is_in_group("BuildingsUI"): return
-	#return
-	var power_empty = ( GlobalData.power_total -  GlobalData.power_owned ) / GlobalData.power_total
-	var power_capspace = ( GlobalData.power_owned - GlobalData.power_used ) / GlobalData.power_total
-	var power_used = GlobalData.power_used / GlobalData.power_total
-	for i in range(num_bars): 
-		var percent = float(num_bars - i) / float(num_bars)
-		if percent < power_used: 
-			#bars[i].modulate = Color(1.0,1.0,1.0)
-			bars[i].theme_type_variation = "PowerPanelContainerUsed"
-		elif percent < power_used + power_capspace: 
-			bars[i].theme_type_variation = "PowerPanelContainerCapSpace"
+
+	for i in range(GlobalData.power_total):
+		var ind = GlobalData.power_total - i - 1
+		if i < GlobalData.power_used: 
+			bars[ind].theme_type_variation = "PowerPanelContainerUsed"
+		elif i < GlobalData.power_owned:
+			bars[ind].theme_type_variation = "PowerPanelContainerCapSpace"
 		else: 
-			bars[i].theme_type_variation = "PowerPanelContainerEmpty"
+			bars[ind].theme_type_variation = "PowerPanelContainerEmpty"
 	
 # When the buildings button is pressed change the global data to indicate which page is being displayed
 func _on_button_pressed(): 
