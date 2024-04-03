@@ -7,7 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dnp0gme7blbe3" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Refectory.obj" id="3_qpttf"]
 [ext_resource type="ArrayMesh" uid="uid://tx7rxvd4y1q6" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/Storage.obj" id="4_ji7k6"]
 [ext_resource type="ArrayMesh" uid="uid://bneite3bw4y6v" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/HelicopterBase.obj" id="5_gi1p6"]
-[ext_resource type="PackedScene" uid="uid://duejdjcopirhu" path="res://Scenes/Units/ResourceTruck/resource_truck.tscn" id="6_4mlxc"]
+[ext_resource type="PackedScene" uid="uid://duejdjcopirhu" path="res://Scenes/Units/FriendlyUnits/resource_truck.tscn" id="6_4mlxc"]
 [ext_resource type="PackedScene" uid="uid://citp6id14eisi" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/a585d4ea-4c1c-4b86-b3dd-35b3161a5681.glb" id="6_kl7jy"]
 [ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="7_lcbks"]
 [ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="8_ivgl8"]
@@ -111,6 +111,8 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 8, 0)
 [node name="ResourceTruck" parent="Base/Refineries/Refinery1" instance=ExtResource("6_4mlxc")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -18.3952, -2.68797, 0.223217)
 visible = false
+collision_layer = 2
+collision_mask = 4
 
 [node name="SelectionRing" type="MeshInstance3D" parent="Base/Refineries/Refinery1"]
 transform = Transform3D(25, 0, 0, 0, 0.17, 0, 0, 0, 15, 0, -2.3918, 0)

@@ -155,6 +155,7 @@ func clear_targets():
 # ------------------------------------------------------------ HANDLES BASE BUILDING ------------------------------------------------------------
 @onready var buildings_ui = $BuildingsUI
 @onready var units_ui = $UnitsUI
+@onready var nav_region = $NavRegionMain
 @onready var headquarters = $NavRegionMain/SimpleTerrain/Base/Headquarters
 @onready var barracks : Array = [$NavRegionMain/SimpleTerrain/Base/Quarters/Quarter1, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter2, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter3, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter4] 
 @onready var refineries : Array = [$NavRegionMain/SimpleTerrain/Base/Refineries/Refinery1, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery2, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery3, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery4] 
@@ -172,8 +173,14 @@ func _init_signals():
 	buildings_ui.factory_pressed.connect(_on_factory_pressed)
 	buildings_ui.airport_pressed.connect(_on_airport_pressed)
 	buildings_ui.nuclear_plant_pressed.connect(_on_nuclear_plant_pressed)
-	buildings_ui.power_plant_pressed.connect(_on_power_plant_pressed) 
-	
+	buildings_ui.power_plant_pressed.connect(_on_power_plant_pressed)
+	units_ui.general_infantry_pressed.connect(_on_general_infantry_pressed)
+	units_ui.rocket_infantry_pressed.connect(_on_rocket_infantry_pressed)
+	units_ui.tank_pressed.connect(_on_tank_pressed)
+	units_ui.armoured_car_pressed.connect(_on_armoured_car_pressed)
+	units_ui.mg_helicopter_pressed.connect(_on_mg_helicopter_pressed)
+	units_ui.rocket_helicopter_pressed.connect(_on_rocket_helicopter_pressed)
+		
 func _init_visibility(): 
 	headquarters.visible = false
 	nuclear_plant.visible = false
@@ -234,3 +241,58 @@ func _on_power_plant_pressed():
 
 func _update_building_visiblility(): 
 	pass
+
+var general_infantry = preload("res://Scenes/Units/FriendlyUnits/general_infantry.tscn")
+func _on_general_infantry_pressed(): 
+	var instance = general_infantry.instantiate()
+	var transf = instance.global_transform 
+	transf = transf.scaled(Vector3(4, 4, 4))
+	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
+	transf.origin = Vector3(-80, 5, -30)
+	
+	instance.global_transform = transf  
+	nav_region.add_child(instance)
+	instance.update_target_location(Vector3(-180, 0, -65))
+	
+var rocket_infantry = preload("res://Scenes/Units/FriendlyUnits/rocket_infantry.tscn")
+func _on_rocket_infantry_pressed(): 
+	var instance = rocket_infantry.instantiate()
+	var transf = instance.global_transform 
+	transf = transf.scaled(Vector3(4, 4, 4))
+	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
+	transf.origin = Vector3(-80, 5, -64)
+	
+	instance.global_transform = transf  
+	nav_region.add_child(instance)
+	instance.update_target_location(Vector3(-180, 5, -125))
+	
+var tank = preload("res://Scenes/Units/FriendlyUnits/tank.tscn")
+func _on_tank_pressed(): 
+	var instance = tank.instantiate()
+	var transf = instance.global_transform 
+	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
+	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
+	transf.origin = Vector3(71.0, 5, -3.0)
+	
+	instance.global_transform = transf  
+	nav_region.add_child(instance)
+	instance.update_target_location(Vector3(145, 5, -0))
+
+var ac = preload("res://Scenes/Units/FriendlyUnits/armoured_car.tscn")
+func _on_armoured_car_pressed(): 
+	var instance = ac.instantiate()
+	var transf = instance.global_transform 
+	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
+	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
+	transf.origin = Vector3(71.0, 5, -3.0)
+	
+	instance.global_transform = transf  
+	nav_region.add_child(instance)
+	instance.update_target_location(Vector3(145, 5, -0))
+	
+func _on_mg_helicopter_pressed(): 
+	print("MGH")
+	
+func _on_rocket_helicopter_pressed(): 
+	print("RH")
+	

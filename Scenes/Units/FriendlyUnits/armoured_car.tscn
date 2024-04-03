@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://hjq81jwg076l"]
+
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/unit.gd" id="1_7kgn6"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_7p4jh"]
+[ext_resource type="ArrayMesh" uid="uid://clu78nh8g7lyl" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Jeep.obj" id="3_kk7yc"]
+[ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="4_d6qtc"]
+[ext_resource type="ArrayMesh" uid="uid://bdmg0g74fkev1" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/GrenadeLauncher.obj" id="5_ou1p5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvrhy"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6gmju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5sfy"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="Tank" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
+script = ExtResource("1_7kgn6")
+SPEED = 8.0
+dps = 1000.0
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.36662, 0)
+shape = SubResource("BoxShape3D_mvrhy")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 0.11, 0, 0, 0, 5.7, 0, 0.143517, 0)
+visible = false
+mesh = SubResource("CylinderMesh_6gmju")
+surface_material_override/0 = SubResource("StandardMaterial3D_t5sfy")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_7p4jh")]
+unique_name_in_owner = true
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0, 3.24135, 0)
+
+[node name="Jeep" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = ExtResource("3_kk7yc")
+
+[node name="Ak" type="MeshInstance3D" parent="Jeep"]
+transform = Transform3D(-4.37114e-08, 0, 1, -0.258819, 0.965926, -1.13133e-08, -0.965926, -0.258819, -4.2222e-08, -0.793945, 0.147691, 0.529847)
+mesh = ExtResource("4_d6qtc")
+skeleton = NodePath("../..")
+
+[node name="Ak2" type="MeshInstance3D" parent="Jeep"]
+transform = Transform3D(-4.37114e-08, 0, 1, -0.258819, 0.965926, -1.13133e-08, -0.965926, -0.258819, -4.2222e-08, 0.887014, 0.147691, 0.529847)
+mesh = ExtResource("4_d6qtc")
+skeleton = NodePath("../..")
+
+[node name="GrenadeLauncher" type="MeshInstance3D" parent="Jeep/Ak2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 3.90799e-14, -6.21725e-15, 1, 0.779362, 1.57214, -0.492333)
+mesh = ExtResource("5_ou1p5")
+skeleton = NodePath("../..")

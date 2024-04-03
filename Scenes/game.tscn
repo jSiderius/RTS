@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d3w8k2dwlknto"]
+[gd_scene load_steps=20 format=3 uid="uid://d3w8k2dwlknto"]
 
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_53jgf"]
 [ext_resource type="Texture2D" uid="uid://b3ybuewunshw0" path="res://Assets/Textures/Sky/istockphoto-923897806-612x612.png" id="2_5p5f6"]
@@ -9,11 +9,10 @@
 [ext_resource type="Script" path="res://Scenes/UI/selection_box.gd" id="7_31uxq"]
 [ext_resource type="Script" path="res://Scenes/World/nav_region.gd" id="8_08ih7"]
 [ext_resource type="PackedScene" uid="uid://jprfemyb3jbn" path="res://Scenes/World/simple_terrain.tscn" id="9_u80md"]
-[ext_resource type="PackedScene" uid="uid://d2v7buf63dtn3" path="res://Scenes/Units/GeneralInfantry/unit.tscn" id="10_4nake"]
+[ext_resource type="PackedScene" uid="uid://d2v7buf63dtn3" path="res://Scenes/Units/FriendlyUnits/unit.tscn" id="10_4nake"]
 [ext_resource type="PackedScene" uid="uid://bkakinwr3qloa" path="res://Scenes/Collectables/ResourceCollectable/resource_collectable.tscn" id="10_h6jf2"]
 [ext_resource type="PackedScene" uid="uid://cg5ef6fa6ljea" path="res://Scenes/Units/EnemyUnits/enemy.tscn" id="11_0smbk"]
 [ext_resource type="PackedScene" uid="uid://baphrr88i27t3" path="res://Scenes/World/EnemyBase/enemy_hq.tscn" id="11_da3x3"]
-[ext_resource type="PackedScene" uid="uid://boc7t81tlldmx" path="res://Scenes/Units/Tank/tank.tscn" id="12_sf44e"]
 [ext_resource type="PackedScene" uid="uid://bhhniqjwc2sv6" path="res://Scenes/Collectables/HealthCollectable/health_collectable.tscn" id="14_12g66"]
 [ext_resource type="PackedScene" uid="uid://dvwucnq5rev5v" path="res://Scenes/Collectables/WeaponUpgradeCollectable/weapon_upgrade_collectable.tscn" id="15_y1jvc"]
 
@@ -57,11 +56,11 @@ environment = SubResource("Environment_uck4y")
 [node name="IntroUI" parent="." instance=ExtResource("5_h8jva")]
 
 [node name="CameraBase" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, 193, 0, 153)
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, 209.216, 0, -50.3514)
 script = ExtResource("6_aa04f")
 
 [node name="Camera3D" type="Camera3D" parent="CameraBase"]
-transform = Transform3D(0.62853, 0.33619, -0.701375, -0.353847, 0.926632, 0.127066, 0.692635, 0.168315, 0.701376, -198.433, -102.303, 460.255)
+transform = Transform3D(0.623757, 0.162785, -0.764479, -0.380904, 0.917379, -0.115447, 0.682524, 0.363204, 0.634228, -114.4, -163.948, 457.419)
 
 [node name="Collectables" type="Node3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -133,21 +132,25 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -100, 
 [node name="WeaponUpgradeCollectables" type="Node3D" parent="Collectables"]
 
 [node name="WeaponUpgradeCollectable" parent="Collectables/WeaponUpgradeCollectables" instance=ExtResource("15_y1jvc")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -100.5, 5, -89.5)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -93.9377, 4.85911, -67.4909)
 
 [node name="WeaponUpgradeCollectable2" parent="Collectables/WeaponUpgradeCollectables" instance=ExtResource("15_y1jvc")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -100.5, 5, -99)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -95.9991, 5, -75.2311)
 
 [node name="WeaponUpgradeCollectable3" parent="Collectables/WeaponUpgradeCollectables" instance=ExtResource("15_y1jvc")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -106, 5, -94.5)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -99.4674, 5, -68.2672)
 
 [node name="EnemyBase" type="Node3D" parent="."]
 
 [node name="EnemyHq" parent="EnemyBase" instance=ExtResource("11_da3x3")]
 transform = Transform3D(-3.0598e-07, 0, 7, 0, 7, 0, -7, 0, -3.0598e-07, -261, 15, -105)
 
+[node name="Unit4" parent="." instance=ExtResource("10_4nake")]
+transform = Transform3D(-2.09814e-07, 0, -4.8, 0, 4.8, 0, 4.8, 0, -2.09814e-07, -151, 10, -52)
+visible = false
+
 [node name="NavRegionMain" type="NavigationRegion3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 18.2292)
 navigation_mesh = SubResource("NavigationMesh_pu4y1")
 script = ExtResource("8_08ih7")
 
@@ -162,15 +165,15 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Unit1" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -17.625)
+visible = false
 
 [node name="Unit2" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -13.875)
+visible = false
 
 [node name="Unit3" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
 transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -10)
-
-[node name="Unit4" parent="NavRegionMain/Units/Infantry" instance=ExtResource("10_4nake")]
-transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -18.875, 0.5, -6.5)
+visible = false
 
 [node name="Enemies" type="Node3D" parent="NavRegionMain/Units"]
 
@@ -185,9 +188,6 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -25, 0.6, -12)
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -25, 0.6, -8.5)
 
 [node name="Tanks" type="Node3D" parent="NavRegionMain/Units"]
-
-[node name="Tank1" parent="NavRegionMain/Units/Tanks" instance=ExtResource("12_sf44e")]
-transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -24.3798, 1.01442, 0.53157)
 
 [node name="SimpleTerrain" parent="NavRegionMain" instance=ExtResource("9_u80md")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

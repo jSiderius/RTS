@@ -10,7 +10,7 @@ func _process(delta):
 func health_bar_invisible(): 
 	health_bar.visible = false
 
-var truck = preload("res://Scenes/Units/ResourceTruck/resource_truck.tscn")
+var truck = preload("res://Scenes/Units/FriendlyUnits/resource_truck.tscn")
 func instantiate_truck(): 
 	if is_in_group("Refinery"):
 		var instance = truck.instantiate()

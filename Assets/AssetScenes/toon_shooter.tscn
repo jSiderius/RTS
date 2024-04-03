@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://j4srgh0135ed"]
+[gd_scene load_steps=77 format=3 uid="uid://j4srgh0135ed"]
 
 [ext_resource type="ArrayMesh" uid="uid://doejhguot68yg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Barrier_Fixed.obj" id="1_bgl4t"]
 [ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="1_w6qok"]
@@ -71,6 +71,11 @@
 [ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="53_w1ksg"]
 [ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="54_peea4"]
 [ext_resource type="ArrayMesh" uid="uid://c8lg4r6515hjg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WoodPlanks.obj" id="55_bywhq"]
+[ext_resource type="PackedScene" uid="uid://bhgitbef4cheh" path="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/glTF/Character_Enemy.gltf" id="72_rl8yp"]
+[ext_resource type="ArrayMesh" uid="uid://bg0753ia00po" path="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/OBJ/Character_Enemy.obj" id="72_u3m7n"]
+[ext_resource type="ArrayMesh" uid="uid://cgu5gq6fkcrc4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/OBJ/Character_Hazmat.obj" id="73_6784q"]
+[ext_resource type="ArrayMesh" uid="uid://c4m0jo7ojn36p" path="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/OBJ/Character_Soldier.obj" id="74_aimk8"]
+[ext_resource type="ArrayMesh" uid="uid://bn81renqwrouc" path="res://Assets/AssetPacks/ToonShooterAssetPack/Characters/OBJ/Character_Soldier_Edited.obj" id="75_xeqkb"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -245,6 +250,7 @@ mesh = ExtResource("14_c4nmy")
 
 [node name="Crate" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
 mesh = ExtResource("15_1w2vi")
 
 [node name="DebrisBrokenCar" type="MeshInstance3D" parent="."]
@@ -446,3 +452,27 @@ mesh = ExtResource("54_peea4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
 visible = false
 mesh = ExtResource("55_bywhq")
+
+[node name="Character_Enemy2" parent="." instance=ExtResource("72_rl8yp")]
+visible = false
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="CharacterEnemy" type="MeshInstance3D" parent="Characters"]
+visible = false
+mesh = ExtResource("72_u3m7n")
+skeleton = NodePath("../..")
+
+[node name="CharacterHazmat" type="MeshInstance3D" parent="Characters"]
+visible = false
+mesh = ExtResource("73_6784q")
+skeleton = NodePath("../..")
+
+[node name="CharacterSoldier" type="MeshInstance3D" parent="Characters"]
+mesh = ExtResource("74_aimk8")
+skeleton = NodePath("../..")
+
+[node name="CharacterSoldierEdited" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0746849, -1.19209e-07, 0.0839612)
+visible = false
+mesh = ExtResource("75_xeqkb")

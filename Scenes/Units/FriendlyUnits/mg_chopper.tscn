@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy24utuc74s88"]
+
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/unit.gd" id="1_qekx7"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_6w6kp"]
+[ext_resource type="ArrayMesh" uid="uid://db47rdj3gkp24" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Light_Tank.obj" id="3_ahk2e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvrhy"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6gmju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5sfy"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="Tank" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
+script = ExtResource("1_qekx7")
+SPEED = 8.0
+dps = 1000.0
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.36662, 0)
+shape = SubResource("BoxShape3D_mvrhy")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 0.11, 0, 0, 0, 5.7, 0, 0.143517, 0)
+mesh = SubResource("CylinderMesh_6gmju")
+surface_material_override/0 = SubResource("StandardMaterial3D_t5sfy")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_6w6kp")]
+unique_name_in_owner = true
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0, 3.24135, 0)
+
+[node name="LightTank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.683038, 0)
+mesh = ExtResource("3_ahk2e")

@@ -2,6 +2,7 @@ extends Node
 
 # Global function to determine if a node is in one of several groups
 func is_in_groups(node : Node, groups : Array[String]): 
+	if node == null: return false
 	for group in groups: 
 		if node.is_in_group(group): 
 			return true
@@ -178,7 +179,7 @@ func popup(text):
 	instance.queue_free()
 
 func set_node_transparancy(node, a): 
-	for i in range(7):
+	for i in range(node.get_surface_override_material_count()):
 		#var surface = node.get_surface_override_material(i)
 		var surface = node.get_active_material(i)
 		# Make sure the material exists and is compatible with transparency

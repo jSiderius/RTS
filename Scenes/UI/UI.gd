@@ -12,12 +12,17 @@ class_name UI
 
 signal headquarters_pressed() 
 signal barracks_pressed()
-signal refinery_pressed
+signal refinery_pressed()
 signal factory_pressed()
 signal airport_pressed() 
 signal nuclear_plant_pressed() 
 signal power_plant_pressed() 
-
+signal general_infantry_pressed()
+signal rocket_infantry_pressed() 
+signal tank_pressed() 
+signal armoured_car_pressed() 
+signal mg_helicopter_pressed() 
+signal rocket_helicopter_pressed() 
 
 func _ready(): 
 	_update_time_label()
@@ -126,9 +131,9 @@ func _update_time_label():
 		time_label.text = str( ( time - (int(time) % 60) ) / 60.0) + ":" + str(int(time) % 60)
 
 # Update function for the money label
-func _update_money_label(): 
+func _update_money_label():
 	money_label.text = "$" + str(floor(GlobalData.money))
-
+	
 var power_bar = preload("res://Scenes/UI/power_bar.tscn")
 var bars : Array = [] 
 var num_bars = 50
@@ -163,6 +168,8 @@ func _on_button_2_pressed():
 # Emit signal to be picked up by the game
 func _headquarters_button_pressed():
 	emit_signal("headquarters_pressed")
+	emit_signal("general_infantry_pressed")
+	
 func _barracks_button_pressed():
 	emit_signal("barracks_pressed")
 func _refinery_button_pressed():
@@ -176,7 +183,21 @@ func _nuclear_plant_button_pressed():
 func _power_plant_button_pressed(): 
 	emit_signal("power_plant_pressed")
 	
-#TODO: implement unit buying, signals, ...
+func _general_infantry_button_pressed(): 
+	emit_signal("general_infantry_pressed")
+	
+func _rocket_infantry_button_pressed(): 
+	emit_signal("rocket_infantry_pressed")
 
+func _tank_button_pressed(): 
+	emit_signal("tank_pressed")
 
+func _armoured_car_button_pressed(): 
+	emit_signal("armoured_car_pressed")
+
+func _mg_helicopter_button_pressed(): 
+	emit_signal("mg_helicopter_pressed")
+
+func _rocket_helicopter_button_pressed(): 
+	emit_signal("rocket_helicopter_pressed")
 
