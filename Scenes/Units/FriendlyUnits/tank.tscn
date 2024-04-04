@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://boc7t81tlldmx"]
 
-[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/unit.gd" id="1_6wemu"]
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/tank.gd" id="1_opw5x"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_u6tnc"]
 [ext_resource type="ArrayMesh" uid="uid://db47rdj3gkp24" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Light_Tank.obj" id="3_r2v6v"]
 
@@ -12,7 +12,7 @@
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
 [node name="Tank" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
-script = ExtResource("1_6wemu")
+script = ExtResource("1_opw5x")
 SPEED = 8.0
 dps = 1000.0
 

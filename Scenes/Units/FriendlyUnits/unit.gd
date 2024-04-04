@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Unit 
+class_name Unit
 
 @onready var nav_agent = $NavigationAgent3D
 @onready var selection_ring = $SelectionRing
@@ -28,8 +28,6 @@ func _unit_ready():
 # Update the health bar per frame
 func _process(delta):
 	health_bar.health = health
-	if is_in_group("ResourceTruck") and carrying_box and abs(global_position.distance_to(get_parent().global_position)) < 40:
-		cash_box()
 
 	
 func _physics_process(delta): 
@@ -80,12 +78,6 @@ func handle_target(delta):
 # Handles the outcome of a collision
 func handle_collisions(collision):
 	var collider = collision.get_collider()
-	#prints(self.get_groups(), "is colliding with", collider.get_groups()) 
-	
-	# Handles a resource truck picking up a resource collectable
-	# TODO: This is a function because eventually I'll add move functionality (mesh with a box in truck bed, truck sets base as target and returns)
-	if collider.is_in_group("ResourceCollectable") and is_in_group("ResourceTruck") and not carrying_box:
-		add_box(collider) 
 		
 	# Handles a healable unit picking up a health collectable
 	if collider.is_in_group("HealthCollectable") and is_in_group("HealableUnit") and health < 100:
@@ -111,20 +103,20 @@ func attack(delta):
 func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)	
 
-func add_box(collider):
-	print_debug("Add Box")
-	var parent = get_parent()
-	collider.get_parent().queue_free() 
-	update_target_location(parent.global_position)
-	parent.select() #There will be more logic with this, hack fix
-	carrying_box = true 
-
-func cash_box(): 
-	print_debug("Drop Box")
-	carrying_box = false  
-	GlobalData.money += GlobalData.box_value 
-	get_parent().deselect()
-	update_target_location(global_position)
+#func add_box(collider):
+	#print_debug("Add Box")
+	#var parent = get_parent()
+	#collider.get_parent().queue_free() 
+	#update_target_location(parent.global_position)
+	#parent.select() #There will be more logic with this, hack fix
+	#carrying_box = true 
+#
+#func cash_box(): 
+	#print_debug("Drop Box")
+	#carrying_box = false  
+	#GlobalData.money += GlobalData.box_value 
+	#get_parent().deselect()
+	#update_target_location(global_position)
 
 func select(): 
 	selection_ring.visible = true
@@ -133,10 +125,11 @@ func deselect():
 	selection_ring.visible = false
 
 func set_target(unit): 
-	#if not is_instance_valid(target): 
-		#return 
-	target = unit
-	target.select() 
+	return
+	#if unit == null: return 
+	#if not GlobalFunctions.is_in_groups(unit, ["EnemyGroundUnit", "HealthCollectable", "WeaponUpgradeCollectable"]): return 
+	#target = unit
+	#target.select() 
 	
 func clear_target():
 	if target and is_instance_valid(target): 

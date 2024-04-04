@@ -19,10 +19,10 @@
 [ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="14_xaqtf"]
 [ext_resource type="Texture2D" uid="uid://dj2ytkgedawp6" path="res://Assets/Textures/dirt.png" id="15_wh7yt"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fsk3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrpcl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_jbqnc"]
-material = SubResource("StandardMaterial3D_0fsk3")
+material = SubResource("StandardMaterial3D_qrpcl")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0jnwt"]
 

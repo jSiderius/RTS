@@ -21,7 +21,7 @@ func handle_target(delta):
 	
 	# If an attack capable unit is in distance of an existing enemy unit or enemy building target, stop moving and attack
 	var in_attack_distance = target and abs(global_transform.origin.distance_to(target.global_transform.origin)) < attack_distance
-	if  GlobalFunctions.is_in_groups(target, ["EnemyUnit", "EnemyBuilding"]): 
+	if  in_attack_distance and GlobalFunctions.is_in_groups(target, ["EnemyUnit", "EnemyBuilding"]): 
 		attack(delta)
 		return true
 	
@@ -49,3 +49,9 @@ func handle_collisions(collision):
 		%LightWeapon.visible = false # Change weapon visibility
 		dps += gi_upgrade_dps # Change damage stats
 		collider.get_parent().queue_free() # Remove collectable from the queue
+		
+func set_target(unit): 
+	if unit == null: return 
+	if not GlobalFunctions.is_in_groups(unit, ["EnemyGroundUnit", "HealthCollectable", "WeaponUpgradeCollectable"]): return 
+	target = unit
+	target.select() 

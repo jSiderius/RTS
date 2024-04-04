@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://hjq81jwg076l"]
 
-[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/unit.gd" id="1_7kgn6"]
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/armoured_car.gd" id="1_dg8g8"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_7p4jh"]
 [ext_resource type="ArrayMesh" uid="uid://clu78nh8g7lyl" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Jeep.obj" id="3_kk7yc"]
 [ext_resource type="ArrayMesh" uid="uid://ckomi3mbib6l0" path="res://Assets/AssetPacks/ToonShooterAssetPack/Guns/OBJ/AK.obj" id="4_d6qtc"]
@@ -13,8 +13,8 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5sfy"]
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
-[node name="Tank" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
-script = ExtResource("1_7kgn6")
+[node name="ArmouredCar" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
+script = ExtResource("1_dg8g8")
 SPEED = 8.0
 dps = 1000.0
 

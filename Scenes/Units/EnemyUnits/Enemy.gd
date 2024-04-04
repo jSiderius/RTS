@@ -1,4 +1,5 @@
 extends StaticBody3D
+class_name Enemy
 
 @onready var selection_ring = $SelectionRing
 @onready var health_bar = %HealthBar

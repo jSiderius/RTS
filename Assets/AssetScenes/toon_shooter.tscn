@@ -81,6 +81,7 @@
 
 [node name="Weapons" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13081, 0, 0.871125)
+visible = false
 
 [node name="Ak" type="MeshInstance3D" parent="Weapons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29117, 0, -0.0280852)
@@ -457,6 +458,7 @@ mesh = ExtResource("55_bywhq")
 visible = false
 
 [node name="Characters" type="Node3D" parent="."]
+visible = false
 
 [node name="CharacterEnemy" type="MeshInstance3D" parent="Characters"]
 visible = false
@@ -469,6 +471,7 @@ mesh = ExtResource("73_6784q")
 skeleton = NodePath("../..")
 
 [node name="CharacterSoldier" type="MeshInstance3D" parent="Characters"]
+visible = false
 mesh = ExtResource("74_aimk8")
 skeleton = NodePath("../..")
 

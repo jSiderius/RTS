@@ -28,16 +28,20 @@ func _process(delta):
 	# Handle target selection
 	if Input.is_action_just_pressed("main_command"):
 		move_selected_units(m_pos)
-		var unit = get_unit_under_mouse(m_pos, ["EnemyUnit", "EnemyBuilding", "Collectable"])
+		var unit = get_unit_under_mouse(m_pos, ["Targetable"])
 		clear_targets()
-		if unit and (unit.is_in_group("EnemyUnit") or unit.is_in_group("EnemyBuilding")): 
-			target_enemy_unit(unit)
-		if unit and unit.is_in_group("ResourceCollectable"):
-			target_resource_collectable(unit)
-		if unit and unit.is_in_group("HealthCollectable"):
-			target_health_collectable(unit)
-		if unit and unit.is_in_group("WeaponUpgradeCollectable"):
-			target_weapon_upgrade(unit)
+		if unit and unit.is_in_group("Targetable"): 
+			for u in selected_units: 
+				u.set_target(unit) #With polymorphism should filter themselves
+				
+		#if unit and (unit.is_in_group("EnemyUnit") or unit.is_in_group("EnemyBuilding")): 
+			#target_enemy_unit(unit)
+		#if unit and unit.is_in_group("ResourceCollectable"):
+			#target_resource_collectable(unit)
+		#if unit and unit.is_in_group("HealthCollectable"):
+			#target_health_collectable(unit)
+		#if unit and unit.is_in_group("WeaponUpgradeCollectable"):
+			#target_weapon_upgrade(unit)
 	
 	# On LMB just pressed, save the mouse information
 	if Input.is_action_just_pressed("alt_command"):
@@ -125,8 +129,10 @@ func raycast_from_mouse(m_pos, collision_mask):
 # Set an enemy as a target for all selected units who can target is 
 func target_enemy_unit(enemy): 
 	for unit in selected_units: 
-		if unit.is_in_group("AttackingUnit"):
-			unit.set_target(enemy) 
+		unit.set_target(enemy) #With polymorphism should filter themselves
+		
+		#if unit.is_in_group("AttackingUnit"):
+			
 
 # Set a resource collectable as a target for all selected units who can target is 
 func target_resource_collectable(resource): 
@@ -156,14 +162,15 @@ func clear_targets():
 @onready var buildings_ui = $BuildingsUI
 @onready var units_ui = $UnitsUI
 @onready var nav_region = $NavRegionMain
-@onready var headquarters = $NavRegionMain/SimpleTerrain/Base/Headquarters
-@onready var barracks : Array = [$NavRegionMain/SimpleTerrain/Base/Quarters/Quarter1, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter2, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter3, $NavRegionMain/SimpleTerrain/Base/Quarters/Quarter4] 
-@onready var refineries : Array = [$NavRegionMain/SimpleTerrain/Base/Refineries/Refinery1, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery2, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery3, $NavRegionMain/SimpleTerrain/Base/Refineries/Refinery4] 
-@onready var factories : Array = [$NavRegionMain/SimpleTerrain/Base/Factories/Factory1, $NavRegionMain/SimpleTerrain/Base/Factories/Factory2]
-@onready var airports : Array = [$NavRegionMain/SimpleTerrain/Base/Airports/Airport1, $NavRegionMain/SimpleTerrain/Base/Airports/Airport2]
-@onready var nuclear_plant = $NavRegionMain/SimpleTerrain/Base/NuclearPlant
-@onready var power_plants = [$NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/SimpleTerrain/Base/PowerPlants/PowerPlant4]
-@onready var towers = $NavRegionMain/SimpleTerrain/Base/Towers
+@onready var nav_region_air = $NavRegionAir
+@onready var headquarters = $NavRegionMain/Terrain/Base/Headquarters
+@onready var barracks : Array = [$NavRegionMain/Terrain/Base/Quarters/Quarter1, $NavRegionMain/Terrain/Base/Quarters/Quarter2, $NavRegionMain/Terrain/Base/Quarters/Quarter3, $NavRegionMain/Terrain/Base/Quarters/Quarter4] 
+@onready var refineries : Array = [$NavRegionMain/Terrain/Base/Refineries/Refinery1, $NavRegionMain/Terrain/Base/Refineries/Refinery2, $NavRegionMain/Terrain/Base/Refineries/Refinery3, $NavRegionMain/Terrain/Base/Refineries/Refinery4] 
+@onready var factories : Array = [$NavRegionMain/Terrain/Base/Factories/Factory1, $NavRegionMain/Terrain/Base/Factories/Factory2]
+@onready var airports : Array = [$NavRegionMain/Terrain/Base/Airports/Airport1, $NavRegionMain/Terrain/Base/Airports/Airport2]
+@onready var nuclear_plant = $NavRegionMain/Terrain/Base/NuclearPlant
+@onready var power_plants = [$NavRegionMain/Terrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant4]
+@onready var towers = $NavRegionMain/Terrain/Base/Towers
 
 func _init_signals(): 
 	# IDEALLY CAN CONNECT THESE DIRECTLY TO GLOBAL FUNCTIONS WITH AN ARGUMENT 
@@ -252,7 +259,7 @@ func _on_general_infantry_pressed():
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(-180, 0, -65))
+	instance.update_target_location(Vector3(-70, 0, 0))
 	
 var rocket_infantry = preload("res://Scenes/Units/FriendlyUnits/rocket_infantry.tscn")
 func _on_rocket_infantry_pressed(): 
@@ -264,7 +271,7 @@ func _on_rocket_infantry_pressed():
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(-180, 5, -125))
+	instance.update_target_location(Vector3(-70, 0, 0))
 	
 var tank = preload("res://Scenes/Units/FriendlyUnits/tank.tscn")
 func _on_tank_pressed(): 
@@ -290,8 +297,18 @@ func _on_armoured_car_pressed():
 	nav_region.add_child(instance)
 	instance.update_target_location(Vector3(145, 5, -0))
 	
+var mg_chopper = preload("res://Scenes/Units/FriendlyUnits/mg_chopper.tscn")
 func _on_mg_helicopter_pressed(): 
-	print("MGH")
+	#print("")
+	var instance = mg_chopper.instantiate()
+	var transf = instance.global_transform 
+	transf = transf.scaled(Vector3(4, 4, 4))
+	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
+	transf.origin = Vector3(71.0, 80, 0)
+	
+	instance.global_transform = transf  
+	nav_region_air.add_child(instance)
+	instance.update_target_location(Vector3(145, 5, -0))
 	
 func _on_rocket_helicopter_pressed(): 
 	print("RH")
