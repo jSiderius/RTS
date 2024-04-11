@@ -24,6 +24,35 @@ Also the editor uses quite alot of RAM on the game and terrain scenes so don't h
 Message me if you have any problems grading  
 Also the assets are not mine and I'm not claiming any credit for them other than manipulating them in the editor 
 
+I'll go over the checklist and where I would say each component is implemented
+1: 
+	- I presented on Thursday the 4th
+2: 
+	- The Nav mesh renders based on CollisionShape3D's
+	- This way I can use masking to determine what bakes into the Nav Mesh
+	- You can see base buildings and terrain baked into the mesh as obstacles while units and collectables are not
+3: 
+	- Didn't do it, probably wouldn't have been too hard because my meshes are animated but I just didn't get to it 
+4: 
+	- This is best implemented in the ResourceTruck, if you click on a resource on the map, it will get the resource then target its home base and cash the resource in 
+	- The turrets will also auto-detect units in their range and attack
+5: 
+	- The units take their own actions in the game and are able to patrol, chase, chase and attack, stop and attack
+6 :
+	- Most of the mechanics are there but I came up short on a full playable experience 
+	- Units are placed around the map and gaurding resources 
+	- The player has to fight the troops to gather resources and build better troops to storm the enemy base
+	- The Enemy base spawns units faster over time which eventually could overcome the player base 
+7: 
+	- At least this is decent, UI and selection do a good job of explaining events
+8: 
+	- Seperate Air and Land navigation with different units being able to attack air, land, buildings
+	- Collectables in the world with different effects
+	- Unit spawners in the enemy base 
+	- Ability to build 7 building types with different purposes
+	- Power and money systems which tie into building and unit construction
+	- Informative popups in the left hand corner informing why you may not be able to buy something 
+	- 5 individual player units and 2 enemy units with unique stats
 
 
 ASSIGNMENT 1 README 
