@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://jidw6a57k4tg"]
+
+[ext_resource type="ArrayMesh" uid="uid://sji023diydkj" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SandsSack.obj" id="1_pcbiq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_by0h0"]
+size = Vector3(2.45258, 0.79895, 1)
+
+[node name="Sandbag" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00698853, 0.00445557, 0)
+shape = SubResource("BoxShape3D_by0h0")
+
+[node name="SandsSack" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_pcbiq")
+skeleton = NodePath("../../../..")

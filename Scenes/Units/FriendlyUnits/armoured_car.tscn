@@ -14,11 +14,12 @@
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
 [node name="ArmouredCar" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
+collision_mask = 23
 script = ExtResource("1_dg8g8")
-SPEED = 8.0
 dps = 1000.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.36662, 0)

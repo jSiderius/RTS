@@ -1,0 +1,148 @@
+[gd_scene load_steps=13 format=3 uid="uid://u0m2r4i6ou4o"]
+
+[ext_resource type="Script" path="res://Scenes/World/Base/power_plant.gd" id="1_lfnv2"]
+[ext_resource type="ArrayMesh" uid="uid://dmhvggvh0b5qg" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_1.obj" id="2_kd7hg"]
+[ext_resource type="ArrayMesh" uid="uid://l5i7bjyl35f4" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Platform.obj" id="3_p0e86"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="4_mmm6k"]
+[ext_resource type="ArrayMesh" uid="uid://dl7pa5xudx8ck" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_4.obj" id="5_yjak5"]
+[ext_resource type="ArrayMesh" uid="uid://h25fs6qxpbl8" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/WaterTank_Floor.obj" id="6_v4ecq"]
+[ext_resource type="ArrayMesh" uid="uid://ohlbbglbhxrb" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Pipes.obj" id="7_d1ipb"]
+[ext_resource type="ArrayMesh" uid="uid://d1sfmiptw7vv7" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/GasTank.obj" id="8_2xwbl"]
+[ext_resource type="ArrayMesh" uid="uid://2jf38q3vf4qj" path="res://Assets/AssetPacks/ToonShooterAssetPack/Environment/OBJ/Structure_3.obj" id="9_eyj56"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b2yay"]
+size = Vector3(9.781, 7.647, 5.769)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mnvit"]
+size = Vector3(11.6603, 8.367, 10.7325)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ap0g"]
+size = Vector3(9.91699, 10.0435, 5.86572)
+
+[node name="PowerPlant" type="Node3D"]
+script = ExtResource("1_lfnv2")
+
+[node name="PowerPlant1" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 0, 0, 0)
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PowerPlant1"]
+collision_layer = 2
+
+[node name="Structure" type="MeshInstance3D" parent="PowerPlant1/StaticBody3D"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.000189498, -0.000203133, 0.000182152)
+mesh = ExtResource("2_kd7hg")
+skeleton = NodePath("../../..")
+
+[node name="WaterTankPlatform2" type="MeshInstance3D" parent="PowerPlant1/StaticBody3D"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -1.931, 3.29, -0.131001)
+mesh = ExtResource("3_p0e86")
+skeleton = NodePath("../WaterTankPlatform")
+
+[node name="WaterTankPlatform" type="MeshInstance3D" parent="PowerPlant1/StaticBody3D"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 1.669, 3.29, -0.131001)
+mesh = ExtResource("3_p0e86")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PowerPlant1/StaticBody3D"]
+transform = Transform3D(1, 0, -7.98437e-13, 0, 1, 0, 7.98437e-13, 0, 1, -0.431999, 3.84217, 0.254429)
+shape = SubResource("BoxShape3D_b2yay")
+
+[node name="PowerPlant2" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0)
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PowerPlant2"]
+collision_layer = 2
+
+[node name="Structure" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
+mesh = ExtResource("5_yjak5")
+skeleton = NodePath("../../../..")
+
+[node name="PowerGenerator" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.869, 6.461, 2.013)
+mesh = ExtResource("6_v4ecq")
+skeleton = NodePath("../../../..")
+
+[node name="Pipes" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 0.6, -2.078, 3.234, -0.209)
+mesh = ExtResource("7_d1ipb")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank1" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -0.626, 6.47, 3.962)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank2" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(-0.4324, 0, -0.901682, 0, 1, 0, 0.901682, 0, -0.4324, -0.626, 6.46, 2.951)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank3" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(-0.020296, -0.00709604, 0.999769, -0.330037, 0.943968, 0, -0.94375, -0.32996, -0.0215008, -0.460788, 0.0587983, 2.51863)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank4" type="MeshInstance3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(-4.37033e-08, 0.999816, 0.0191975, -1, -4.37114e-08, 0, 8.39147e-10, -0.0191975, 0.999816, 0.250728, 0.506392, 2.50333)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PowerPlant2/StaticBody3D"]
+transform = Transform3D(0.99991, 0, 2.97362e-12, 0, 0.99991, 0, -2.97362e-12, 0, 0.99991, 0.320374, 4.66359, 1.61786)
+shape = SubResource("BoxShape3D_mnvit")
+
+[node name="PowerPlant3" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -4.73141, 1.7136)
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PowerPlant3"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.339277, 13.225, -2.77432)
+shape = SubResource("BoxShape3D_5ap0g")
+
+[node name="Container" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.18254, -2.88864)
+mesh = ExtResource("9_eyj56")
+skeleton = NodePath("../../../..")
+
+[node name="Pipes1" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -2.48949, 11.4253, -2.97556)
+mesh = ExtResource("7_d1ipb")
+skeleton = NodePath("../../../..")
+
+[node name="Pipes2" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(1.14641e-15, -2.62268e-08, 0.6, -0.6, -2.62268e-08, 0, 2.62268e-08, -0.6, -2.62268e-08, -1.55622, 10.9384, -4.7013)
+mesh = ExtResource("7_d1ipb")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank1" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, 0.499811, 11.5769, -3.9755)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank2" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, -0.350515, 11.5769, -3.36387)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank3" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, -0.288779, 11.5769, -3.9755)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="GasTank4" type="MeshInstance3D" parent="PowerPlant3/StaticBody3D"]
+transform = Transform3D(-0.0107504, 0, -0.499884, 0, 0.5, 0, 0.499884, 0, -0.0107504, 0.499811, 11.5769, -3.36387)
+mesh = ExtResource("8_2xwbl")
+skeleton = NodePath("../../../..")
+
+[node name="HealthBar" parent="." instance=ExtResource("4_mmm6k")]
+unique_name_in_owner = true
+transform = Transform3D(-6.55671e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -6.55671e-08, 0, 6.41302, 0)

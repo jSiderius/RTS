@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4p7kvstwfwng"]
+
+[ext_resource type="ArrayMesh" uid="uid://bcf40pvsdpx33" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/GateKeeperStation.obj" id="1_orvmd"]
+[ext_resource type="ArrayMesh" uid="uid://b1koato78qcfw" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/BarrierParking.obj" id="2_6dot5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucrwk"]
+size = Vector3(7.53601, 4.8396, 7.91772)
+
+[node name="TollBooth" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.634338, 0.714478, 0.119751)
+shape = SubResource("BoxShape3D_ucrwk")
+
+[node name="BarrierParking2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, 1, 4.00221, -0.955972, 3.88444)
+mesh = ExtResource("2_6dot5")
+skeleton = NodePath("../../../..")
+
+[node name="GateKeeperStation2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67779, -0.000971794, -0.000549316)
+mesh = ExtResource("1_orvmd")
+skeleton = NodePath("../../..")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://duejdjcopirhu"]
+
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/resource_truck.gd" id="1_hl2sp"]
+[ext_resource type="ArrayMesh" uid="uid://bgk4cj8f5mg8c" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Scout_Car.obj" id="2_c6tfp"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_pahow"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkwn5"]
+size = Vector3(1.965, 2.385, 4.346)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ur5vx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpyhd"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="ResourceTruck" type="CharacterBody3D" groups=["ResourceTruck", "ResourceUnit", "Unit", "units"]]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+collision_mask = 15
+script = ExtResource("1_hl2sp")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="ScoutCar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 1, 2.08616e-07)
+mesh = ExtResource("2_c6tfp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22995, -0.40208)
+visible = false
+shape = SubResource("BoxShape3D_mkwn5")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.30011, 0, 0, 0, 0.0340631, 0, 0, 0, 5.17507, 0, 0.271953, -0.514532)
+visible = false
+mesh = SubResource("CylinderMesh_ur5vx")
+surface_material_override/0 = SubResource("StandardMaterial3D_tpyhd")
+
+[node name="HealthBar" parent="." instance=ExtResource("3_pahow")]
+unique_name_in_owner = true
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.81409, 0)

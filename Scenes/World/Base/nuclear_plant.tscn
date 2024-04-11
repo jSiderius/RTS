@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://btg5jdweeuw8o"]
+
+[ext_resource type="PackedScene" uid="uid://citp6id14eisi" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/a585d4ea-4c1c-4b86-b3dd-35b3161a5681.glb" id="1_5jeo2"]
+[ext_resource type="Script" path="res://Scenes/World/Base/building.gd" id="2_wjt58"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_qp3et"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s7l4i"]
+size = Vector3(13.75, 10.603, 10.626)
+
+[node name="NuclearPlant" type="Node3D"]
+script = ExtResource("2_wjt58")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.506897, 5, 0)
+shape = SubResource("BoxShape3D_s7l4i")
+
+[node name="NuclearPlant" parent="StaticBody3D" instance=ExtResource("1_5jeo2")]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
+
+[node name="HealthBar" parent="StaticBody3D" instance=ExtResource("3_qp3et")]
+unique_name_in_owner = true
+transform = Transform3D(-2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 2, 10, 0)

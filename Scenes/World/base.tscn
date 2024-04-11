@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://c6slf8t842t1m"]
-
-[node name="Base" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_pahow"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mkwn5"]
-size = Vector3(5, 9, 1)
+size = Vector3(1.965, 2.385, 4.346)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ur5vx"]
 
@@ -13,22 +13,23 @@ size = Vector3(5, 9, 1)
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
 [node name="ResourceTruck" type="CharacterBody3D" groups=["ResourceTruck", "ResourceUnit", "Unit", "units"]]
-collision_mask = 5
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+collision_mask = 23
 script = ExtResource("1_hl2sp")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
+[node name="ScoutCar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 1, 2.08616e-07)
+mesh = ExtResource("2_c6tfp")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.39293, 0, 0, 0, 0.264955, 0, 0, 0, 4.34608, 0, 1.22995, -0.40208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22995, -0.40208)
+visible = false
 shape = SubResource("BoxShape3D_mkwn5")
 
-[node name="ScoutCar" type="MeshInstance3D" parent="CollisionShape3D"]
-transform = Transform3D(2.54498, 0, 0, 0, 3.77422, 0, 0, 0, 0.230093, 0, -0.867871, 0.0925156)
-mesh = ExtResource("2_c6tfp")
-skeleton = NodePath("../..")
-
 [node name="SelectionRing" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.294, 0, 0, 0, 0.17, 0, 0, 0, 4.392, 0, 0.435743, 0)
+transform = Transform3D(3.30011, 0, 0, 0, 0.0340631, 0, 0, 0, 5.17507, 0, 0.271953, -0.514532)
 visible = false
 mesh = SubResource("CylinderMesh_ur5vx")
 surface_material_override/0 = SubResource("StandardMaterial3D_tpyhd")

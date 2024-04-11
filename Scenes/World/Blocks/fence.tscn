@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjlbd2ix32cig"]
+
+[ext_resource type="PackedScene" uid="uid://cph0b0qxbx32c" path="res://Assets/AssetPacks/TileMapAssetPack/Models/GLTF format/fence.glb" id="1_pbxlr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jalmy"]
+size = Vector3(1, 1.59229, 0.161621)
+
+[node name="Fence" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="fence1" parent="StaticBody3D" instance=ExtResource("1_pbxlr")]
+
+[node name="fence2" parent="StaticBody3D" instance=ExtResource("1_pbxlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="fence3" parent="StaticBody3D" instance=ExtResource("1_pbxlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="fence4" parent="StaticBody3D" instance=ExtResource("1_pbxlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.817051, -0.419189)
+shape = SubResource("BoxShape3D_jalmy")

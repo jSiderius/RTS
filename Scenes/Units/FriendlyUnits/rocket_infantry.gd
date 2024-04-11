@@ -2,38 +2,15 @@ extends Unit
 
 @export var ri_upgrade_dps = 40.0
 @export var ri_dps = 20.0
-@export var ri_attack_distance = 100.0
+@export var ri_attack_distance = 200.0
+var ri_attack_targets = ["EnemyAirUnit", "EnemyBuilding"]
+var ri_other_targets = ["HealthCollectable", "WeaponUpgradeCollectable"]
 
 func _ready(): 
 	dps = ri_dps
 	attack_distance = ri_attack_distance 
-	
-# Handles behavior regarding the target on a per-frame basis 
-# Return true to stop movement
-func handle_target(delta): 
-	# Check if the unit has a target and the target deleted itself
-	if target and not is_instance_valid(target): 
-		target = null
-		return false
-	
-	# Check if the target exists, if so set it to our target location and make sure it is selected
-	if target: 
-		update_target_location(target.global_transform.origin)
-		target.select()
-	
-	# If an attack capable unit is in distance of an existing enemy unit or enemy building target, stop moving and attack
-	var in_attack_distance = target and abs(global_transform.origin.distance_to(target.global_transform.origin)) < attack_distance
-	if target: 
-		#prints(target, abs(global_transform.origin.distance_to(target.global_transform.origin)) < attack_distance, target.is_in_group("EnemyAirUnit"))
-		prints(abs(global_transform.origin.distance_to(target.global_transform.origin)), attack_distance)
-	if  in_attack_distance and target.is_in_group("EnemyAirUnit"): 
-		print("attack")
-		attack(delta)
-		return true
-	# Check if the target is reached, stops spamming
-	if nav_agent.is_navigation_finished():
-		return true
-	return false 
+	attack_targets = ri_attack_targets
+	other_targets = ri_other_targets 
 	
 # Handles the outcome of a collision
 func handle_collisions(collision):
@@ -55,8 +32,4 @@ func handle_collisions(collision):
 		dps += ri_upgrade_dps # Change damage stats
 		collider.get_parent().queue_free() # Remove collectable from the queue
 		
-func set_target(unit): 
-	if unit == null: return 
-	if not GlobalFunctions.is_in_groups(unit, ["EnemyAirUnit", "HealthCollectable", "WeaponUpgradeCollectable"]): return 
-	target = unit
-	target.select() 
+

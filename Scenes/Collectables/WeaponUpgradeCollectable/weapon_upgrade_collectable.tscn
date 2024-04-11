@@ -18,7 +18,7 @@ albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Collectable", "Targetable", "WeaponUpgradeCollectable"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 collision_layer = 4
-collision_mask = 7
+collision_mask = 0
 script = ExtResource("1_ybe77")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]

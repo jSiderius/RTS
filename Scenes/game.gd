@@ -7,61 +7,52 @@ var selected_units = []
 var select_pos = Vector2()
 @onready var selection_box = $SelectionBox
 @onready var cam = $CameraBase/Camera3D
+var ui_screening = false
 
 func _ready():
 	_init_signals()
 	_init_visibility()
 	_init_global_data()
+	#NavigationServer3D.set_debug_enabled(true) #navmesh_add(nav_region)
 
 func _process(delta):
-	# Updates which UI is displayed
-	if(GlobalData.buildings_ui):
-		buildings_ui.visible = true
-		units_ui.visible = false
-	else: 
-		buildings_ui.visible = false
-		units_ui.visible = true
-		
 	# Get the current mouse position
 	var m_pos = get_viewport().get_mouse_position()
 	
 	# Handle target selection
-	if Input.is_action_just_pressed("main_command"):
+	if Input.is_action_just_pressed("main_command") and not ui_screening:
 		move_selected_units(m_pos)
+		#print("get_unit_under_mouse()")
 		var unit = get_unit_under_mouse(m_pos, ["Targetable"])
 		clear_targets()
+		print(unit)
 		if unit and unit.is_in_group("Targetable"): 
+			#print_debug("Set target for: ", unit)
 			for u in selected_units: 
 				u.set_target(unit) #With polymorphism should filter themselves
-				
-		#if unit and (unit.is_in_group("EnemyUnit") or unit.is_in_group("EnemyBuilding")): 
-			#target_enemy_unit(unit)
-		#if unit and unit.is_in_group("ResourceCollectable"):
-			#target_resource_collectable(unit)
-		#if unit and unit.is_in_group("HealthCollectable"):
-			#target_health_collectable(unit)
-		#if unit and unit.is_in_group("WeaponUpgradeCollectable"):
-			#target_weapon_upgrade(unit)
 	
 	# On LMB just pressed, save the mouse information
-	if Input.is_action_just_pressed("alt_command"):
+	if Input.is_action_just_pressed("alt_command") and not ui_screening:
 		selection_box.select_pos = m_pos
 		select_pos = m_pos
 	
 	# While LMB is pressed inform the selection box so it can render correctly
-	if Input.is_action_pressed("alt_command"):
+	if Input.is_action_pressed("alt_command") and not ui_screening:
 		selection_box.m_pos = m_pos
 		selection_box.visible = true
 	else: 
 		selection_box.visible = false
 		
 	# Handle unit selection on LMB released
-	if Input.is_action_just_released("alt_command"):
-		select_units(m_pos)
+	if Input.is_action_just_released("alt_command") and not ui_screening:
+		if Input.is_action_pressed("shift"):
+			alt_select_units(m_pos)
+		else:
+			select_units(m_pos) 
 
 func move_selected_units(m_pos):
-	#var collision_mask = 1 << 2 #| 1 << layer2 | ... | 1 << layer <--- Sample, A way to set up collision masks
-	var result = raycast_from_mouse(m_pos, 1) # Check for on object at a ray cast from the mouse 
+	var collision_mask = 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4#| 1 << layer2 | ... | 1 << layer <--- Sample, A way to set up collision masks
+	var result = raycast_from_mouse(m_pos, collision_mask) # Check for on object at a ray cast from the mouse 
 	# Return if theres none 
 	if not result:
 		return 
@@ -86,10 +77,38 @@ func select_units(m_pos):
 	for unit in new_selected_units: 
 		unit.select()
 	selected_units = new_selected_units
+ 
+func alt_select_units(m_pos): 
+	var new_selected_units = selected_units.duplicate()
+	# If the mouse position is close to the select position (initial click) then use the click functionality
+	if m_pos.distance_to(select_pos) < 30: 
+		var unit = get_unit_under_mouse(m_pos, ["Unit"])
+		if not unit: return 
+		if unit in new_selected_units:	
+			new_selected_units.erase(unit)
+		else: new_selected_units.append(unit)
+			
+			
+	# If its far use the drag select functionality 
+	else: 
+		#new_selected_units = 
+		for unit in get_units_in_box(select_pos, m_pos): 
+			if unit in new_selected_units: new_selected_units.erase(unit)
+			else: new_selected_units.append(unit)
+			
+	# Deselect all previously selected units
+	for unit in selected_units: 
+		unit.deselect()
+	# Select all new units
+	for unit in new_selected_units: 
+		unit.select()
+	selected_units = new_selected_units
 	
 # Returns any unit directly underneath the mouse and in the provided groups
 func get_unit_under_mouse(m_pos, groups : Array[String]): 
-	var result = raycast_from_mouse(m_pos, 0x5) # Raycast from the mouse (collision mask 1 & 3)
+	#var collision_mask = 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6 | 1 << 7 | 1 << 8
+	var result = raycast_from_mouse(m_pos, 21) 
+	#print_debug("Result", result)
 	# Check if the result exists and is a relevant node 
 	if result and GlobalFunctions.is_in_groups(result.collider, groups): 
 		return result.collider 
@@ -126,32 +145,6 @@ func raycast_from_mouse(m_pos, collision_mask):
 	
 	return space_state.intersect_ray(params)
 
-# Set an enemy as a target for all selected units who can target is 
-func target_enemy_unit(enemy): 
-	for unit in selected_units: 
-		unit.set_target(enemy) #With polymorphism should filter themselves
-		
-		#if unit.is_in_group("AttackingUnit"):
-			
-
-# Set a resource collectable as a target for all selected units who can target is 
-func target_resource_collectable(resource): 
-	for unit in selected_units: 
-		if unit.is_in_group("ResourceUnit"):
-			unit.set_target(resource) 
-
-# Set a health collectable as a target for all selected units who can target is 
-func target_health_collectable(health):
-	for unit in selected_units: 
-		if unit.is_in_group("HealableUnit"):
-			unit.set_target(health) 
-
-# Set a weapon collectable as a target for all selected units who can target is 
-func target_weapon_upgrade(weapon):
-	for unit in selected_units: 
-		if unit.is_in_group("WeaponUpgradeUnit"):
-			unit.set_target(weapon) 
-
 # Clear targets for all selected units
 func clear_targets(): 
 	for unit in selected_units: 
@@ -159,8 +152,8 @@ func clear_targets():
 
 
 # ------------------------------------------------------------ HANDLES BASE BUILDING ------------------------------------------------------------
-@onready var buildings_ui = $BuildingsUI
-@onready var units_ui = $UnitsUI
+@onready var buildings_ui = %BuildingsUI
+@onready var units_ui = %UnitsUI
 @onready var nav_region = $NavRegionMain
 @onready var nav_region_air = $NavRegionAir
 @onready var headquarters = $NavRegionMain/Terrain/Base/Headquarters
@@ -181,12 +174,20 @@ func _init_signals():
 	buildings_ui.airport_pressed.connect(_on_airport_pressed)
 	buildings_ui.nuclear_plant_pressed.connect(_on_nuclear_plant_pressed)
 	buildings_ui.power_plant_pressed.connect(_on_power_plant_pressed)
+	buildings_ui.mouse_entered.connect(_on_ui_mouse_entered)
+	buildings_ui.mouse_exited.connect(_on_ui_mouse_exited)
+	
 	units_ui.general_infantry_pressed.connect(_on_general_infantry_pressed)
 	units_ui.rocket_infantry_pressed.connect(_on_rocket_infantry_pressed)
 	units_ui.tank_pressed.connect(_on_tank_pressed)
 	units_ui.armoured_car_pressed.connect(_on_armoured_car_pressed)
 	units_ui.mg_helicopter_pressed.connect(_on_mg_helicopter_pressed)
 	units_ui.rocket_helicopter_pressed.connect(_on_rocket_helicopter_pressed)
+	units_ui.mouse_entered.connect(_on_ui_mouse_entered)
+	units_ui.mouse_exited.connect(_on_ui_mouse_exited)
+	
+	for r in refineries:
+		r.truck_death.connect(_on_truck_death)
 		
 func _init_visibility(): 
 	headquarters.visible = false
@@ -209,6 +210,23 @@ func _init_global_data():
 	GlobalData.max_factories = factories.size()
 	GlobalData.max_airports = airports.size()
 	GlobalData.max_power_plants = power_plants.size()
+
+func _on_unit_death(unit): 
+	selected_units.erase(unit)
+	unit.queue_free()
+
+func _on_truck_death(): 
+	for u in selected_units: 
+		if u.is_in_group("ResourceTruck"): 
+			u.deselect() 
+			selected_units.erase(u)
+	
+#I really dont know why enter and exit are backwards but it works
+func _on_ui_mouse_entered(): 
+	ui_screening = false
+	
+func _on_ui_mouse_exited(): 
+	ui_screening = true
 	
 func _on_headquarters_pressed():
 	GlobalFunctions.buy_headquarters(headquarters) 
@@ -255,11 +273,12 @@ func _on_general_infantry_pressed():
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
 	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
-	transf.origin = Vector3(-80, 5, -30)
+	transf.origin = Vector3(-180, 6, -80)
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(-70, 0, 0))
+	instance.update_target_location(Vector3(-300, 6, -120))
+	instance.death.connect(_on_unit_death)
 	
 var rocket_infantry = preload("res://Scenes/Units/FriendlyUnits/rocket_infantry.tscn")
 func _on_rocket_infantry_pressed(): 
@@ -267,11 +286,11 @@ func _on_rocket_infantry_pressed():
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
 	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
-	transf.origin = Vector3(-80, 5, -64)
+	transf.origin = Vector3(-180, 6, -80)
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(-70, 0, 0))
+	instance.update_target_location(Vector3(-300, 6, -120))
 	
 var tank = preload("res://Scenes/Units/FriendlyUnits/tank.tscn")
 func _on_tank_pressed(): 
@@ -279,11 +298,11 @@ func _on_tank_pressed():
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
 	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
-	transf.origin = Vector3(71.0, 5, -3.0)
+	transf.origin = Vector3(-180, 6, 70)
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(145, 5, -0))
+	instance.update_target_location(Vector3(-300, 6, 180))
 
 var ac = preload("res://Scenes/Units/FriendlyUnits/armoured_car.tscn")
 func _on_armoured_car_pressed(): 
@@ -291,24 +310,23 @@ func _on_armoured_car_pressed():
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
 	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
-	transf.origin = Vector3(71.0, 5, -3.0)
+	transf.origin = Vector3(-180, 6, 70)
 	
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
-	instance.update_target_location(Vector3(145, 5, -0))
+	instance.update_target_location(Vector3(-300, 6, 180))
 	
 var mg_chopper = preload("res://Scenes/Units/FriendlyUnits/mg_chopper.tscn")
 func _on_mg_helicopter_pressed(): 
-	#print("")
 	var instance = mg_chopper.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
 	transf = transf.rotated(Vector3(0.0, 1.0, 0.0), -1.57079)
-	transf.origin = Vector3(71.0, 80, 0)
+	transf.origin = Vector3(10, 60, -10)
 	
 	instance.global_transform = transf  
 	nav_region_air.add_child(instance)
-	instance.update_target_location(Vector3(145, 5, -0))
+	instance.update_target_location(Vector3(-300, 6, 180))
 	
 func _on_rocket_helicopter_pressed(): 
 	print("RH")

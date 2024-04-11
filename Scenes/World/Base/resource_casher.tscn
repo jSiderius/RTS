@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cl4nglt8tmhbk"]
+
+[ext_resource type="Script" path="res://Scenes/World/Base/resource_casher.gd" id="1_wjyhd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4o8st"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3ijq"]
+albedo_color = Color(1, 0.647059, 0.207843, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cns7g"]
+material = SubResource("StandardMaterial3D_b3ijq")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mkrgx"]
+radius = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hfpqn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqp8c"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="ResourceCasher" type="Node3D" groups=["ResourceCasher", "Selectable", "Targetable"]]
+script = ExtResource("1_wjyhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["ResourceCasher", "Selectable", "Targetable"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_4o8st")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_cns7g")
+
+[node name="HealthBar" type="Node3D" parent="StaticBody3D"]
+unique_name_in_owner = true
+
+[node name="CashRangeArea" type="Area3D" parent="StaticBody3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.242295, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/CashRangeArea"]
+shape = SubResource("SphereShape3D_mkrgx")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, -0.394932, 0)
+visible = false
+mesh = SubResource("CylinderMesh_hfpqn")
+skeleton = NodePath("../StaticBody3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_eqp8c")
+
+[connection signal="body_entered" from="StaticBody3D/CashRangeArea" to="." method="_on_cash_range_area_body_entered"]
+[connection signal="body_exited" from="StaticBody3D/CashRangeArea" to="." method="_on_cash_range_area_body_exited"]

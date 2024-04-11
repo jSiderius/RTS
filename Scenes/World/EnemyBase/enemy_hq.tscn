@@ -18,8 +18,7 @@ albedo_color = Color(1, 0.129412, 0.0901961, 1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["EnemyBuilding", "EnemyHQ", "Targetable"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-collision_layer = 4
-collision_mask = 7
+collision_layer = 2
 script = ExtResource("1_8fdtc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]
@@ -28,7 +27,7 @@ shape = SubResource("BoxShape3D_xji12")
 
 [node name="SelectionRing" type="MeshInstance3D" parent="StaticBody3D"]
 unique_name_in_owner = true
-transform = Transform3D(3, 0, 0, 0, 0.1, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 0.01, 0, 0, 0, 3, 0, -0.237128, 0)
 visible = false
 mesh = SubResource("CylinderMesh_pg6kp")
 surface_material_override/0 = SubResource("StandardMaterial3D_25vqw")

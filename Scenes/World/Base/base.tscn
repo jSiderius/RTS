@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpfs0mofe4gdy"]
+
+[ext_resource type="PackedScene" uid="uid://bwhpnnbulj0ux" path="res://Scenes/World/Base/headquarters.tscn" id="1_3ifi5"]
+[ext_resource type="PackedScene" uid="uid://iwfv23xwu3xx" path="res://Scenes/World/Base/refinery.tscn" id="3_glea4"]
+[ext_resource type="PackedScene" uid="uid://covmwu6tw0e7n" path="res://Scenes/World/Base/factory.tscn" id="4_objkf"]
+[ext_resource type="PackedScene" uid="uid://c8yck30y6trcs" path="res://Scenes/World/Base/quarters.tscn" id="5_54dw6"]
+[ext_resource type="PackedScene" uid="uid://n2403nmwxq81" path="res://Scenes/World/Base/airport.tscn" id="5_873e3"]
+[ext_resource type="PackedScene" uid="uid://btg5jdweeuw8o" path="res://Scenes/World/Base/nuclear_plant.tscn" id="9_7s2re"]
+[ext_resource type="PackedScene" uid="uid://u0m2r4i6ou4o" path="res://Scenes/World/Base/power_plant.tscn" id="16_4pbaj"]
+[ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="17_qpiwf"]
+
+[node name="Base" type="Node3D"]
+
+[node name="Headquarters" parent="." instance=ExtResource("1_3ifi5")]
+unique_name_in_owner = true
+
+[node name="Quarters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Quarter1" parent="Quarters" instance=ExtResource("5_54dw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.7, -5)
+
+[node name="Quarter2" parent="Quarters" instance=ExtResource("5_54dw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.7, -8)
+
+[node name="Quarter3" parent="Quarters" instance=ExtResource("5_54dw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.7, -11)
+
+[node name="Quarter4" parent="Quarters" instance=ExtResource("5_54dw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.7, -14)
+
+[node name="Refineries" type="Node3D" parent="."]
+
+[node name="Refinery1" parent="Refineries" instance=ExtResource("3_glea4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.65, 5)
+
+[node name="Refinery2" parent="Refineries" instance=ExtResource("3_glea4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.65, 8)
+
+[node name="Refinery3" parent="Refineries" instance=ExtResource("3_glea4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.65, 11)
+
+[node name="Refinery4" parent="Refineries" instance=ExtResource("3_glea4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.65, 14)
+
+[node name="Factories" type="Node3D" parent="."]
+
+[node name="Factory1" parent="Factories" instance=ExtResource("4_objkf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 6.5, -12)
+
+[node name="Factory2" parent="Factories" instance=ExtResource("4_objkf")]
+transform = Transform3D(1, 0, 0, 0, 0.77, 0, 0, 0, 1, 10, 5, -12)
+
+[node name="Airports" type="Node3D" parent="."]
+
+[node name="Airport1" parent="Airports" instance=ExtResource("5_873e3")]
+transform = Transform3D(1.00434, 0, 0, 0, 1.00434, 0, 0, 0, 1.00434, 11, 1, 6.9983)
+
+[node name="Airport2" parent="Airports" instance=ExtResource("5_873e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 13)
+
+[node name="NuclearPlant" parent="." instance=ExtResource("9_7s2re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.614, 1.011, -13.016)
+
+[node name="PowerPlants" type="Node3D" parent="."]
+
+[node name="PowerPlant1" parent="PowerPlants" instance=ExtResource("16_4pbaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.095, 0, 14.447)
+
+[node name="PowerPlant4" parent="PowerPlants" instance=ExtResource("16_4pbaj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.144, 0, 14.477)
+
+[node name="PowerPlant2" parent="PowerPlants" instance=ExtResource("16_4pbaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.536, 0.998, 14.497)
+type = 2
+
+[node name="PowerPlant3" parent="PowerPlants" instance=ExtResource("16_4pbaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00598, 0.835523, 17.1064)
+type = 3
+
+[node name="Towers" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+visible = false
+
+[node name="SniperTower" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -6)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower10" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -6)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower2" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 6)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower9" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 6)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower5" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 15)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower8" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 15)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower6" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -15)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower11" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -15)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower3" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower17" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, 24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower18" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, 24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower19" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, 24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower7" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower4" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower14" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, -24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower15" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, -24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower16" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, -24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower13" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
+mesh = ExtResource("17_qpiwf")
+
+[node name="SniperTower12" type="MeshInstance3D" parent="Towers"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
+mesh = ExtResource("17_qpiwf")

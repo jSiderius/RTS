@@ -1,8 +1,32 @@
 Author: 	Josh Siderius
 Date: 		2024-03-17
 Class: 		COMP 4501
-Assignment:	Project ProtoType
+Assignment:	Project
 
+Didn't get to accoplish everything I wanted but I've been coding for 15 hours and I'm done, I'll probably finish anyways and hoping for extension so heres the todo list 
+	- Finish turrets properly and make enemys able to destroy them
+	- Add units for the enemy
+	- Add unit wait times and queues when purchasing
+	- Make unit purchases spend cash 
+	- balance unit cost (building cost should be fine already)
+	- Animate 
+	- Power-ups have AOE
+	- Switch earlier code to better conventions (polymorphism, triggers)
+	- Player units search for targets just like enemy units
+	- Audio 
+	- Minimap
+	- Visible bullets
+	- Bug fix
+	- Playtest and manufature the game experience
+	
+Overall I think I overextended myself with features functionality and design, I definitely could have had a much simpler but complete game
+Also the editor uses quite alot of RAM on the game and terrain scenes so don't have those open as much as possible
+Message me if you have any problems grading  
+Also the assets are not mine and I'm not claiming any credit for them other than manipulating them in the editor 
+
+
+
+ASSIGNMENT 1 README 
 The code documentation is in the code so I'll just go over the features and high-level stuff
 
 - I spent a good amount of my time on UI and base designing. Close to the proposal deadline I switched gears into unit and action base stuff because I realized the proposal revolves around it more

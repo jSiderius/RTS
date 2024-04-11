@@ -1,7 +1,7 @@
 extends Node
 
 # Track the score and number of attempts
-var buildings_ui = true
+#var buildings_ui = true
 var money = 125000.0 #eventually should be $2800
 
 var power_total = 50.0
@@ -9,7 +9,7 @@ var power_owned = 0.0
 var power_used = 0.0
 
 # Constant amount of time to wait for a building to build, can be changed to individual if necessary
-var building_wait_time = 0.2
+var building_wait_time = 0.1
 var popup_wait_time = 2.0
 
 var box_value = 100 # Boxes will probably have different values so this can be a get from the collided object 
