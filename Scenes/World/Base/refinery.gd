@@ -2,7 +2,6 @@ extends Building
 
 var truck = preload("res://Scenes/Units/FriendlyUnits/resource_truck.tscn")
 func instantiate_truck(): 
-	#print()
 	if is_in_group("Refinery"):
 		var instance = truck.instantiate()
 		var transf = instance.global_transform

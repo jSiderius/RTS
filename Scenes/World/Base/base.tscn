@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://covmwu6tw0e7n" path="res://Scenes/World/Base/factory.tscn" id="4_objkf"]
 [ext_resource type="PackedScene" uid="uid://c8yck30y6trcs" path="res://Scenes/World/Base/quarters.tscn" id="5_54dw6"]
 [ext_resource type="PackedScene" uid="uid://n2403nmwxq81" path="res://Scenes/World/Base/airport.tscn" id="5_873e3"]
+[ext_resource type="PackedScene" uid="uid://bb0im0nj20pdh" path="res://Scenes/World/Base/tower.tscn" id="8_amips"]
 [ext_resource type="PackedScene" uid="uid://btg5jdweeuw8o" path="res://Scenes/World/Base/nuclear_plant.tscn" id="9_7s2re"]
 [ext_resource type="PackedScene" uid="uid://u0m2r4i6ou4o" path="res://Scenes/World/Base/power_plant.tscn" id="16_4pbaj"]
-[ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="17_qpiwf"]
 
 [node name="Base" type="Node3D"]
 
@@ -78,82 +78,55 @@ type = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00598, 0.835523, 17.1064)
 type = 3
 
-[node name="Towers" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-visible = false
+[node name="Turrets" type="Node3D" parent="."]
+transform = Transform3D(1, 4.54747e-14, 2.32831e-11, -4.54747e-14, 1, 4.65661e-11, -2.32831e-11, -4.65661e-11, 1, 0, 0, 0)
 
-[node name="SniperTower" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -6)
-mesh = ExtResource("17_qpiwf")
+[node name="Group1" type="Node3D" parent="Turrets"]
 
-[node name="SniperTower10" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -6)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret1" parent="Turrets/Group1" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -1.42108e-13, -7.27595e-11, 1.42108e-13, 1, -7.27595e-11, 7.27595e-11, 7.27595e-11, 1, -24, 2.5, 6)
 
-[node name="SniperTower2" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 6)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret2" parent="Turrets/Group1" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 0, 2.5, 24)
 
-[node name="SniperTower9" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 6)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret3" parent="Turrets/Group1" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 4.65661e-10, 2.5, -24)
 
-[node name="SniperTower5" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 15)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret4" parent="Turrets/Group1" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -2.27374e-13, -4.07454e-10, 2.27374e-13, 1, -5.82077e-11, 0, 5.82077e-11, 0.999999, -24.0291, 2.49822, -6.03479)
 
-[node name="SniperTower8" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 15)
-mesh = ExtResource("17_qpiwf")
+[node name="Group2" type="Node3D" parent="Turrets"]
 
-[node name="SniperTower6" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -15)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret1" parent="Turrets/Group2" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, 24)
 
-[node name="SniperTower11" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -15)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret2" parent="Turrets/Group2" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, 24)
 
-[node name="SniperTower3" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, 24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret3" parent="Turrets/Group2" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, -24)
 
-[node name="SniperTower17" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, 24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret4" parent="Turrets/Group2" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, -24)
 
-[node name="SniperTower18" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, 24)
-mesh = ExtResource("17_qpiwf")
+[node name="Group3" type="Node3D" parent="Turrets"]
 
-[node name="SniperTower19" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, 24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret1" parent="Turrets/Group3" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 12, 2.5, 24)
 
-[node name="SniperTower7" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, 24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret2" parent="Turrets/Group3" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 12, 2.5, -24)
 
-[node name="SniperTower4" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -24, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret3" parent="Turrets/Group3" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -2.27374e-13, -3.49246e-10, 2.27374e-13, 1, -5.82077e-11, 0, 5.82077e-11, 0.999999, -24.0097, 2.43798, -14.9953)
 
-[node name="SniperTower14" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
+[node name="Group4" type="Node3D" parent="Turrets"]
 
-[node name="SniperTower15" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret1" parent="Turrets/Group4" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, 15)
 
-[node name="SniperTower16" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret2" parent="Turrets/Group4" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -12, 2.5, 24)
 
-[node name="SniperTower13" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
-
-[node name="SniperTower12" type="MeshInstance3D" parent="Towers"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 24, 2.5, -24)
-mesh = ExtResource("17_qpiwf")
+[node name="Turret3" parent="Turrets/Group4" instance=ExtResource("8_amips")]
+transform = Transform3D(1, -7.10543e-14, 0, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -12, 2.5, -24)

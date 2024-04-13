@@ -1,15 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://csbi5dyjdjxj8"]
+[gd_scene load_steps=15 format=3 uid="uid://csbi5dyjdjxj8"]
 
 [ext_resource type="Script" path="res://Scenes/Units/EnemyUnits/enemy_air_unit.gd" id="1_4u87f"]
-[ext_resource type="ArrayMesh" uid="uid://g84e1o864yim" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Aircraft.obj" id="1_h3olq"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="1_haiaq"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dxhh"]
-diffuse_mode = 1
-albedo_color = Color(0.603922, 0, 0.00392157, 1)
-metallic = 0.29
-metallic_specular = 0.41
-roughness = 0.8
+[ext_resource type="ArrayMesh" uid="uid://c5chlpqrbbn22" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AircraftBody.obj" id="3_owgrn"]
+[ext_resource type="ArrayMesh" uid="uid://daa0jhx6y8mnh" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AircraftRotor.obj" id="4_44bdm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gqkvu"]
 radius = 3.0
@@ -31,17 +25,20 @@ material = SubResource("StandardMaterial3D_wavle")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_llfkl"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm8um"]
+albedo_color = Color(0.603922, 0, 0.00392157, 1)
+metallic = 0.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_enqj7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v3g4"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
 [node name="EnemyChopper" type="CharacterBody3D" groups=["EnemyAirUnit", "Targetable"]]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_4u87f")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-
-[node name="Aircraft" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, 0)
-mesh = ExtResource("1_h3olq")
-skeleton = NodePath("../CollisionShape3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_2dxhh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["EnemyAirUnit"]]
 transform = Transform3D(0.25, 0, 0, 0, 0, -0.25, 0, 0.25, 0, 0, 1, -0.882912)
@@ -56,8 +53,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fe70c")
 [node name="HealthBar" parent="." groups=["EnemyUnit"] instance=ExtResource("1_haiaq")]
 unique_name_in_owner = true
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 3.12129, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
@@ -106,6 +101,28 @@ transform = Transform3D(9, 0, 0, 0, 25, 0, 0, 0, 9, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_llfkl")
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+
+[node name="Mesh" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.99046, 0)
+
+[node name="AircraftBody" type="MeshInstance3D" parent="Mesh"]
+mesh = ExtResource("3_owgrn")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qm8um")
+
+[node name="RotorBase" type="Node3D" parent="Mesh"]
+transform = Transform3D(0.376224, 0, -0.926529, 0, 1, 0, 0.926529, 0, 0.376224, 0.0214105, 4.43391, 1.51878)
+
+[node name="AircraftRotor" type="MeshInstance3D" parent="Mesh/RotorBase"]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -0.0214105, -4.6527, -1.51878)
+mesh = ExtResource("4_44bdm")
+skeleton = NodePath("../../..")
+
+[node name="SelectionRing2" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 0.02675, 0, 0, 0, 12.42, 0, -0.434087, -0.739057)
+visible = false
+mesh = SubResource("CylinderMesh_enqj7")
+surface_material_override/0 = SubResource("StandardMaterial3D_5v3g4")
 
 [connection signal="body_entered" from="AttackRangeArea" to="." method="_on_attack_body_entered"]
 [connection signal="body_exited" from="AttackRangeArea" to="." method="_on_attack_body_exited"]

@@ -22,12 +22,9 @@ func _process(delta):
 	# Handle target selection
 	if Input.is_action_just_pressed("main_command") and not ui_screening:
 		move_selected_units(m_pos)
-		#print("get_unit_under_mouse()")
 		var unit = get_unit_under_mouse(m_pos, ["Targetable"])
 		clear_targets()
-		print(unit)
 		if unit and unit.is_in_group("Targetable"): 
-			#print_debug("Set target for: ", unit)
 			for u in selected_units: 
 				u.set_target(unit) #With polymorphism should filter themselves
 	
@@ -108,7 +105,6 @@ func alt_select_units(m_pos):
 func get_unit_under_mouse(m_pos, groups : Array[String]): 
 	#var collision_mask = 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6 | 1 << 7 | 1 << 8
 	var result = raycast_from_mouse(m_pos, 21) 
-	#print_debug("Result", result)
 	# Check if the result exists and is a relevant node 
 	if result and GlobalFunctions.is_in_groups(result.collider, groups): 
 		return result.collider 
@@ -163,7 +159,7 @@ func clear_targets():
 @onready var airports : Array = [$NavRegionMain/Terrain/Base/Airports/Airport1, $NavRegionMain/Terrain/Base/Airports/Airport2]
 @onready var nuclear_plant = $NavRegionMain/Terrain/Base/NuclearPlant
 @onready var power_plants = [$NavRegionMain/Terrain/Base/PowerPlants/PowerPlant1, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant2, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant3, $NavRegionMain/Terrain/Base/PowerPlants/PowerPlant4]
-@onready var towers = $NavRegionMain/Terrain/Base/Towers
+@onready var turrets = [$NavRegionMain/Terrain/Base/Turrets/Group1, $NavRegionMain/Terrain/Base/Turrets/Group2, $NavRegionMain/Terrain/Base/Turrets/Group3, $NavRegionMain/Terrain/Base/Turrets/Group4]
 
 func _init_signals(): 
 	# IDEALLY CAN CONNECT THESE DIRECTLY TO GLOBAL FUNCTIONS WITH AN ARGUMENT 
@@ -172,6 +168,7 @@ func _init_signals():
 	buildings_ui.refinery_pressed.connect(_on_refinery_pressed)
 	buildings_ui.factory_pressed.connect(_on_factory_pressed)
 	buildings_ui.airport_pressed.connect(_on_airport_pressed)
+	buildings_ui.turret_pressed.connect(_on_turret_pressed)
 	buildings_ui.nuclear_plant_pressed.connect(_on_nuclear_plant_pressed)
 	buildings_ui.power_plant_pressed.connect(_on_power_plant_pressed)
 	buildings_ui.mouse_entered.connect(_on_ui_mouse_entered)
@@ -182,7 +179,6 @@ func _init_signals():
 	units_ui.tank_pressed.connect(_on_tank_pressed)
 	units_ui.armoured_car_pressed.connect(_on_armoured_car_pressed)
 	units_ui.mg_helicopter_pressed.connect(_on_mg_helicopter_pressed)
-	units_ui.rocket_helicopter_pressed.connect(_on_rocket_helicopter_pressed)
 	units_ui.mouse_entered.connect(_on_ui_mouse_entered)
 	units_ui.mouse_exited.connect(_on_ui_mouse_exited)
 	
@@ -192,7 +188,8 @@ func _init_signals():
 func _init_visibility(): 
 	headquarters.visible = false
 	nuclear_plant.visible = false
-	towers.visible = false
+	for turret in turrets: 
+		turret.visible = false 
 	for barrack in barracks: 
 		barrack.visible = false 
 	for refinery in refineries: 
@@ -210,6 +207,7 @@ func _init_global_data():
 	GlobalData.max_factories = factories.size()
 	GlobalData.max_airports = airports.size()
 	GlobalData.max_power_plants = power_plants.size()
+	GlobalData.max_turrets = turrets.size() 
 
 func _on_unit_death(unit): 
 	selected_units.erase(unit)
@@ -255,6 +253,12 @@ func _on_airport_pressed():
 		return
 	GlobalFunctions.buy_airport(airports[GlobalData.num_airports])
 	
+func _on_turret_pressed(): 
+	if GlobalData.num_turrets >= GlobalData.max_turrets: 
+		GlobalFunctions.popup("Maximum turrets purchased")
+		return
+	GlobalFunctions.buy_turret(turrets[GlobalData.num_turrets])
+	
 func _on_nuclear_plant_pressed():
 	GlobalFunctions.buy_nuclear_plant(nuclear_plant)
 		
@@ -269,6 +273,11 @@ func _update_building_visiblility():
 
 var general_infantry = preload("res://Scenes/Units/FriendlyUnits/general_infantry.tscn")
 func _on_general_infantry_pressed(): 
+	if GlobalData.money < GlobalData.general_infantry_cost: 
+		GlobalFunctions.popup("insufficient money, harvest resources")
+		return
+	GlobalData.money -= GlobalData.general_infantry_cost
+	
 	var instance = general_infantry.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
@@ -282,6 +291,11 @@ func _on_general_infantry_pressed():
 	
 var rocket_infantry = preload("res://Scenes/Units/FriendlyUnits/rocket_infantry.tscn")
 func _on_rocket_infantry_pressed(): 
+	if GlobalData.money < GlobalData.rocket_infantry_cost: 
+		GlobalFunctions.popup("insufficient money, harvest resources")
+		return
+	GlobalData.money -= GlobalData.rocket_infantry_cost
+	
 	var instance = rocket_infantry.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
@@ -291,9 +305,15 @@ func _on_rocket_infantry_pressed():
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
 	instance.update_target_location(Vector3(-300, 6, -120))
+	instance.death.connect(_on_unit_death)
 	
 var tank = preload("res://Scenes/Units/FriendlyUnits/tank.tscn")
 func _on_tank_pressed(): 
+	if GlobalData.money < GlobalData.tank_cost: 
+		GlobalFunctions.popup("insufficient money, harvest resources")
+		return
+	GlobalData.money -= GlobalData.tank_cost
+	
 	var instance = tank.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
@@ -303,9 +323,15 @@ func _on_tank_pressed():
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
 	instance.update_target_location(Vector3(-300, 6, 180))
+	instance.death.connect(_on_unit_death)
 
 var ac = preload("res://Scenes/Units/FriendlyUnits/armoured_car.tscn")
 func _on_armoured_car_pressed(): 
+	if GlobalData.money < GlobalData.armoured_car_cost: 
+		GlobalFunctions.popup("insufficient money, harvest resources")
+		return
+	GlobalData.money -= GlobalData.armoured_car_cost
+	
 	var instance = ac.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(3.2, 3.2, 3.2))
@@ -315,9 +341,15 @@ func _on_armoured_car_pressed():
 	instance.global_transform = transf  
 	nav_region.add_child(instance)
 	instance.update_target_location(Vector3(-300, 6, 180))
+	instance.death.connect(_on_unit_death)
 	
 var mg_chopper = preload("res://Scenes/Units/FriendlyUnits/mg_chopper.tscn")
 func _on_mg_helicopter_pressed(): 
+	if GlobalData.money < GlobalData.mg_chopper_cost: 
+		GlobalFunctions.popup("insufficient money, harvest resources")
+		return
+	GlobalData.money -= GlobalData.mg_chopper_cost
+	
 	var instance = mg_chopper.instantiate()
 	var transf = instance.global_transform 
 	transf = transf.scaled(Vector3(4, 4, 4))
@@ -327,7 +359,5 @@ func _on_mg_helicopter_pressed():
 	instance.global_transform = transf  
 	nav_region_air.add_child(instance)
 	instance.update_target_location(Vector3(-300, 6, 180))
-	
-func _on_rocket_helicopter_pressed(): 
-	print("RH")
+	instance.death.connect(_on_unit_death)
 	

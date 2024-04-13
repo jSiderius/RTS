@@ -125,6 +125,32 @@ func buy_factory(node):
 	GlobalData.factories_waiting = false 
 	return true
 
+func buy_turret(node): 
+	if GlobalData.money < GlobalData.turret_cost:
+		popup("insufficient money, harvest resources")
+		return false
+	GlobalData.money -= GlobalData.turret_cost
+	GlobalData.turrets_waiting = true 
+	GlobalData.power_used -= GlobalData.turret_power
+	
+	node.visible = true
+	for i in range(node.get_child_count()):
+			node.get_child(i).visible = true
+			
+	set_transparancy_multiple_meshes(node, 0.6)
+	for i in range(10): 
+		await get_tree().create_timer(GlobalData.building_wait_time / 10).timeout
+		for j in range(node.get_child_count()):
+			node.get_child(j).health += 10
+	
+	GlobalData.num_turrets += 1
+	GlobalData.turrets_waiting = false 	
+	set_transparancy_multiple_meshes(node, 1.0)
+	for i in range(node.get_child_count()):
+			node.get_child(i).set_ready()
+
+	
+	
 # Function to handle logic when buying the airport
 func buy_airport(node): 
 	if GlobalData.money < GlobalData.airport_cost:
@@ -173,19 +199,21 @@ func buy_nuclear_plant(node):
 	node.health_bar_invisible()
 	GlobalData.nuclear_plant = true
 	GlobalData.nuclear_plant_waiting = false 
+	nuke_popup()
 	return true 
 
-# Function to handle logic when buying the turrent, I only finished a partial implementation of the turret
-func buy_turret(node): 
-	pass
-
-var popup_scene = preload("res://Scenes/UI/popup.tscn")
+var popup_scene = preload("res://Scenes/UI/PopupUI/popup.tscn")
 func popup(text):
 	var instance = popup_scene.instantiate()
 	add_child(instance)
 	instance.find_child("Text").text = text
 	await get_tree().create_timer(GlobalData.popup_wait_time).timeout
 	instance.queue_free()
+
+var n_popup = preload("res://Scenes/UI/PopupUI/nuke_popup.tscn")
+func nuke_popup(): 
+	var instance = n_popup.instantiate()
+	get_tree().get_root().add_child(instance)
 
 # Function to set transparancy for a MeshInstance3D
 func set_node_transparancy(node, a): 

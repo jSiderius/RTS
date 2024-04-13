@@ -6,6 +6,8 @@ var rt_other_targets = ["ResourceCollectable", "ResourceCasher"]
 @export var rt_speed = 50
 @export var cash_distance = 40
 
+@onready var crate = $Crate
+
 func _ready(): 
 	attack_targets = rt_attack_targets 
 	other_targets = rt_other_targets
@@ -42,14 +44,15 @@ func add_box(collider):
 	update_target_location(casher.global_transform.origin)
 	target = casher
 	casher.select()
+	crate.visible = true 
 	
 func cash_box(): 
-	#print("Cash Box")
 	carrying_box = false  
 	GlobalData.money += GlobalData.box_value 
 	if target: target.deselect()
 	target = null 
 	update_target_location(global_transform.origin)
+	crate.visible = false
 	
 func set_target(unit): 
 	if unit.is_in_group("ResourceCasher"):

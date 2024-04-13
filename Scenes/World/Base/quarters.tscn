@@ -7,21 +7,19 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_m5vd2"]
 size = Vector3(4.822, 1.752, 3.2)
 
-[node name="Quarters" type="Node3D"]
+[node name="StaticBody3D" type="StaticBody3D"]
+collision_layer = 2
 script = ExtResource("2_rsw8u")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 2
-
-[node name="Quarter1" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Quarter1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0)
 mesh = ExtResource("1_l7c1m")
 skeleton = NodePath("../../..")
 
-[node name="HealthBar" parent="StaticBody3D" instance=ExtResource("3_04aak")]
+[node name="HealthBar" parent="." instance=ExtResource("3_04aak")]
 unique_name_in_owner = true
 transform = Transform3D(-9.61651e-09, 0, 0.22, 0, 0.22, 0, -0.22, 0, -9.61651e-09, 0, 2, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.192842, 0)
 shape = SubResource("BoxShape3D_m5vd2")

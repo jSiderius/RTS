@@ -9,7 +9,7 @@ var power_owned = 0.0
 var power_used = 0.0
 
 # Constant amount of time to wait for a building to build, can be changed to individual if necessary
-var building_wait_time = 0.1
+var building_wait_time = 5.0
 var popup_wait_time = 2.0
 
 var box_value = 100 # Boxes will probably have different values so this can be a get from the collided object 
@@ -50,11 +50,11 @@ var num_airports = 0
 var max_airports = 0 
 var airports_waiting = null 
 
-var turret_cost = 200 #TODO: Probably expensive but no power 
-var turret_power = -25
-var num_turrets = 0  
+var turret_cost = 800
+var turret_power = 0 
+var num_turrets = 0
 var max_turrets = 0 
-var turrets_waiting = null 
+var turrets_waiting = null
 
 var nuclear_plant_cost = 4500
 var nuclear_plant_power = -14
@@ -62,9 +62,8 @@ var nuclear_plant = false
 var nuclear_plant_waiting = null 
 
 #Same for Units
-var general_infantry_cost = 100 
-var rocket_infantry_cost = 200 
-var tank_cost = 300 
-var armoured_car_cost = 400 
-var mg_chopper_cost = 500 
-var rocket_chopper_cost = 600 
+var general_infantry_cost = 50 
+var rocket_infantry_cost = 80 
+var tank_cost = 400 
+var armoured_car_cost = 300 
+var mg_chopper_cost = 600 

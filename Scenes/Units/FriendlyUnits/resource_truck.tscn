@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://duejdjcopirhu"]
+[gd_scene load_steps=8 format=3 uid="uid://duejdjcopirhu"]
 
 [ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/resource_truck.gd" id="1_hl2sp"]
 [ext_resource type="ArrayMesh" uid="uid://bgk4cj8f5mg8c" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/Scout_Car.obj" id="2_c6tfp"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_pahow"]
+[ext_resource type="PackedScene" uid="uid://bdmk7be6y5tu4" path="res://Assets/AssetPacks/TileMapAssetPack/Models/GLTF format/crateItem.glb" id="4_3fob1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mkwn5"]
 size = Vector3(1.965, 2.385, 4.346)
@@ -37,3 +38,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tpyhd")
 [node name="HealthBar" parent="." instance=ExtResource("3_pahow")]
 unique_name_in_owner = true
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.81409, 0)
+
+[node name="Crate" parent="." instance=ExtResource("4_3fob1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.18845, -1.36536)
+visible = false

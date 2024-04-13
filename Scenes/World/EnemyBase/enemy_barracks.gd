@@ -33,3 +33,4 @@ func instantiate_enemy():
 	instance.global_transform = transf  
 	add_child(instance)
 	instance.update_target_location(instance.global_position + Vector3(2, 0, 0))
+	instance.storming_unit = true

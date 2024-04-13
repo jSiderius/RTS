@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://daa0jhx6y8mnh"
+path="res://.godot/imported/AircraftRotor.obj-7fe1af24a6e99279911dbb9fa1bdb2e5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AircraftRotor.obj-7fe1af24a6e99279911dbb9fa1bdb2e5.mesh"]
+
+source_file="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AircraftRotor.obj"
+dest_files=["res://.godot/imported/AircraftRotor.obj-7fe1af24a6e99279911dbb9fa1bdb2e5.mesh", "res://.godot/imported/AircraftRotor.obj-7fe1af24a6e99279911dbb9fa1bdb2e5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

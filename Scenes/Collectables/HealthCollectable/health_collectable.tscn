@@ -11,7 +11,7 @@ size = Vector3(0.5, 0.5, 0.419)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilbfh"]
 albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 
-[node name="HealthCollectable" type="Node3D" groups=["HealthCollectable", "Targetable"]]
+[node name="HealthCollectable" type="Node3D" groups=["Collectable", "HealthCollectable", "Selectable", "Targetable"]]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Collectable", "HealthCollectable", "Targetable"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

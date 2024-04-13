@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqft812leaeg7"]
+
+[ext_resource type="Script" path="res://Scenes/UI/PopupUI/intro_ui.gd" id="1_dimi3"]
+[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="2_qvvyl"]
+
+[sub_resource type="GDScript" id="GDScript_rjjer"]
+script/source = "extends PanelContainer  
+
+# Very simple script to delete the button oncecliced
+func _on_ok_pressed():
+	queue_free()
+"
+
+[node name="IntroUi" type="CanvasLayer"]
+script = ExtResource("1_dimi3")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IntroMessageContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 861.0
+offset_bottom = 119.0
+scale = Vector2(1.00973, 1.00986)
+theme = ExtResource("2_qvvyl")
+theme_type_variation = &"BigPanelContainer"
+script = SubResource("GDScript_rjjer")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/IntroMessageContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/IntroMessageContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Control/IntroMessageContainer/MarginContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet. Aut consequatur minima et libero consequatur est sunt sint et voluptates veritatis et veniam voluptatem! Qui accusamus culpa est sint dolor in autem similique cum sint aliquam aut voluptas voluptates? Ad veniam sapiente et soluta voluptate qui earum delectus ut nemo sint. Ut sunt doloribus ab neque expedita quo numquam galisum."
+autowrap_mode = 3

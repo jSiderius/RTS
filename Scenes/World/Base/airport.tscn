@@ -13,36 +13,34 @@ albedo_color = Color(1, 1, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_5pl32"]
 material = SubResource("StandardMaterial3D_pww4l")
 
-[node name="Airport" type="Node3D"]
+[node name="StaticBody3D" type="StaticBody3D"]
+collision_layer = 2
 script = ExtResource("2_4nysw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 2
-
-[node name="Airport1" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Airport1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 mesh = ExtResource("1_gfixc")
 skeleton = NodePath("../..")
 
-[node name="HealthBar" parent="StaticBody3D" instance=ExtResource("3_ycekp")]
+[node name="HealthBar" parent="." instance=ExtResource("3_ycekp")]
 unique_name_in_owner = true
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 2, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67582, 0)
 shape = SubResource("BoxShape3D_gl38b")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2164, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.1052, -1.02305)
 mesh = SubResource("PlaneMesh_5pl32")
 skeleton = NodePath("../Airport1")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2164, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.1052, 1.023)
 mesh = SubResource("PlaneMesh_5pl32")
 skeleton = NodePath("../Airport1")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-5.31706e-08, 0, -0.2, 0, 0.2, 0, 1.2164, 0, -8.74228e-09, 0, 0.1052, 0)
 mesh = SubResource("PlaneMesh_5pl32")
 skeleton = NodePath("../Airport1")

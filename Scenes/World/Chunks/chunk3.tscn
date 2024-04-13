@@ -8955,7 +8955,7 @@ transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -11.6718
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -2.67176, 0, 10.4731)
 
 [node name="EnemyChopper" parent="Resources/Cache1" instance=ExtResource("5_ns42s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3479, 32.0432, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3479, 32.0432, 27)
 
 [node name="Enemy" parent="Resources/Cache1" instance=ExtResource("6_i15xx")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -19.6758, 0, 13.6694)

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dy24utuc74s88"]
+
+[ext_resource type="Script" path="res://Scenes/Units/FriendlyUnits/mg_chopper.gd" id="1_2aaoa"]
+[ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_6w6kp"]
+[ext_resource type="ArrayMesh" uid="uid://c5chlpqrbbn22" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AircraftBody.obj" id="4_3pc1j"]
+[ext_resource type="ArrayMesh" uid="uid://daa0jhx6y8mnh" path="res://Assets/AssetPacks/MilitaryVehiclesAssetPack/Military_Vehicles_LP/OBJ/AircraftRotor.obj" id="5_dxc1t"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wu325"]
+radius = 3.0
+height = 36.953
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nyttc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wh8r5"]
+albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
+
+[node name="MGChopper" type="CharacterBody3D" groups=["AttackingUnit", "Unit", "units"]]
+script = ExtResource("1_2aaoa")
+mg_chopper_dps = null
+mg_chopper_speed = null
+mg_chopper_range = null
+dps = 1000.0
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="HealthBar" parent="." instance=ExtResource("2_6w6kp")]
+unique_name_in_owner = true
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0, 2.4876, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." groups=["EnemyAirUnit"]]
+transform = Transform3D(0.25, 0, 0, 0, 0, -0.25, 0, 0.25, 0, 0, 1, -0.882912)
+shape = SubResource("CapsuleShape3D_wu325")
+
+[node name="Mesh" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="AircraftBody" type="MeshInstance3D" parent="Mesh"]
+mesh = ExtResource("4_3pc1j")
+skeleton = NodePath("../..")
+
+[node name="SelectionRing" type="MeshInstance3D" parent="Mesh"]
+transform = Transform3D(16, 0, 0, 0, 0.107, 0, 0, 0, 49.68, 0, -5.69819, -2.95623)
+mesh = SubResource("CylinderMesh_nyttc")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wh8r5")
+
+[node name="RotorBase" type="Node3D" parent="Mesh"]
+transform = Transform3D(0.376224, 0, -0.926529, 0, 1, 0, 0.926529, 0, 0.376224, 0.0214105, 4.43391, 1.51878)
+
+[node name="AircraftRotor" type="MeshInstance3D" parent="Mesh/RotorBase"]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -0.0214105, -4.6527, -1.51878)
+mesh = ExtResource("5_dxc1t")
+skeleton = NodePath("../../..")

@@ -32,4 +32,5 @@ func instantiate_enemy():
 	
 	instance.global_transform = transf  
 	add_child(instance)
+	instance.storming_unit = true
 

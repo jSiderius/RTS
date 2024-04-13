@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bb0im0nj20pdh"]
 
-[ext_resource type="Script" path="res://Scenes/World/Base/tower.gd" id="1_3ta7o"]
 [ext_resource type="ArrayMesh" uid="uid://1vfbqb5i2lt8" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/SniperTower.obj" id="1_q5xco"]
+[ext_resource type="Script" path="res://Scenes/World/Base/friendly_turret.gd" id="1_uffgc"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="2_un4kg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2jdpb"]
@@ -11,31 +11,27 @@ size = Vector3(8.49, 12.815, 7.07386)
 height = 358.708
 radius = 85.546
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwagv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbsei"]
 transparency = 1
-albedo_color = Color(0.215686, 1, 1, 0.407843)
+albedo_color = Color(0.215686, 1, 1, 0.121569)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_x38pq"]
-material = SubResource("StandardMaterial3D_iwagv")
+material = SubResource("StandardMaterial3D_lbsei")
 
-[node name="Tower" type="Node3D"]
-script = ExtResource("1_3ta7o")
+[node name="Tower" type="StaticBody3D" groups=["AttackableFriendlyBuilding", "Damageable", "Turret"]]
+script = ExtResource("1_uffgc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-collision_layer = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(0.96, 0, 0, 0, 0.96, 0, 0, 0, 0.96, 0, 0, 1.31281)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.192, 0, 0, 0, 0.192, 0, 0, 0, 0.192, 0, 0, 0.262562)
 shape = SubResource("BoxShape3D_2jdpb")
 
-[node name="SniperTower2" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="SniperTower2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 mesh = ExtResource("1_q5xco")
-skeleton = NodePath("../..")
 
-[node name="HealthBar" parent="StaticBody3D" instance=ExtResource("2_un4kg")]
+[node name="HealthBar" parent="." instance=ExtResource("2_un4kg")]
 unique_name_in_owner = true
-transform = Transform3D(-6.55671e-08, 0, 0.5, 0, 1, 0, -1.5, 0, -2.18557e-08, 0, 10.7466, 1.09774)
+transform = Transform3D(-1.31134e-08, 0, 0.1, 0, 0.2, 0, -0.3, 0, -4.37114e-09, 0, 2.14932, 0.219548)
 
 [node name="AttackRangeArea" type="Area3D" parent="."]
 unique_name_in_owner = true
@@ -46,7 +42,7 @@ transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0, 0,
 shape = SubResource("CylinderShape3D_1xejq")
 
 [node name="CollisionVisualizer" type="MeshInstance3D" parent="AttackRangeArea"]
-transform = Transform3D(11.2388, 0, 0, 0, 11.933, 0, 0, 0, 11.288, 0, 0, 0)
+transform = Transform3D(11.2388, 0, 0, 0, -0.0998266, 0, 0, 0, 11.288, 0, -0.474326, 0)
 visible = false
 mesh = SubResource("CylinderMesh_x38pq")
 

@@ -5,12 +5,17 @@ extends Unit
 @export var ri_attack_distance = 200.0
 var ri_attack_targets = ["EnemyAirUnit", "EnemyBuilding"]
 var ri_other_targets = ["HealthCollectable", "WeaponUpgradeCollectable"]
+@onready var animation_tree = $CharacterArmature/AnimationTree
 
 func _ready(): 
 	dps = ri_dps
 	attack_distance = ri_attack_distance 
 	attack_targets = ri_attack_targets
 	other_targets = ri_other_targets 
+
+func _process(delta): 
+	_process_animation(delta)
+	super(delta) 
 	
 # Handles the outcome of a collision
 func handle_collisions(collision):
@@ -33,3 +38,16 @@ func handle_collisions(collision):
 		collider.get_parent().queue_free() # Remove collectable from the queue
 		
 
+func _process_animation(delta): 
+	if anim_moving: 
+		animation_tree.set("parameters/walking/transition_request", "true")
+	else: 
+		animation_tree.set("parameters/walking/transition_request", "false")
+	if anim_attack: 
+		animation_tree.set("parameters/attacking/transition_request", "true")
+	else: 
+		animation_tree.set("parameters/attacking/transition_request", "false")
+	if anim_damaged: 
+		animation_tree.set("parameters/damaged/transition_request", "true")
+	else: 
+		animation_tree.set("parameters/damaged/transition_request", "false")

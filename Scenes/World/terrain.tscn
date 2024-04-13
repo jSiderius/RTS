@@ -1,9 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://7trfyilqwqc3"]
+[gd_scene load_steps=33 format=3 uid="uid://7trfyilqwqc3"]
 
 [ext_resource type="PackedScene" uid="uid://bhalkbsv8mb11" path="res://Scenes/World/Blocks/dirt_block.tscn" id="1_hka1d"]
 [ext_resource type="PackedScene" uid="uid://ctf5wkwvwpp2c" path="res://Scenes/World/Blocks/grass_half_block.tscn" id="2_qu44g"]
 [ext_resource type="PackedScene" uid="uid://d0i3awx5l03tt" path="res://Scenes/World/Blocks/road_block.tscn" id="5_8su7v"]
-[ext_resource type="PackedScene" uid="uid://bb0im0nj20pdh" path="res://Scenes/World/Base/tower.tscn" id="5_ckrqf"]
 [ext_resource type="PackedScene" uid="uid://c4p7kvstwfwng" path="res://Scenes/World/Blocks/toll_booth.tscn" id="8_sj7wo"]
 [ext_resource type="PackedScene" uid="uid://ddxrkr1coxbeo" path="res://Scenes/World/Blocks/barrier.tscn" id="10_r3j7n"]
 [ext_resource type="PackedScene" uid="uid://jidw6a57k4tg" path="res://Scenes/World/Blocks/sandbag.tscn" id="14_ug8m6"]
@@ -8451,66 +8450,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
 [node name="Cosmetic" type="Node3D" parent="."]
 transform = Transform3D(1, -1.4729e-06, -0.000322466, 1.21437e-06, 1, -0.000754264, 0.000322467, 0.000754263, 1, 0, 0, 0)
 
-[node name="Towers" type="Node3D" parent="Cosmetic"]
-transform = Transform3D(1, 4.54747e-14, 2.32831e-11, -4.54747e-14, 1, 4.65661e-11, -2.32831e-11, -4.65661e-11, 1, 0, 0, 0)
-
-[node name="Tower" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, -6)
-
-[node name="Tower2" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -1.42108e-13, -7.27595e-11, 1.42108e-13, 1, -7.27595e-11, 7.27595e-11, 7.27595e-11, 1, -24, 2.5, 6)
-
-[node name="Tower3" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -1.7053e-13, -1.45519e-10, -2.84217e-14, 1, -1.74623e-10, 5.82077e-11, 1.16415e-10, 1, 24, 2.5, 6)
-
-[node name="Tower4" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, 15)
-
-[node name="Tower5" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, 15)
-
-[node name="Tower6" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, -15)
-
-[node name="Tower7" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, 24)
-
-[node name="Tower8" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -12, 2.5, 24)
-
-[node name="Tower9" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 12, 2.5, 24)
-
-[node name="Tower10" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 0, 2.5, 24)
-
-[node name="Tower11" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, 24)
-
-[node name="Tower12" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -24, 2.5, -24)
-
-[node name="Tower13" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, -12, 2.5, -24)
-
-[node name="Tower14" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 4.65661e-10, 2.5, -24)
-
-[node name="Tower15" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 12, 2.5, -24)
-
-[node name="Tower16" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, -24)
-
-[node name="Tower17" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -7.10543e-14, 5.16988e-24, 7.10543e-14, 1, -7.27596e-11, 0, 7.27596e-11, 1, 24, 2.5, -24)
-
-[node name="Tower18" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -2.27374e-13, -4.07454e-10, 2.27374e-13, 1, -5.82077e-11, 0, 5.82077e-11, 0.999999, -24.0291, 2.49822, -6.03479)
-
-[node name="Tower19" parent="Cosmetic/Towers" instance=ExtResource("5_ckrqf")]
-transform = Transform3D(1, -2.27374e-13, -3.49246e-10, 2.27374e-13, 1, -5.82077e-11, 0, 5.82077e-11, 0.999999, -24.0097, 2.43798, -14.9953)
-
 [node name="Cosmetic" type="Node3D" parent="Cosmetic"]
 
 [node name="GasTanks" type="Node3D" parent="Cosmetic/Cosmetic"]
@@ -8840,6 +8779,9 @@ transform = Transform3D(0.999997, 0, 0, -1.16415e-10, 1, -2.84217e-14, 1.42609e-
 transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 2.03727e-10, 7.67386e-13, 1, -63.9996, -0.0482721, 0.916805)
 
 [node name="Sandbag" parent="Cosmetic/Cosmetic/SandSacks/Line2" instance=ExtResource("14_ug8m6")]
+
+[node name="Sandbag22" parent="Cosmetic/Cosmetic/SandSacks/Line2" instance=ExtResource("14_ug8m6")]
+transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 1.16415e-10, 5.68434e-14, 1, -0.936234, -0.000706196, 0.000301361)
 
 [node name="Sandbag2" parent="Cosmetic/Cosmetic/SandSacks/Line2" instance=ExtResource("14_ug8m6")]
 transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 8.73115e-11, 3.12639e-13, 1, 2, 0.00150847, -0.000644684)
@@ -9236,174 +9178,6 @@ transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.40284e-10, 2.47269
 
 [node name="Sandbag12" parent="Cosmetic/Cosmetic/SandSacks/Line5" instance=ExtResource("14_ug8m6")]
 transform = Transform3D(0.999999, -1.12247e-10, 0, 4.35002e-12, 1, 2.27374e-13, 6.98492e-10, 2.95586e-12, 1, 21.6714, 0.016346, -0.0070076)
-
-[node name="Line6" type="Node3D" parent="Cosmetic/Cosmetic/SandSacks"]
-transform = Transform3D(0.999999, -9.31323e-10, 2.91038e-11, 8.14907e-10, 1, 1.02034e-11, 5.23869e-10, 1.28352e-10, 1, -64.8418, -0.0490384, -106.399)
-
-[node name="Sandbag" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-
-[node name="Sandbag2" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 8.73115e-11, 3.12639e-13, 1, 2, 0.00150847, -0.000644684)
-
-[node name="Sandbag3" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 1.45519e-10, 5.40012e-13, 1, 4, 0.00301695, -0.00128937)
-
-[node name="Sandbag4" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 2.03727e-10, 7.67386e-13, 1, 5.99999, 0.00452566, -0.00193405)
-
-[node name="Sandbag5" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 2.91038e-10, 1.10845e-12, 1, 7.99999, 0.00603414, -0.00259018)
-
-[node name="Sandbag6" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 3.49246e-10, 1.33582e-12, 1, 9.99999, 0.00754261, -0.00324249)
-
-[node name="Sandbag7" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.07454e-10, 1.56319e-12, 1, 12, 0.00905108, -0.00389099)
-
-[node name="Sandbag8" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.65661e-10, 1.79057e-12, 1, 14, 0.0105596, -0.00453568)
-
-[node name="Sandbag9" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.23869e-10, 2.01794e-12, 1, 16, 0.0120683, -0.00518036)
-
-[node name="Sandbag10" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.82077e-10, 2.24532e-12, 1, 18, 0.0135767, -0.00582504)
-
-[node name="Sandbag11" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.40284e-10, 2.47269e-12, 1, 20, 0.0150852, -0.00646973)
-
-[node name="Sandbag12" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.98492e-10, 2.70006e-12, 1, 22, 0.0165937, -0.00711441)
-
-[node name="Sandbag13" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 7.567e-10, 2.92744e-12, 1, 24, 0.0181024, -0.00775909)
-
-[node name="Sandbag14" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 8.14907e-10, 3.15481e-12, 1, 26, 0.0196109, -0.00840378)
-
-[node name="Sandbag15" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 9.31323e-10, 3.60956e-12, 1, 28, 0.0211194, -0.00904846)
-
-[node name="Sandbag16" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 9.8953e-10, 3.83693e-12, 1, 30, 0.0226278, -0.00970078)
-
-[node name="Sandbag17" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.04774e-09, 4.0643e-12, 1, 32, 0.0241363, -0.0103531)
-
-[node name="Sandbag18" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.10595e-09, 4.29168e-12, 1, 34, 0.025645, -0.0110016)
-
-[node name="Sandbag19" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.16415e-09, 4.51905e-12, 1, 36, 0.0271535, -0.0116463)
-
-[node name="Sandbag20" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999997, 0, 0, 0, 1, -2.84217e-14, 1.22236e-09, 4.74643e-12, 1, 38, 0.028662, -0.012291)
-
-[node name="Sandbag21" parent="Cosmetic/Cosmetic/SandSacks/Line6" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999997, 0, 0, 0, 1, -2.84217e-14, 1.28057e-09, 4.9738e-12, 1, 40, 0.0301704, -0.0129356)
-
-[node name="Line7" type="Node3D" parent="Cosmetic/Cosmetic/SandSacks"]
-transform = Transform3D(0.999999, -9.31323e-10, 2.91038e-11, 8.14907e-10, 1, 1.05445e-11, 6.1118e-10, 1.28352e-10, 1, -22.8418, -0.0173597, -106.412)
-
-[node name="Sandbag" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-
-[node name="Sandbag2" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 8.73115e-11, 3.12639e-13, 1, 2, 0.00150847, -0.000644684)
-
-[node name="Sandbag3" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 1.45519e-10, 5.40012e-13, 1, 4, 0.00301695, -0.00128937)
-
-[node name="Sandbag4" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 2.03727e-10, 7.67386e-13, 1, 5.99999, 0.00452566, -0.00193405)
-
-[node name="Sandbag5" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 2.91038e-10, 1.10845e-12, 1, 7.99999, 0.00603414, -0.00259018)
-
-[node name="Sandbag6" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 3.49246e-10, 1.33582e-12, 1, 9.99999, 0.00754261, -0.00324249)
-
-[node name="Sandbag7" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.07454e-10, 1.56319e-12, 1, 12, 0.00905108, -0.00389099)
-
-[node name="Sandbag8" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.65661e-10, 1.79057e-12, 1, 14, 0.0105596, -0.00453568)
-
-[node name="Sandbag9" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.23869e-10, 2.01794e-12, 1, 16, 0.0120683, -0.00518036)
-
-[node name="Sandbag10" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.82077e-10, 2.24532e-12, 1, 18, 0.0135767, -0.00582504)
-
-[node name="Sandbag11" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.40284e-10, 2.47269e-12, 1, 20, 0.0150852, -0.00646973)
-
-[node name="Sandbag12" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.98492e-10, 2.70006e-12, 1, 22, 0.0165937, -0.00711441)
-
-[node name="Sandbag13" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 7.567e-10, 2.92744e-12, 1, 24, 0.0181024, -0.00775909)
-
-[node name="Sandbag14" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 8.14907e-10, 3.15481e-12, 1, 26, 0.0196109, -0.00840378)
-
-[node name="Sandbag15" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 9.31323e-10, 3.60956e-12, 1, 28, 0.0211194, -0.00904846)
-
-[node name="Sandbag16" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 9.8953e-10, 3.83693e-12, 1, 30, 0.0226278, -0.00970078)
-
-[node name="Sandbag17" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.04774e-09, 4.0643e-12, 1, 32, 0.0241363, -0.0103531)
-
-[node name="Sandbag18" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.10595e-09, 4.29168e-12, 1, 34, 0.025645, -0.0110016)
-
-[node name="Sandbag19" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999998, 0, 0, 0, 1, -2.84217e-14, 1.16415e-09, 4.51905e-12, 1, 36, 0.0271535, -0.0116463)
-
-[node name="Sandbag20" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999997, 0, 0, 0, 1, -2.84217e-14, 1.22236e-09, 4.74643e-12, 1, 38, 0.028662, -0.012291)
-
-[node name="Sandbag21" parent="Cosmetic/Cosmetic/SandSacks/Line7" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999997, 0, 0, 0, 1, -2.84217e-14, 1.28057e-09, 4.9738e-12, 1, 40, 0.0301704, -0.0129356)
-
-[node name="Line8" type="Node3D" parent="Cosmetic/Cosmetic/SandSacks"]
-transform = Transform3D(0.999999, -9.31323e-10, 2.91038e-11, 8.14907e-10, 1, 1.07718e-11, 6.69388e-10, 1.28352e-10, 1, 19.1581, 0.0143189, -106.426)
-
-[node name="Sandbag" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-
-[node name="Sandbag2" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 8.73115e-11, 3.12639e-13, 1, 2, 0.00150847, -0.000644684)
-
-[node name="Sandbag3" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 1.45519e-10, 5.40012e-13, 1, 4, 0.00301695, -0.00128937)
-
-[node name="Sandbag4" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 2.03727e-10, 7.67386e-13, 1, 5.99999, 0.00452566, -0.00193405)
-
-[node name="Sandbag5" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 2.91038e-10, 1.10845e-12, 1, 7.99999, 0.00603414, -0.00259018)
-
-[node name="Sandbag6" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 3.49246e-10, 1.33582e-12, 1, 9.99999, 0.00754261, -0.00324249)
-
-[node name="Sandbag7" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.07454e-10, 1.56319e-12, 1, 12, 0.00905108, -0.00389099)
-
-[node name="Sandbag8" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 4.65661e-10, 1.79057e-12, 1, 14, 0.0105596, -0.00453568)
-
-[node name="Sandbag9" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.23869e-10, 2.01794e-12, 1, 16, 0.0120683, -0.00518036)
-
-[node name="Sandbag10" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 5.82077e-10, 2.24532e-12, 1, 18, 0.0135767, -0.00582504)
-
-[node name="Sandbag11" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.40284e-10, 2.47269e-12, 1, 20, 0.0150852, -0.00646973)
-
-[node name="Sandbag12" parent="Cosmetic/Cosmetic/SandSacks/Line8" instance=ExtResource("14_ug8m6")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, -2.84217e-14, 6.98492e-10, 2.70006e-12, 1, 22, 0.0165937, -0.00711441)
 
 [node name="Boxes" type="Node3D" parent="Cosmetic/Cosmetic"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -18.2668, 1.42941, 17.2088)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://baphrr88i27t3"]
 
-[ext_resource type="Script" path="res://Scenes/World/EnemyBase/enemy_building.gd" id="1_8fdtc"]
+[ext_resource type="Script" path="res://Scenes/World/EnemyBase/enemy_hq.gd" id="1_7n2uq"]
 [ext_resource type="ArrayMesh" uid="uid://chx065ytfsb3s" path="res://Assets/AssetPacks/MilitaryBaseAssetPack/MilitaryBase/OBJ/RadioStation.obj" id="2_ux8pi"]
 [ext_resource type="PackedScene" uid="uid://cywrlq0ki8qu6" path="res://Scenes/Units/health_bar.tscn" id="3_wemeq"]
 
@@ -14,25 +14,20 @@ albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8312d"]
 albedo_color = Color(1, 0.129412, 0.0901961, 1)
 
-[node name="EnemyHq" type="Node3D"]
+[node name="EnemyHq" type="StaticBody3D" groups=["EnemyBuilding", "EnemyHQ", "Selectable", "Targetable"]]
+collision_layer = 16
+script = ExtResource("1_7n2uq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["EnemyBuilding", "EnemyHQ", "Targetable"]]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-collision_layer = 2
-script = ExtResource("1_8fdtc")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["Collectable", "ResourceCollectable"]]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.25, 0)
 shape = SubResource("BoxShape3D_xji12")
 
-[node name="SelectionRing" type="MeshInstance3D" parent="StaticBody3D"]
-unique_name_in_owner = true
-transform = Transform3D(3, 0, 0, 0, 0.01, 0, 0, 0, 3, 0, -0.237128, 0)
-visible = false
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.0451831, 0, 0, 0, 3, 0, -0.277668, 0)
 mesh = SubResource("CylinderMesh_pg6kp")
 surface_material_override/0 = SubResource("StandardMaterial3D_25vqw")
 
-[node name="Headquarters" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Headquarters" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.5, 0.173)
 mesh = ExtResource("2_ux8pi")
 skeleton = NodePath("../..")

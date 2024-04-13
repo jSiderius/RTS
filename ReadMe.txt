@@ -3,13 +3,9 @@ Date: 		2024-03-17
 Class: 		COMP 4501
 Assignment:	Project
 
-Didn't get to accoplish everything I wanted but I've been coding for 15 hours and I'm done, I'll probably finish anyways and hoping for extension so heres the todo list 
-	- Finish turrets properly and make enemys able to destroy them
-	- Add units for the enemy
+Didn't get to accoplish everything I wanted but I am done for now at least, I will probably pick it up at somepoint and finish
 	- Add unit wait times and queues when purchasing
 	- Make unit purchases spend cash 
-	- balance unit cost (building cost should be fine already)
-	- Animate 
 	- Power-ups have AOE
 	- Switch earlier code to better conventions (polymorphism, triggers)
 	- Player units search for targets just like enemy units
@@ -18,11 +14,45 @@ Didn't get to accoplish everything I wanted but I've been coding for 15 hours an
 	- Visible bullets
 	- Bug fix
 	- Playtest and manufature the game experience
+	- Optimization
 	
 Overall I think I overextended myself with features functionality and design, I definitely could have had a much simpler but complete game
 Also the editor uses quite alot of RAM on the game and terrain scenes so don't have those open as much as possible
 Message me if you have any problems grading  
 Also the assets are not mine and I'm not claiming any credit for them other than manipulating them in the editor 
+
+Report: 
+
+The mechanics of the game are as follows
+	- The play is capable of using the UI to purchase buildings and units in the game
+	- The buildings and units cost money and can also cost or give power
+	- The headquarters building is the home base and if destroyed (Not currently implemented because bugs) the game is over
+	- The Power plants give access to more power for buildings
+	- The refinery gives trucks which can go into the world and collect resources
+	- The quarters allow unit spawing
+	- The factories allow truck unit spawning
+	- The airports allow air unit spawning
+	- The nuclear plant is an alternate end condition
+	- The units on the player side can be manipulated by
+		- Drag and select
+		- Click and select
+		- Shift drag or click and select (alt-select)
+		- Right click to move
+		- Right click on target (Collectable, Unit, Building) to target
+	- The resoruce truck works as follows
+		- Select and send to resource
+		- On collision with resource, picks it up and naturally returns to base
+		- On death, respawns after a time period 
+	- The GI works as follows
+		- Can attack ground units and buildings
+		- Can collect health and weapon upgrades
+	- The tank and armoured car are attacking units with altered stats
+	- Units in the world are patroling / defending units, they will patrol points, or fight units in range
+	- You have to go to them to access resources
+	- Units that spawn are storming units, they will charge the player base
+	- This is the last thing I was working on and unfortunately it is in a decently buggy state
+	- The airport will spawn units after about 3 minutes and the barracks after 1, but you can change this in their scripts
+	- There's probably some other stuff I'm missing
 
 I'll go over the checklist and where I would say each component is implemented
 1: 
@@ -32,12 +62,27 @@ I'll go over the checklist and where I would say each component is implemented
 	- This way I can use masking to determine what bakes into the Nav Mesh
 	- You can see base buildings and terrain baked into the mesh as obstacles while units and collectables are not
 3: 
-	- Didn't do it, probably wouldn't have been too hard because my meshes are animated but I just didn't get to it 
+	- There are 8 units in my game and I added animation to 5 of them
+	- The assets I have imported for the infantry unit and enemy infantry have animations attached
+	- I implemented an animation tree and game logic to have them 
+		- Attack / shoot
+		- Walk + attack / shoot
+		- Idle
+		- Walk 
+		- Take damage 
+	- These 3 units were very similar and once the first was done the rest took minimal work
+	- The helicopters were just an OBJ mesh
+	- I split the mesh into rotor and body in Blender and re-imported to Godot
+	- Then I just ported to meshs' to each unit and added constant rotation to the rotor
+	- For the tank, armoured car, and resource truck I didn't feel animation was necessary because the movement of the mesh itself gives most of the animation
+	- Anything else would just be tires spinning which is minimal and at the scale of the game would barely be noticed 
 4: 
 	- This is best implemented in the ResourceTruck, if you click on a resource on the map, it will get the resource then target its home base and cash the resource in 
 	- The turrets will also auto-detect units in their range and attack
 5: 
-	- The units take their own actions in the game and are able to patrol, chase, chase and attack, stop and attack
+	- Units can  be patroling units or storming units. 
+	- Patrolling units will alternate between patrol, chase, chase and attack, stop and attack
+	- Storming units will alternate between storm base, chase, chase and attack, stop and attack
 6 :
 	- Most of the mechanics are there but I came up short on a full playable experience 
 	- Units are placed around the map and gaurding resources 

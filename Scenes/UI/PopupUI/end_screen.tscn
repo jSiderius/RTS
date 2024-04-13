@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://1xppj85vqys4"]
+
+[ext_resource type="Script" path="res://Scenes/UI/PopupUI/intro_ui.gd" id="1_gsd5k"]
+[ext_resource type="Theme" uid="uid://ctwc3vll6brq3" path="res://Assets/UI/UITheme.tres" id="2_2lyuv"]
+
+[node name="NukePopup" type="CanvasLayer"]
+script = ExtResource("1_gsd5k")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="PanelContainer" parent="Control"]
+layout_mode = 1
+offset_left = -23.0
+offset_top = -16.0
+offset_right = 1732.0
+offset_bottom = 977.0
+scale = Vector2(1.00973, 1.00986)
+theme = ExtResource("2_2lyuv")
+theme_type_variation = &"BigPanelContainer"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Container/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="Text" type="Label" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+text = "Lorem ipsum dolor sit amet. Aut consequatur minima et libero consequatur est sunt sint et voluptates veritatis et veniam voluptatem! Qui accusamus culpa est sint dolor in autem similique cum sint aliquam aut voluptas voluptates? Ad veniam sapiente et soluta voluptate qui earum delectus ut nemo sint. Ut sunt doloribus ab neque expedita quo numquam galisum."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="Spacer" type="Control" parent="Control/Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer1" type="Control" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="Okay" type="Button" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer" groups=["button_group"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.29
+theme = ExtResource("2_2lyuv")
+text = "Okay
+"
+
+[node name="Spacer2" type="Control" parent="Control/Container/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 10.0
+
+[connection signal="pressed" from="Control/Container/MarginContainer/VBoxContainer/HBoxContainer/Okay" to="." method="_on_end_pressed"]

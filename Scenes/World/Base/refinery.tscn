@@ -12,28 +12,26 @@ albedo_color = Color(0.654902, 0.231373, 0.12549, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ooy0y"]
 size = Vector3(4.822, 1.752, 3.2)
 
-[node name="Refinery" type="Node3D" groups=["Refinery"]]
+[node name="StaticBody3D" type="StaticBody3D" groups=["Refinery"]]
+collision_layer = 2
 script = ExtResource("1_483y5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 2
-
-[node name="Refinery1" type="MeshInstance3D" parent="StaticBody3D" groups=["Refinery", "Selectable"]]
+[node name="Refinery1" type="MeshInstance3D" parent="." groups=["Refinery", "Selectable"]]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = ExtResource("1_73vh6")
 skeleton = NodePath("../..")
 
-[node name="HealthBar" parent="StaticBody3D" instance=ExtResource("3_083xt")]
+[node name="HealthBar" parent="." instance=ExtResource("3_083xt")]
 unique_name_in_owner = true
 transform = Transform3D(0, 0, 0.25, 0, 0.25, 0, -0.25, 0, 0, 0, 2, 0)
 
-[node name="SelectionRing" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="SelectionRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.25, 0, 0, 0, 0.0425, 0, 0, 0, 3.75, 0, -0.59795, 0)
 visible = false
 mesh = SubResource("CylinderMesh_atjnh")
 skeleton = NodePath("../Refinery1")
 surface_material_override/0 = SubResource("StandardMaterial3D_tiodt")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.192842, 0)
 shape = SubResource("BoxShape3D_ooy0y")

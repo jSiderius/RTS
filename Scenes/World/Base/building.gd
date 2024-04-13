@@ -1,15 +1,15 @@
 extends Node3D
 class_name Building
 
-var health_bar : Node3D
+@onready var health_bar = $HealthBar
 var health = 0.0
 
-
 func _ready(): 
-	health_bar = $StaticBody3D/HealthBar
+	#health_bar = $StaticBody3D/HealthBar
+	pass
 	
 func _process(delta):
-	#health_bar.health = health
+	health_bar.health = health
 	pass
 
 func health_bar_invisible(): 
@@ -28,7 +28,11 @@ func deselect():
 # Annoying to have to rewrite some code from unit, I would've looked into a better approach with more time 
 signal death
 func damage(d):
+	if not is_in_group("Damageable"): return 
+	
 	health -= d
+	print(health)
 	if health <= 0: 
+		print(death)
 		await emit_signal("death", self)
 		queue_free()

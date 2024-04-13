@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_rd2ql"]
 [ext_resource type="Script" path="res://Scenes/enemy_manager.gd" id="2_dh7st"]
-[ext_resource type="Script" path="res://Scenes/UI/ui_manager.gd" id="3_f1wx1"]
-[ext_resource type="PackedScene" uid="uid://dhfqmt2eseedf" path="res://Scenes/UI/units_ui.tscn" id="4_ky1by"]
-[ext_resource type="PackedScene" uid="uid://bdsc2h3fq3i5r" path="res://Scenes/UI/buildings_ui.tscn" id="5_uaub0"]
-[ext_resource type="PackedScene" uid="uid://cymu7a6dtcti8" path="res://Scenes/UI/intro_ui.tscn" id="6_socfx"]
+[ext_resource type="Script" path="res://Scenes/UI/GameUI/ui_manager.gd" id="3_f1wx1"]
+[ext_resource type="PackedScene" uid="uid://dhfqmt2eseedf" path="res://Scenes/UI/GameUI/units_ui.tscn" id="4_ky1by"]
+[ext_resource type="PackedScene" uid="uid://bdsc2h3fq3i5r" path="res://Scenes/UI/GameUI/buildings_ui.tscn" id="5_uaub0"]
+[ext_resource type="PackedScene" uid="uid://cymu7a6dtcti8" path="res://Scenes/UI/PopupUI/intro_ui.tscn" id="6_socfx"]
 [ext_resource type="Script" path="res://Scenes/temp.gd" id="7_jkkju"]
 [ext_resource type="Texture2D" uid="uid://b3ybuewunshw0" path="res://Assets/Textures/Sky/istockphoto-923897806-612x612.png" id="8_6mltm"]
 [ext_resource type="Script" path="res://Scenes/Camera/camera_base.gd" id="9_d86t0"]
@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Scenes/World/nav_region.gd" id="14_kboga"]
 [ext_resource type="PackedScene" uid="uid://jprfemyb3jbn" path="res://Scenes/World/simple_terrain.tscn" id="15_ucepi"]
 [ext_resource type="PackedScene" uid="uid://csbi5dyjdjxj8" path="res://Scenes/Units/EnemyUnits/enemy_chopper.tscn" id="16_o88gb"]
-[ext_resource type="Script" path="res://Scenes/UI/selection_box.gd" id="16_tf4vw"]
+[ext_resource type="Script" path="res://Scenes/UI/GameUI/selection_box.gd" id="16_tf4vw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_36kot"]
 panorama = ExtResource("8_6mltm")
